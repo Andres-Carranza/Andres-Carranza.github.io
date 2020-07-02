@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLING*/
+
+.header {
+  background-image: url('../images/header-background.jpg');
+  background-repeat: no-repeat;  
+  background-size: cover;
+  height: 700px;
+}
+
+/*NAVBAR STYLING*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 150px;
+}
+.navbar-logo img{
+  height: 130px;
+  padding-left: 20px;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: white;
+  font-size: 28px;
+  transition: .6s;
+}
+
+.navbar-links li:hover a{
+  font-size: 33px;
+  transition: .6s;
+}
