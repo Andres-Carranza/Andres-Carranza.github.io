@@ -4,9 +4,15 @@
   <head>
     <meta charset='UTF-8'>
     <title>Covid-19 & Aviation</title>
+    <link rel = "icon" href ="images/nasa-logo-favicon.png" type="image x-icon"> 
+    
     <link rel="stylesheet" href="styles/reset-styles.css">
-    <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
   </head>
 
   <body class='preload'>
@@ -18,7 +24,7 @@
       <nav class='navbar'>
 
         <div class="navbar-logo">
-          <a href="https://www.nasa.gov"><img src="images/nasa-logo.png" alt="NASA"></a>
+          <a href="https://www.nasa.gov" target='_blank'><img src="images/nasa-logo.png" alt="NASA"></a>
         </div>
 
         <a href="#" class='toggle-button'>
@@ -29,29 +35,81 @@
 
         <div class="navbar-links">
           <ul> 
-            <li><a href="#" class=>Ames Research Center</a></li>
-            <li><a href="#" class=>Aviation Systems Division</a></li>
-            <li><a href="#" class=>Revelation</a></li>
+            <li><div class='navbar-link active-navbar-link'>
+              <a href="index.html">Research</a>
+            </div></li>
+            <li><div class='navbar-link'>
+              <a href="https://www.nasa.gov/ames" target='_blank'>Ames Research Center</a>
+            </div></li>
+            <li><div class='navbar-link'>
+              <a href="https://www.aviationsystemsdivision.arc.nasa.gov/index.shtml" target='_blank'>Aviation Systems Division</a>
+            </div></li>
+            <li><div class='navbar-link'>
+              <a href="revelation.html">Revelation</a>
+            </div></li>
           </ul>
         </div>
         
       </nav>
 
       <!--OVERVIEW--> 
-      <div>
-
+      <div class='overview'>
+        <div class='summary'>An in-depth analysis of covid-19 and its impact on aviation.</div>
       </div>
           
     </div>
 
     <!--BODY-->
+
     <!--NAV-TABS-->
-    <!--SCROLLABLE CONTENT OVERVIEWS-->
+    <div class="navtab">
+      <div class="navtab-links">
+        <ul> 
+          <li><div class='navtab-link' id="current-impact-tab" onclick="changeNavtabActive('current-impact-tab')">
+            <a href="#current-impact-overview">Current Impact</a>
+          </div></li>
+          <li><div class='navtab-link' id = 'previous-crises-tab' onclick="changeNavtabActive('previous-crises-tab')">
+            <a href="#previous-crises-overview">Previous Crises</a>
+          </div></li>
+          <li><div class='navtab-link' id='modeling-tab' onclick="changeNavtabActive('modeling-tab')">
+            <a href="#modeling-overview">Modeling the Impact</a>
+          </div></li>
+          <li><div class='navtab-link' id='aviation-pre-covid-tab' onclick="changeNavtabActive('aviation-pre-covid-tab')">
+            <a href="#aviation-pre-covid-overview">Aviation pre-Covid</a>
+          </div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!--SCROLLABLE CONTENT OVERVIEWS-->
+      <div class="research-overviews">
+        <div class='current-impact-overview' id="current-impact-overview">
+          current-impact-overview
+        </div>
+
+        <div class='previous-crises-overview' id="previous-crises-overview">
+            previous-crises-overview
+        </div>
+
+        <div class='modeling-overview' id="modeling-overview">
+          modeling-overview
+        </div>
+
+        <div class='aviation-pre-covid-overview' id="aviation-pre-covid-overview">
+          aviation-pre-covid-overview
+        </div>
+      </div>
+    </div>
   </body>
 
   <!--Prevent animations from occuring preload-->
-  <script>
-    $(window).load(function() {
-      $("body").removeClass("preload");});
-  </script>
+  <script src="scripts/preload.js"></script>
+
+  <!--Show menu when you click toggle button-->
+  <script src="scripts/toggle-menu.js"></script>
+  
+   <!--Format navtab behavior-->
+   <script src="scripts/navtab.js"></script> 
 </html>

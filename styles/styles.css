@@ -1,21 +1,47 @@
 * {
   box-sizing: border-box;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', Helvetica, sans-serif;
+}
+
+.preload *{
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 body {
-  background: black;
+  background: white;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* HEADER STYLING*/
 
 .header {
-  background-image: url('../images/header-background.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3) ), url('../images/header-background.jpg');
   background-repeat: no-repeat;  
+  background-position: right center;
   background-size: cover;
   height: 700px;
+}
+
+.overview{
+  height: 550px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.overview > .summary {
+  margin-left: 100px;
+  padding: 25px;
+  width: 45%;
+  font-size: 60px;
+  color: white;
 }
 
 /*NAVBAR STYLING*/
@@ -24,17 +50,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
   height: 150px;
 }
+
 .navbar-logo img{
   height: 130px;
-  padding-left: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.navbar-link {
+  height: 70px;
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.active-navbar-link {
+  border-bottom: 4px solid white;
 }
 
 .navbar-links ul {
   margin: 0;
   padding: 0;
+  margin-right: 20px;
   display: flex;
 }
 
@@ -54,4 +94,176 @@ body {
 .navbar-links li:hover a{
   font-size: 33px;
   transition: .6s;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 30px;
+}
+
+.toggle-button .bar {
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*NAVTAB*/
+
+ .navtab {
+   background-color: white;
+   width: 100%;
+ }
+ .navtab.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+ .navtab-links {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.navtab-link {
+  margin: 10px;
+  height: 50px;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.navtab-link:hover {
+  border-bottom: 3px solid lightgrey;
+  transition: border-bottom 0.5s;
+}
+
+.active-navtab-link {
+  border-bottom: 3px solid #2990ea;
+  transition: border-bottom 0.5s;
+}
+
+.active-navtab-link:hover {
+  border-bottom: 3px solid #2990ea;
+}
+
+.navtab-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navtab-links li {
+  list-style: none;
+}
+
+.navtab-links li a {
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  color: grey;
+  font-size: 20px;
+}
+
+/*CONTENTT*/
+.content {}
+
+/*RESEARCH OVERVIEWS*/
+
+ .research-overviews div {
+   height: 900px;
+   padding-top: 128px;
+   padding-bottom: 128px;
+ }
+
+ .current-impact-overview, .modeling-overview{
+  background-color: rgba(0,0,0,0.05);
+ }
+
+ .previous-crises-overview, .aviation-pre-covid-overview {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+ /*RESPONSIVE CONTENT*/
+@media (max-width: 1200px) {
+  /*navbar*/
+  .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .navbar-logo img{
+    height: 100px;
+    margin: 20px;
+  }
+  
+  .toggle-button {
+      display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-link {
+    height: fit-content;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    background-color:  rgb(50, 50, 50, .8);
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    position: relative;
+  }
+
+  .navbar-links ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-links ul li div {
+    display: inline-block;
+  }
+
+  .navbar-links ul li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    width: 100%;
+  }
+
+  /*overview summary*/
+  .overview > .summary {
+    margin-left: 10vw;
+    width: 70vw;
+    font-size: 7vw;
+  }
+
+  .header {
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3) ), url('../images/header-background-alternate.jpg');
+    background-repeat: no-repeat;  
+    background-position: left center;
+    background-size: cover;
+    height: 700px;
+  }
+
+  /*remove navtab*/
+  .navtab-links {
+    display: none;
+  }
 }
