@@ -44,6 +44,13 @@ html {
   color: white;
 }
 
+.revelation-greeting {
+  margin-left: 100px;
+  padding: 25px;
+  font-size: 80px;
+  color: white; 
+}
+
 /*NAVBAR STYLING*/
 
 .navbar {
@@ -87,12 +94,12 @@ html {
   padding: 10px;
   display: block;
   color: white;
-  font-size: 28px;
+  font-size: 25px;
   transition: .6s;
 }
 
 .navbar-links li:hover a{
-  font-size: 33px;
+  font-size: 30px;
   transition: .6s;
 }
 
@@ -180,12 +187,10 @@ html {
 
 /*RESEARCH OVERVIEWS*/
 
- .research-overviews div {
-   height: 900px;
+ .research-overviews > div {
    padding-top: 128px;
    padding-bottom: 128px;
  }
-
  .current-impact-overview, .modeling-overview{
   background-color: rgba(0,0,0,0.05);
  }
@@ -194,6 +199,24 @@ html {
   background-color: rgba(0,0,0,0.1);
 }
 
+.current-impact-overview {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  height: fit-content;
+  align-content: center;
+}
+
+.overview-wrapper {
+  padding: 50px;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.overview-wrapper h2 {
+  font-size: 30px;
+  width: 300px;
+}
 
  /*RESPONSIVE CONTENT*/
 @media (max-width: 1200px) {
@@ -252,6 +275,12 @@ html {
     margin-left: 10vw;
     width: 70vw;
     font-size: 7vw;
+  }
+
+  .revelation-greeting {
+    margin-left: 10vw;
+    width: 70vw;
+    font-size: 10vw;
   }
 
   .header {
