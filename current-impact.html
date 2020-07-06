@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <title>Current Impact</title>
+    <link rel = "icon" href ="images/nasa-logo-favicon.png" type="image x-icon"> 
+    
+    <link rel="stylesheet" href="styles/reset-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src = "https://d3js.org/d3.v4.min.js"></script>
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
+  </head>
+
+  <body class='preload'>
+
+    <!--BODY-->
+
+    <!--NAV-TABS-->
+    <div class="navtab">
+      <div class="navtab-links">
+        <ul> 
+          <li><div class='navtab-link' id="current-impact-tab" onclick="changeNavtabActive('current-impact-tab')">
+            <a href="#current-impact-overview">Current Impact</a>
+          </div></li>
+          <li><div class='navtab-link' id = 'previous-crises-tab' onclick="changeNavtabActive('previous-crises-tab')">
+            <a href="#previous-crises-overview">Previous Crises</a>
+          </div></li>
+          <li><div class='navtab-link' id='modeling-tab' onclick="changeNavtabActive('modeling-tab')">
+            <a href="#modeling-overview">Modeling the Impact</a>
+          </div></li>
+          <li><div class='navtab-link' id='aviation-pre-covid-tab' onclick="changeNavtabActive('aviation-pre-covid-tab')">
+            <a href="#aviation-pre-covid-overview">Aviation pre-Covid</a>
+          </div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+
+        <div class="overview-wrapper">
+
+            <div class="text-wrapper">
+                <h2>Evaluation of the current state of air travel and how covid-19 has led it here.</h2>
+                <a href="current-impact.html">Learn More</a>
+            </div>
+
+            <div class="chart-wrapper">
+                <canvas id='tsa-chart'></canvas>
+            </div>
+
+          </div>
+        </div>
+
+    </div>
+  </body>
+
+  <!--Prevent animations from occuring preload-->
+  <script src="scripts/preload.js"></script>
+  
+   <!--Format navtab behavior-->
+   <script src="scripts/navtab.js"></script> 
+
+   <!--Chart TSA data-->
+   <script src='scripts/tsa-chart.js'></script>
+
+</html>

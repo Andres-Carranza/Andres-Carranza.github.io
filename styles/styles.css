@@ -200,23 +200,66 @@ html {
   height: 800px;
 }
 
+/*CURRENT IMPACT*/
 .current-impact-overview {
   padding-top: 128px;
   padding-bottom: 128px;
-  height: fit-content;
   align-content: center;
+  text-align: center;
 }
 
 .overview-wrapper {
-  padding: 50px;
   width: fit-content;
-  height: fit-content;
-  margin: auto;
+  display: inline-flex;
+
 }
 
-.overview-wrapper h2 {
-  font-size: 40px;
-  width: 300px;
+.text-wrapper {
+  padding: 50px;
+  vertical-align: center;
+  text-align: left;
+}
+
+.current-impact-overview h2 {
+  font-size: 45px;
+  width: 400px;
+  margin-bottom: 65px;
+}
+
+/*.current-impact-overview a{
+  font-size: 50px;
+  text-decoration: none;
+  color: #2990EA;
+}*/
+
+.current-impact-overview a {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 800;
+  color: dodgerblue 50%;
+  overflow: hidden;
+  background: linear-gradient(to right, royalblue, royalblue 50%, dodgerblue 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position .75s ease;
+}
+
+.current-impact-overview a:hover {
+  background-position: 0 100%;
+}
+
+.tsa-chart {
+  height: 500px;
+  width: 650px;
+}
+
+.chart-wrapper p {
+  float: right;
+  font-size: 13px;
 }
 
  /*RESPONSIVE CONTENT*/
@@ -291,9 +334,5 @@ html {
     background-size: cover;
     height: 700px;
   }
-
-  /*remove navtab*/
-  .navtab-links {
-    display: none;
-  }
 }
+
