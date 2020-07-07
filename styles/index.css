@@ -141,11 +141,11 @@ html {
   display: flex;
   justify-content: center;
   align-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navtab-link {
-  margin: 10px;
-  height: 50px;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.5s;
 }
@@ -165,25 +165,23 @@ html {
 }
 
 .navtab-links ul {
-  margin: 0;
-  padding: 0;
   display: flex;
 }
 
 .navtab-links li {
+  margin-left: 11px;
+  margin-right: 11px;
   list-style: none;
 }
 
 .navtab-links li a {
   text-decoration: none;
-  padding: 10px;
   display: block;
   color: grey;
-  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
 }
-
-/*CONTENTT*/
-.content {}
 
 /*RESEARCH OVERVIEWS*/
 
@@ -191,11 +189,11 @@ html {
    padding-top: 128px;
    padding-bottom: 128px;
  }
- .current-impact-overview, .modeling-overview{
+ .current-impact-overview, .modeling-overview, .commercial-air-travel-overview, .nas{
   background-color: rgba(0,0,0,0.05);
  }
 
- .previous-crises-overview, .aviation-pre-covid-overview {
+ .previous-crises-overview, .aviation-pre-covid-overview, .manufacuturing-overview, .nasa-research-overview {
   background-color: rgba(0,0,0,0.1);
   height: 800px;
 }
@@ -226,15 +224,7 @@ html {
   margin-bottom: 65px;
 }
 
-/*.current-impact-overview a{
-  font-size: 50px;
-  text-decoration: none;
-  color: #2990EA;
-}*/
-
 .current-impact-overview a {
-  position: relative;
-  display: inline-block;
   font-size: 50px;
   font-weight: 800;
   color: dodgerblue 50%;
