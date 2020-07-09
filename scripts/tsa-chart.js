@@ -32,17 +32,34 @@ async function chartData() {
                 
                 yAxes: [{
                     ticks: {
-                        maxTicksLimit: 5
-                    }
+                        maxTicksLimit: 5,
+                        callback: function(value, index, values) {
+                            if(parseInt(value) >= 1000){
+                               return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            } else {
+                               return '$' + value;
+                            }
+                       } 
+                    }      
                 }]
             },
             title: {
                 display: true,
                 text: '# of Daily Passengers in the Last 60 Days',
                 fontSize: 25
-            }
-
-
+            },
+            tooltips: {
+                callbacks: {
+                      label: function(tooltipItem, data) {
+                          var value = data.datasets[0].data[tooltipItem.index];
+                          if(parseInt(value) >= 1000){
+                                     return '$' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                  } else {
+                                     return '$' + value;
+                                  }
+                      }
+                } 
+              }
         }
     });
 }
