@@ -16,7 +16,9 @@ def html_to_csv(html):
     for i, tr in enumerate(tr_elements):
         row = []
         for td in tr.find_all('td'):
-            row.append(td.text.replace(',',''))
+            row.append(td.text)
+            #row.append(td.text.replace(',',''))
+
         if(len(row) == 3):
             new_df.loc[i] = row
 
