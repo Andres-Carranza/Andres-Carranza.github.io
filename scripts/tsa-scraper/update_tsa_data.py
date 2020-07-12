@@ -19,6 +19,7 @@ def html_to_csv(html):
             row.append(td.text.replace(',',''))
 
         if(len(row) == 3):
+            row[0] = row[0][:-5]
             new_df.loc[i] = row
 
     old_df = pd.read_csv('tsa-data.csv')

@@ -15,8 +15,8 @@ async function chartData() {
                     label: '# of Passengers',
                     data: data['2020'],
                     fill: false,
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(13, 186, 79, 1)',
+                    backgroundColor: 'rgba(13, 186, 79, 0.5)',
                     borderWidth: 1,
                     pointRadius: 3
               }
