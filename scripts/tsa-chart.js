@@ -26,6 +26,8 @@ async function chartData() {
             scales: {
                 xAxes: [{
                     ticks: {
+                        maxRotation: 0,
+                        minRotation: 0,
                         maxTicksLimit: 10
                     }
                 }],

@@ -224,7 +224,7 @@ html {
   margin-bottom: 65px;
 }
 
-.current-impact-overview a {
+.current-impact-overview .learn-more{
   font-size: 50px;
   font-weight: 800;
   color: dodgerblue 50%;
@@ -238,7 +238,7 @@ html {
   transition: background-position .75s ease;
 }
 
-.current-impact-overview a:hover {
+.current-impact-overview .learn-more:hover {
   background-position: 0 100%;
 }
 
@@ -247,9 +247,11 @@ html {
   width: 650px;
 }
 
-.chart-wrapper p {
+.chart-wrapper .source {
   float: right;
   font-size: 13px;
+  text-decoration: black;
+  color: black;
 }
 
  /*RESPONSIVE CONTENT*/
