@@ -184,8 +184,15 @@ html {
 }
 
 /*RESEARCH OVERVIEWS*/
+.research-overviews > div {
+  padding-top: 128px;
+  padding-bottom: 128px;
+  align-content: center;
+  text-align: center;
+}
 
- .current-impact-overview, .modeling-overview, .commercial-air-travel-overview, .nas-overview{
+
+ .current-impact-overview, .modeling-overview, .commercial-air-travel-overview, .nas-overview, .report-overview{
   background-color: rgba(0,0,0,0.05);
  }
 
@@ -194,12 +201,6 @@ html {
 }
 
 /*CURRENT IMPACT*/
-.current-impact-overview {
-  padding-top: 128px;
-  padding-bottom: 128px;
-  align-content: center;
-  text-align: center;
-}
 
 .overview-wrapper {
   width: fit-content;
@@ -219,7 +220,16 @@ html {
   margin-bottom: 65px;
 }
 
-.current-impact-overview .learn-more{
+
+/*MODEL OVERVIEW*/
+
+.modeling-overview .chart-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+
+/* Learn More Button */
+.learn-more{
   font-size: 50px;
   font-weight: 800;
   color: dodgerblue 50%;
@@ -233,33 +243,8 @@ html {
   transition: background-position .75s ease;
 }
 
-.current-impact-overview .learn-more:hover {
+.learn-more:hover {
   background-position: 0 100%;
-}
-
-
-/*MODEL OVERVIEW*/
-
-
-.modeling-overview {
-  padding-top: 128px;
-  padding-bottom: 128px;
-  align-content: center;
-  text-align: center;
-}
-.modeling-overview .chart-wrapper {
-  width: 1200px;
-  margin: auto;
-}
-.model-predictions-chart {
-  height: 800px;
-  width: 1200px;
-}
-.chart-wrapper .source {
-  float: right;
-  font-size: 13px;
-  text-decoration: black;
-  color: black;
 }
 
  /*RESPONSIVE CONTENT*/
