@@ -10,6 +10,7 @@
 
 
   body{
+     
     background-image: url(../images/thumb-350-734981.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -38,4 +39,13 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+
+  .chart{
+    margin-left: 800px ;
+    margin-right: 300px;
+
+    width: 700px;
+    height: 400px;
   }
