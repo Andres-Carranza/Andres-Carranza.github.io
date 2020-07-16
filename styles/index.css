@@ -184,7 +184,7 @@ html {
 }
 
 /*RESEARCH OVERVIEWS*/
-.research-overviews > div {
+.sections > div {
   padding-top: 128px;
   padding-bottom: 128px;
   align-content: center;
@@ -192,11 +192,11 @@ html {
 }
 
 
- .current-impact-overview, .modeling-overview, .commercial-air-travel-overview, .nas-overview, .report-overview{
+ .current-impact-section, .modeling-section, .commercial-air-travel-section, .nas-section, .report-section{
   background-color: rgba(0,0,0,0.05);
  }
 
- .previous-crises-overview, .aviation-pre-covid-overview, .manufacturing-overview, .nasa-research-overview {
+ .previous-crises-section, .aviation-pre-covid-section, .manufacturing-section, .nasa-research-section {
   background-color: rgba(0,0,0,0.1);
 }
 
@@ -214,16 +214,16 @@ html {
   text-align: left;
 }
 
-.current-impact-overview h2 {
+.current-impact-section h2 {
   font-size: 45px;
   width: 400px;
   margin-bottom: 65px;
 }
 
 
-/*MODEL OVERVIEW*/
+/*MODEL section*/
 
-.modeling-overview .chart-wrapper {
+.modeling-section .chart-wrapper {
   width: 1200px;
   margin: auto;
 }

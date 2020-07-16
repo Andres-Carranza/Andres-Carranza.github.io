@@ -27,10 +27,10 @@ function changeNavtabActive (id) {
 }
 
 window.addEventListener("scroll", function() {
-  var overviews = document.getElementsByClassName("research-overviews")[0].children;
+  var overviews = document.getElementsByClassName("sections")[0].children;
   for (var i = overviews.length -1 ; i>=0; i--){
     if (window.scrollY > overviews[i].offsetTop - document.getElementsByClassName('navtab')[0].offsetHeight ) {
-      changeNavtabActive(overviews[i].id.replace('overview', 'tab'));
+      changeNavtabActive(overviews[i].id.replace('section', 'tab'));
       return;
     }
   }
