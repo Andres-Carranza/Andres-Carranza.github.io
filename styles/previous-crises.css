@@ -1,32 +1,33 @@
-.content {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 .chart-wrapper {
     margin-top: 30px;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .overview {
     padding: 25px;
     border-radius: 20px;
-    background-color: rgba(0, 0, 255,.3);
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
 }
 
 .overview h1 {
     font-size: 30px;
-    color: rgba(0, 0, 0,.5);
-
+    color: rgba(0, 0, 0,.7);
 }
 
 /*NAVTAB*/
 
 .navtab {
-    width: 1200px;
+    width: 100%;
     background-color: white;
+    position: relative;
   }
   .navtab.sticky {
    position: fixed;
@@ -70,8 +71,8 @@
  }
  
  .navtab-links li {
-   margin-left: 11px;
-   margin-right: 11px;
+   margin-left: 25px;
+   margin-right: 25px;
    list-style: none;
  }
 
@@ -81,12 +82,22 @@
     color: grey;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 16px;
+    font-size: 25px;
   }
   
  /*crises*/
+
+ .gulf-war-wrapper, .iraq-war-wrapper, .great-recession-wrapper{
+  background-color: rgba(0,0,0,0.05);
+ }
+
+._911-wrapper, .sars-wrapper {
+  background-color: rgba(0,0,0,0.1);
+}
 .crises-wrapper p {
     font-size: 25px;
+    text-align: justify;
+
 }
 
 .crises-wrapper h2 {
@@ -99,6 +110,12 @@
     padding-bottom: 64px;
 }
 
+/* Text wrapper */
+.crises-content-wrapper {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Source */
 
 .source {
