@@ -1,3 +1,15 @@
+.header-wrapper {
+  background-image: url('../images/airplanePic.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.content-wrapper {
+  width:1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   h1 {
     color: rgb(124, 124, 124);
@@ -5,45 +17,21 @@
     padding-top: 400px;
     margin: 10px;
     padding-left: 100px;
-    
-  
-    
   }
+
+
   .underline {
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: rgb(124, 124, 124);
-  }
-
-
-
-
-  body{
-     
-    background-image: url(..\images\airplanePic.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; 
-    margin: 0;
-    padding: 0;
-  }
-
-    
+  } 
     
   article{
   color: rgb(56, 54, 54);
   font-size: 100%;
   margin: 15px;
-  
     
 }
-
-
-
-  html {
-    scroll-behavior: smooth;
-  }
-
 
   .chart{
     margin-left: 800px auto;
@@ -52,17 +40,3 @@
     width: 700px;
     height: 400px;
   }
-
-
-  .wrapper{
-    margin:0 auto;
-    padding-top: 400px;
-    width: 1300px;
-  }
-
-
-
-.opener{
-  margin: 0 auto;
-  left: 80px;
-}
