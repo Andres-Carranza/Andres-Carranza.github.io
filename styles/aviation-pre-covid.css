@@ -1,7 +1,6 @@
 
   h1 {
     color: blue;
-
     font-size: 300%;
     padding-top: 15px;
     margin: 10px;
@@ -12,9 +11,15 @@
 
   body{
      
+    background-image: url(../images/thumb-350-734981.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
   }
 
-  article.a{
+  article .a{
     color: rgb(56, 54, 54);
     font-size: 100%;
     margin: 15px;
