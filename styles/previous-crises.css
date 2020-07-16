@@ -22,6 +22,69 @@
 
 }
 
+/*NAVTAB*/
+
+.navtab {
+    width: 1200px;
+    background-color: white;
+  }
+  .navtab.sticky {
+   position: fixed;
+   top: 0;
+ }
+ 
+ /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+ .sticky + .crises-wrapper {
+   padding-top: 60px;
+ }
+ 
+  .navtab-links {
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+ 
+ .navtab-link {
+   border-bottom: 3px solid transparent;
+   transition: border-bottom 0.5s;
+ }
+ 
+ .navtab-link:hover {
+   border-bottom: 3px solid lightgrey;
+   transition: border-bottom 0.5s;
+ }
+ 
+ .active-navtab-link {
+   border-bottom: 3px solid #2990ea;
+   transition: border-bottom 0.5s;
+ }
+ 
+ .active-navtab-link:hover {
+   border-bottom: 3px solid #2990ea;
+ }
+ 
+ .navtab-links ul {
+   display: flex;
+ }
+ 
+ .navtab-links li {
+   margin-left: 11px;
+   margin-right: 11px;
+   list-style: none;
+ }
+
+ .navtab-links li a {
+    text-decoration: none;
+    display: block;
+    color: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+  
+ /*crises*/
 .crises-wrapper p {
     font-size: 25px;
 }
@@ -32,5 +95,6 @@
 }
 
 .crises-wrapper > div{
-    margin-top: 30px;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
