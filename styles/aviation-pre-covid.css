@@ -1,8 +1,44 @@
-body {
-    background-color: powderblue;
+
+  h1 {
+    color: blue;
+    font-family: Titillium Web;
+    font-size: 300%;
+    padding-top: 15px;
+    margin: 10px;
+    
   }
 
 
-  h1{
-     color:blue 
+
+  body{
+    background-image: url(thumb-350-734981.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0;
+    padding: 0;
+  }
+
+  article.a{
+    color: rgb(56, 54, 54);
+    font-family: Titillium Web;
+    font-size: 100%;
+    margin: 15px;
+    
+    
+    
+  }
+  article{
+  color: rgb(56, 54, 54);
+  font-family: Titillium Web;
+  font-size: 100%;
+  margin: 15px;
+  
+    
+}
+
+
+
+  html {
+    scroll-behavior: smooth;
   }
