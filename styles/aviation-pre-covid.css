@@ -5,22 +5,22 @@
     padding-top: 400px;
     margin: 10px;
     padding-left: 100px;
+    
   
     
   }
-
-  .line{
-    border-right: 4px solid rgb(124, 124, 124);
-    height: 200px;
-    margin-right: 400px;
-    margin-top: -150px;
+  .underline {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: rgb(124, 124, 124);
   }
+
 
 
 
   body{
      
-    background-image: url(../images/thumb-350-734981.jpg);
+    background-image: url(..\images\airplanePic.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; 
@@ -28,14 +28,8 @@
     padding: 0;
   }
 
-  article .a{
-    color: rgb(56, 54, 54);
-    font-size: 100%;
-    margin: 15px;
     
     
-    
-  }
   article{
   color: rgb(56, 54, 54);
   font-size: 100%;
@@ -52,8 +46,8 @@
 
 
   .chart{
-    margin-left: 800px ;
-    margin-right: 300px;
+    margin-left: 800px auto;
+    margin-right: 500px auto;
 
     width: 700px;
     height: 400px;
@@ -62,8 +56,8 @@
 
   .wrapper{
     margin:0 auto;
-    padding-top: 700px;
-    width: 1000px;
+    padding-top: 400px;
+    width: 1300px;
   }
 
 
