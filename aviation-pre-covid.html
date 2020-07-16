@@ -12,6 +12,34 @@
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
+  
+  
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       1120],
+          ['2007',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Chart for flight data',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  
   </head>
 
   <body class='preload'>
@@ -85,7 +113,7 @@
         <p>TEXT HERE</p>
       </article>
         
-      
+      <div id="curve_chart" class="chart"></div>
     </div>
   </body>
 
