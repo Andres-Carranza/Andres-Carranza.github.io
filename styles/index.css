@@ -135,15 +135,20 @@ html {
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .content {
-  padding-top: 60px;
+  margin-top: 68px;
 }
 
  .navtab-links {
   display: flex;
-  justify-content: center;
-  align-content: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.navtab-links ul {
+  width: 1200px;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navtab-link {
@@ -181,7 +186,7 @@ html {
   color: grey;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 /*RESEARCH OVERVIEWS*/
@@ -193,40 +198,37 @@ html {
 }
 
 
- .current-impact-section, .modeling-section, .commercial-air-travel-section, .nas-section, .report-section{
+ .background-section, .recommendations-section {
   background-color: rgba(0,0,0,0.05);
  }
 
- .previous-crises-section, .aviation-pre-covid-section, .manufacturing-section, .nasa-research-section {
+ .impact-section, .report-section {
   background-color: rgba(0,0,0,0.1);
 }
 
-/*CURRENT IMPACT*/
-
 .overview-wrapper {
-  width: fit-content;
+  width: 1200px;
   display: inline-flex;
-
 }
-
 .text-wrapper {
   padding: 50px;
   vertical-align: center;
   text-align: left;
+  margin-left: 100px;
+  width: 600px;
 }
-
-.current-impact-section h2 {
-  font-size: 45px;
-  width: 400px;
-  margin-bottom: 65px;
+.text-wrapper p {
+  font-size: 50px;
+  margin-bottom: 50px;
+  text-align: justify;
 }
-
-
-/*MODEL section*/
-
-.modeling-section .chart-wrapper {
-  width: 1200px;
-  margin: auto;
+ h2 {
+  font-size: 60px;
+  width: 500px;
+  text-align: left;
+  padding: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Learn More Button */

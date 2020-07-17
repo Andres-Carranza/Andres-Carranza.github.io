@@ -153,3 +153,10 @@
 2020-07-14 06:10:05.163119: Adding 1 date(s) to csv file...
 2020-07-14 06:10:05.167144: TSA data written to csv
 2020-07-14 06:10:05.167144: Finished script
+2020-07-17 06:10:04.469436: Running script
+2020-07-17 06:10:04.469436: Requesting TSA data...
+2020-07-17 06:10:05.027563: TSA data received
+2020-07-17 06:10:05.027563: Updating csv file..
+2020-07-17 06:10:05.414816: Adding 3 date(s) to csv file...
+2020-07-17 06:10:05.419894: TSA data written to csv
+2020-07-17 06:10:05.419894: Finished script

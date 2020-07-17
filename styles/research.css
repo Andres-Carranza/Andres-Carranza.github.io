@@ -24,68 +24,76 @@
 
 /*NAVBAR*/
 
-.navbar{
-   background-color: white;
-   width: 100%;
-   height: 60px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
 
- }
+.navbar {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+}
 
- .navbar-logo img{
+.navbar-logo img{
   height: 50px;
   margin-left: 5px;
   margin-top: 5px;
 }
 
- .navbar-links {
-   display: flex;
-   justify-content: center;
-   align-content: center;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   margin-right: 5px;
- }
- 
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.content {
+ margin-top: 68px;
+}
+
+.navbar-links {
+ display: flex;
+ padding-top: 10px;
+ padding-bottom: 10px;
+}
+
+.navbar-links ul {
+ width: 1200px;
+ justify-content: space-around;
+ margin-left: auto;
+ margin-right: auto;
+}
+
 .navbar-link {
-   border-bottom: 3px solid transparent;
-   transition: border-bottom 0.5s;
- }
- 
+ border-bottom: 3px solid transparent;
+ transition: border-bottom 0.5s;
+}
+
 .navbar-link:hover {
-   border-bottom: 3px solid lightgrey;
-   transition: border-bottom 0.5s;
- }
- 
+ border-bottom: 3px solid lightgrey;
+ transition: border-bottom 0.5s;
+}
+
 .active-navbar-link {
-   border-bottom: 3px solid #2990ea;
-   transition: border-bottom 0.5s;
- }
- 
- .active-navbar-link:hover {
-   border-bottom: 3px solid #2990ea;
- }
- 
- .navbar-links ul {
-   display: flex;
- }
- 
- .navbar-links li {
-   margin-left: 11px;
-   margin-right: 11px;
-   list-style: none;
- }
- 
- .navbar-links li a {
-   text-decoration: none;
-   display: block;
-   color: grey;
-   padding-top: 10px;
-   padding-bottom: 10px;
-   font-size: 16px;
- }
+ border-bottom: 3px solid #2990ea;
+ transition: border-bottom 0.5s;
+}
+
+.active-navbar-link:hover {
+ border-bottom: 3px solid #2990ea;
+}
+
+.navbar-links ul {
+ display: flex;
+}
+
+.navbar-links li {
+ margin-left: 11px;
+ margin-right: 11px;
+ list-style: none;
+}
+
+.navbar-links li a {
+ text-decoration: none;
+ display: block;
+ color: grey;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ font-size: 25px;
+}
 
  /*CONTENT*/
 

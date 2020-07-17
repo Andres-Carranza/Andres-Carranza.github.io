@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <title>Covid-19 & Aviation</title>
+    <link rel = "icon" href ="images/nasa-logo-favicon.png" type="image x-icon"> 
+    
+    <link rel="stylesheet" href="styles/reset-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src = "https://d3js.org/d3.v4.min.js"></script>
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
+  </head>
+
+  <body class='preload'>
+    <!--HEADER-->
+    <div class='header'>
+
+
+      <!--NAV BAR-->
+      <nav class='navbar'>
+
+        <div class="navbar-logo">
+          <a href="https://www.nasa.gov" target='_blank'><img src="images/nasa-logo.png" alt="NASA"></a>
+        </div>
+
+        <a href="#" class='toggle-button'>
+          <span class='bar'></span>
+          <span class='bar'></span>
+          <span class='bar'></span>
+        </a>
+
+        <div class="navbar-links">
+          <ul> 
+            <li><div class='navbar-link active-navbar-link'>
+              <a href="index.html">Covid-19 & Aviation Overview</a>
+            </div></li>
+
+            <li><div class='navbar-link'>
+              <a href="revelation.html">Team Revelation</a>
+            </div></li>
+          </ul>
+        </div>
+        
+      </nav>
+
+      <!--OVERVIEW--> 
+      <div class='overview'>
+        <div class='summary'>A comprehensive analysis of the impact covid-19 has had on aviation.</div>
+      </div>
+          
+    </div>
+
+    <!--BODY-->
+
+    <!--NAV-TABS-->
+    <div class="navtab">
+      <div class="navtab-links">
+        <ul> 
+          <li><div class='navtab-link' id="current-impact-tab" onclick="changeNavtabActive('current-impact-tab')">
+            <a href="#current-impact-section">Current Impact</a>
+          </div></li>
+          <li><div class='navtab-link' id = 'previous-crises-tab' onclick="changeNavtabActive('previous-crises-tab')">
+            <a href="#previous-crises-section">Previous Crises</a>
+          </div></li>
+          <li><div class='navtab-link' id='modeling-tab' onclick="changeNavtabActive('modeling-tab')">
+            <a href="#modeling-section">Projections</a>
+          </div></li>
+          <li><div class='navtab-link' id='aviation-pre-covid-tab' onclick="changeNavtabActive('aviation-pre-covid-tab')">
+            <a href="#aviation-pre-covid-section">Aviation pre-Covid</a>
+          </div></li>
+          <li><div class='navtab-link' id='commercial-air-travel-tab' onclick="changeNavtabActive('commercial-air-travel-tab')">
+            <a href="#commercial-air-travel-section">Commercial Air Travel</a>
+          </div></li>
+          <li><div class='navtab-link' id='manufacturing-tab' onclick="changeNavtabActive('manufacturing-tab')">
+            <a href="#manufacturing-section">Manufacturing</a>
+          </div></li>
+          <li><div class='navtab-link' id='nas-tab' onclick="changeNavtabActive('nas-tab')">
+            <a href="#nas-section">NAS</a>
+          </div></li>        
+          <li><div class='navtab-link' id='nasa-research-tab' onclick="changeNavtabActive('nasa-research-tab')">
+            <a href="#nasa-research-section">NASA Research</a>
+          </div></li>
+          <li><div class='navtab-link' id='nasa-report-tab' onclick="changeNavtabActive('nasa-report-tab')">
+            <a href="#nasa-report-section">Report</a>
+          </div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!--SCROLLABLE CONTENT sectionS-->
+      <div class="sections">
+        <div class='current-impact-section' id="current-impact-section">
+          <div class="overview-wrapper">
+
+            <div class="text-wrapper">
+              <h2>Explore various metrics to gauge the extent of covid-19's current impact on aviation.</h2>
+              <a class='learn-more' href="current-impact.html">Learn More</a>
+            </div>
+
+            <div class="chart-wrapper">
+              <canvas id='tsa-chart' width="650px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class='previous-crises-section' id="previous-crises-section">
+            previous-crises-section
+            <a class='learn-more' href="previous-crises.html">Learn More</a>
+        </div>
+
+        <div class='modeling-section' id="modeling-section">
+          <div class="chart-wrapper">
+            <canvas id='model-predictions-chart' width="1200px" height="400px"></canvas>
+          </div>
+        </div>
+
+        <div class='aviation-pre-covid-section' id="aviation-pre-covid-section">
+          aviation-pre-covid-section
+          <a class='learn-more' href="aviation-pre-covid.html">Learn More</a>
+        </div>
+        
+        <div class='commercial-air-travel-section' id="commercial-air-travel-section">
+          commercial-air-travel-section
+          <a class='learn-more' href="commercial-air-travel.html">Learn More</a>
+        </div>
+
+        <div class='manufacturing-section' id="manufacturing-section">
+          manufacturing-section
+          <a class='learn-more' href="manufacturing.html">Learn More</a>
+        </div>
+
+        <div class='nas-section' id="nas-section">
+          nas-section
+          <a class='learn-more' href="nas.html">Learn More</a>
+        </div>
+
+        <div class='nasa-research-section' id="nasa-research-section">
+          nasa-research-section
+          <a class='learn-more' href="nasa-research.html">Learn More</a>
+        </div>
+
+        <div class='report-section' id="report-section">
+          nasa-report-section
+          <a class='learn-more' href="documents/report.pdf" target='_blank'>Read Full Report</a>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+  <!--Prevent animations from occuring preload-->
+  <script src="scripts/preload.js"></script>
+
+  <!--Show menu when you click toggle button-->
+  <script src="scripts/toggle-menu.js"></script>
+  
+   <!--Format navtab behavior-->
+   <script src="scripts/navtab.js"></script> 
+
+   <!--Chart TSA data-->
+   <script src='scripts/tsa-chart.js'></script>
+
+   <!--Chart Model predictions-->
+  <script src='scripts/model-predictions-chart.js'></script>
+
+</html>
