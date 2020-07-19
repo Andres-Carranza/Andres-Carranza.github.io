@@ -1,0 +1,80 @@
+.content {
+
+}
+
+.overview {
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overview h1 {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+    text-align: justify;
+    width: 800px;
+}
+
+
+
+.timeline {
+    height: 200px;
+    background-color: rgb(25,25,25);
+
+}
+
+.hl {
+    border-top: 10px solid black;
+    margin-top: 95px;
+    position: absolute;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 500px;
+  }
+
+
+.timeline-content {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+
+}
+
+.timeline-content .section {
+    position: relative;
+    width: 800px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 30px;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/WTC_smoking_on_9-11.jpeg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+}
+
+.timeline-content .header {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: grey;
+    text-align: center;
+}
+
+.summary {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.vl {
+    border-left: 20px solid black;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
