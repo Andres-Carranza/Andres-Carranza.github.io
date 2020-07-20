@@ -1,6 +1,6 @@
 
 async function chartData() {
-    const ctx = document.getElementById('tsa-chart').getContext('2d');
+    const ctx = document.getElementById('deaths').getContext('2d');
     const data = await getData();
 
     Chart.defaults.global.defaultFontSize = 13;

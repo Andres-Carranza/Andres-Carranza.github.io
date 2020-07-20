@@ -1,6 +1,6 @@
 
 async function chartData() {
-    const ctx = document.getElementById('previous-crises-chart').getContext('2d');
+    const ctx = document.getElementById('rpms-projections').getContext('2d');
     const data = await getData();
 
     Chart.defaults.global.defaultFontSize = 13;
@@ -76,7 +76,7 @@ async function chartData() {
             },
             title: {
                 display: true,
-                text: 'Placeholder Chart',
+                text: 'Model Predictions',
                 fontSize: 25
             }
         }

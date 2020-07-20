@@ -10,8 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
 
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src = "https://d3js.org/d3.v4.min.js"></script>
 
     <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
   </head>
@@ -50,14 +53,121 @@
     <!--CONTENT-->
 
     <div class="content">
-      <iframe width="650" height="400" frameborder="0" scrolling="no" 
-  marginheight="0" marginwidth="0" title="2019-nCoV" 
-  src="//arcgis.com/apps/Embed/index.html?webmap=14aa9e5660cf42b5b4b546dec6ceec7c&extent=77.3846,11.535,163.5174,52.8632&zoom=true&previewImage=false&scale=true&disable_scroll=true&theme=light"
-></iframe>
+      <div class="dashboard-wrapper">
+
+        <div class="live-data">
+
+          <div class="covid-econ">
+
+            <div class="covid-chart">
+              <canvas id='covid19' width="1000px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+            <div class="econ-chart">
+              <canvas id='unemployment-claims' width="1000px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tsa-chart">
+            <canvas id='tsa' width="1000px" height="300px"></canvas>
+            <div class="source">
+              Source:&nbsp;
+              <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+              TSA checkpoint travel numbers
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="projected-data">
+
+          <div class="covid-econ-projections">
+
+            <div class="deaths-chart">
+              <canvas id='deaths' width="1000px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+            <div class="unemployment-chart">
+              <canvas id='unemployment' width="1000px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+            <div class="nonfarm-chart">
+              <canvas id='nonfarm' width="1000px" height="500px"></canvas>
+              <div class="source">
+                Source:&nbsp;
+                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+                TSA checkpoint travel numbers
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="rpms-projections">
+            <canvas id='rpms-projections' width="1000px" height="300px"></canvas>
+            <div class="source">
+              Source:&nbsp;
+              <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+              TSA checkpoint travel numbers
+              </a>
+            </div>
+          </div>
+
+          <div class="rpms-change">
+            <canvas id='rpms-change' width="1000px" height="300px"></canvas>
+            <div class="source">
+              Source:&nbsp;
+              <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
+              TSA checkpoint travel numbers
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </body>
 
   <!--Prevent animations from occuring preload-->
   <script src="scripts/preload.js"></script>
+
+  <!--Charts-->
+  <script src='scripts/dashboard-charts/live/covid-19.js'> </script>
+  <script src='scripts/dashboard-charts/live/unemployment-claims.js'> </script>
+  <script src='scripts/dashboard-charts/live/tsa.js'> </script>
+
+  <script src='scripts/dashboard-charts/projections/rpms-change.js'> </script>
+  <script src='scripts/dashboard-charts/projections/rpms-projections.js'> </script>
+  <script src='scripts/dashboard-charts/projections/nonfarm.js'> </script>
+  <script src='scripts/dashboard-charts/projections/unemployment.js'> </script>
+  <script src='scripts/dashboard-charts/projections/deaths.js'> </script>
 
 </html>

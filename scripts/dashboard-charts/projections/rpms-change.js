@@ -1,6 +1,6 @@
 
 async function chartData() {
-    const ctx = document.getElementById('model-predictions-chart').getContext('2d');
+    const ctx = document.getElementById('rpms-change').getContext('2d');
     const data = await getData();
 
     Chart.defaults.global.defaultFontSize = 13;
