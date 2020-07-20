@@ -14,7 +14,7 @@ var sticky = timeline.offsetTop;
 
 // Add the sticky class to the navtab when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function updateSticky()  {
-  if (window.pageYOffset + 30 >= sticky) {
+  if (window.pageYOffset >= sticky) {
     timeline.classList.add("sticky")
   } else {
     timeline.classList.remove("sticky");

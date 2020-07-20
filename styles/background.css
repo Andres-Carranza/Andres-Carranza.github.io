@@ -9,6 +9,13 @@
 }
 
 .overview h1 {
+    font-size: 100px;
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.overview p {
     margin-left: auto;
     margin-right: auto;
     font-size: 30px;
@@ -79,9 +86,13 @@ li {
     margin-top: 25px;
 }
 
+.text:hover {
+    font-weight: bold;
+}
 
 .active{
     font-size: 40px;
+    font-weight: bold;
 }
 
 ._1.active .text {
@@ -115,7 +126,7 @@ li {
     color: white;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/WTC_smoking_on_9-11.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/WTC_smoking_on_9-11.jpeg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -137,10 +148,21 @@ li {
 }
 
 .vl {
-    border-left: 20px solid black;
+    border-left: 20px solid rgba(255,0,0,.3);
     position: absolute;
     left: 50%;
     margin-left: -10px;
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+
+/* Source */
+
+.source {
+    float: left;
+    font-size: 10px;
+  }
+  .source a {
+    text-decoration: none;
+    color: white;
   }
