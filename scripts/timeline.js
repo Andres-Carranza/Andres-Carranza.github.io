@@ -79,7 +79,7 @@ window.addEventListener('scroll', function () {
         secPos.push(element.offsetTop)
     })
 
-    secPos.push(document.body.clientHeight)
+    secPos.push(content.offsetTop + content.offsetHeight)
 
     var progress = 0
 
