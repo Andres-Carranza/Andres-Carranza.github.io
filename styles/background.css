@@ -3,9 +3,18 @@
     padding-bottom: 200px;
 }
 
-.overview {
-    padding: 50px;
+.overview-wrapper {
+    width: 100%;
     background-color: white;
+    padding-bottom: 50px;
+}
+
+.overview {
+    padding: 60px;
+    border-bottom: 2px solid #555;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .overview h1 {
@@ -23,6 +32,8 @@
     text-align: justify;
     width: 800px;
 }
+
+
 
 .timeline {
     background-color: white;
