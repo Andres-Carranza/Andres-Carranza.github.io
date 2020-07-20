@@ -80,13 +80,13 @@ li {
 ._1 {
     margin-bottom: 70px;
     border-bottom: 10px solid royalblue;
-    background: linear-gradient(rgb(255,0,0), rgb(255,0,0)) no-repeat bottom/4px 30%;
+    background: linear-gradient(rgb(197, 7, 7), rgb(197, 7, 7)) no-repeat bottom/4px 30%;
 }
 
 ._2 {
     margin-top: 70px;
     border-top: 10px solid royalblue;
-    background: linear-gradient(rgb(255,0,0), rgb(255,0,0)) no-repeat top/4px 30%;
+    background: linear-gradient(rgb(197, 7, 7),rgb(197, 7, 7)) no-repeat top/4px 30%;
 }
 
 ._1 .text {
@@ -159,7 +159,7 @@ li {
 }
 
 .vl {
-    border-left: 20px solid rgba(255,0,0,.3);
+    border-left: 20px solid rgb(95, 6, 6);
     position: absolute;
     left: 50%;
     margin-left: -10px;

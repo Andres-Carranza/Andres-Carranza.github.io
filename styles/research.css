@@ -65,12 +65,12 @@
 }
 
 .active-navbar-link {
- border-bottom: 3px solid #2990ea;
+ border-bottom: 3px solid royalblue;
  transition: border-bottom 0.5s;
 }
 
 .active-navbar-link:hover {
- border-bottom: 3px solid #2990ea;
+ border-bottom: 3px solid royalblue;
 }
 
 .navbar-links ul {

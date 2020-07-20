@@ -162,12 +162,12 @@ html {
 }
 
 .active-navtab-link {
-  border-bottom: 3px solid #2990ea;
+  border-bottom: 3px solid royalblue;
   transition: border-bottom 0.5s;
 }
 
 .active-navtab-link:hover {
-  border-bottom: 3px solid #2990ea;
+  border-bottom: 3px solid royalblue;
 }
 
 .navtab-links ul {
@@ -199,11 +199,11 @@ html {
 
 
  .background-section, .recommendations-section {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0,0,0,0.1);
  }
 
- .impact-section, .report-section {
-  background-color: rgba(0,0,0,0.1);
+ .dashboard-section .outlook-section, .report-section {
+  background-color: rgba(0,0,0,0.05);
 }
 
 .overview-wrapper {
