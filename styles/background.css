@@ -3,7 +3,7 @@
 }
 
 .overview {
-    padding: 25px;
+    padding: 50px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -16,14 +16,20 @@
 }
 
 .timeline {
-    background-color: rgb(25,25,25);
-    padding-top: 25px;
-    padding-bottom: 25px;
+    background-color: white;
+    width: 100%;
 }
 
 .timeline.sticky {
     position: fixed;
+    top: 0;
+    z-index: 1;
 }
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .timeline-content {
+    margin-top: 150px;
+  }
 
 
 .timeline-wrapper {
@@ -36,33 +42,58 @@
     display: flex;
 }
 
-.timeline li {
+li {
     list-style: none;
-    color: grey;
+    color: #333;
     font-size: 30px;
     text-align: center;
     flex-grow: 1;
+    height: 80px;
+    transition: font-size 1s;
+}
+
+.text {
+    transition: margin-top 1s;
 }
 
 ._1 {
-    margin-bottom: 60px;
-    padding-bottom: 30px;
-    border-bottom: 10px solid #333;
-    background: linear-gradient(#000, #000) no-repeat bottom/4px 30%;
+    margin-bottom: 70px;
+    border-bottom: 10px solid royalblue;
+    background: linear-gradient(rgb(255,0,0), rgb(255,0,0)) no-repeat bottom/4px 30%;
 }
+
 ._2 {
-    margin-top: 60px;
-    padding-top: 30px;
-    border-top: 10px solid #333;
-    background: linear-gradient(#000, #000) no-repeat top/4px 30%;
+    margin-top: 70px;
+    border-top: 10px solid royalblue;
+    background: linear-gradient(rgb(255,0,0), rgb(255,0,0)) no-repeat top/4px 30%;
+}
+
+._1 .text {
+    margin-top: 15px;
+}
+
+._2 .text {
+    margin-top: 25px;
+}
+
+
+.active{
+    font-size: 40px;
+}
+
+._1.active .text {
+    margin-top: 5px;
+}
+
+._2.active .text {
+    margin-top: 20px;
 }
 
 .progress-bar {
     height: 10px;
-    margin-top: 60px;
+    margin-top: 70px;
     position: absolute;
-    width: 10px;
-    background-color: black;
+    background-color: navy;
 }
 
 
@@ -70,7 +101,6 @@
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: rgba(0, 0, 0, 0.9);
-
 }
 
 .timeline-content .section {
