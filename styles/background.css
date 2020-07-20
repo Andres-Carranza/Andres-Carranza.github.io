@@ -1,10 +1,11 @@
 .content {
-
+    background-color: #222;
+    padding-bottom: 200px;
 }
 
 .overview {
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: white;
 }
 
 .overview h1 {
@@ -49,11 +50,13 @@ li {
     text-align: center;
     flex-grow: 1;
     height: 80px;
-    transition: font-size 1s;
+    transition: font-size 750ms;
 }
 
 .text {
-    transition: margin-top 1s;
+    transition: margin-top 750ms;
+    color: #333;
+    cursor: pointer;
 }
 
 ._1 {
@@ -100,7 +103,7 @@ li {
 .timeline-content {
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #222;
 }
 
 .timeline-content .section {
@@ -124,7 +127,7 @@ li {
     font-weight: bold;
     padding-top: 25px;
     padding-bottom: 25px;
-    color: grey;
+    color: white;
     text-align: center;
 }
 

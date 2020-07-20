@@ -2,6 +2,10 @@ var height = document.getElementsByClassName('timeline-content')[0].offsetHeight
 document.getElementsByClassName('vl')[0].style.height = height+'px'
 
 
+function goTo(id){
+  window.scrollTo(0,document.getElementById(id).offsetTop - 180)
+}
+
 // Get the timeline
 var timeline = document.getElementsByClassName("timeline")[0];
 
@@ -32,7 +36,7 @@ window.addEventListener('scroll', function () {
 
     var content = document.getElementsByClassName('timeline-content')[0]
     var pos = -1;
-    var relPos = window.scrollY  +  window.innerHeight / 2
+    var relPos = window.scrollY + 190
     var sections = document.getElementsByClassName('section')
 
     for (var i = sections.length -1 ; i>=0; i--){
