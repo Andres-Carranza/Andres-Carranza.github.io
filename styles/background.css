@@ -137,11 +137,49 @@ li {
     color: white;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 25px;
+}
+
+#s0 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+}
+
+#s1 {
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/WTC_smoking_on_9-11.jpeg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    border-radius: 25px;
+}
+
+#s2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/southwest.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+}
+
+#s3 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/B777\,_B474\,_and_A319\'s_at_SFO_International.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+}
+
+#s4 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/1599px-Delta_Airlines_-_Boeing_767-300_-_N185DN_\(Quintin_Soloviev\).jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+}
+
+#s5 {
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/Delta_Aircraft_Cleaning_-_49656588072.jpg');
+    background-repeat: no-repeat;  
+    background-position: left top;
+    background-size: cover;
 }
 
 .timeline-content .header {
