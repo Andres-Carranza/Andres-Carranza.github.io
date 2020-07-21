@@ -1,6 +1,6 @@
 
 .dashboard-wrapper {
-    padding: 20px;
+    padding: 40px;
     background-color: rgb(8, 20, 48);
 }
 
@@ -37,7 +37,7 @@
 
 
 .projected-data {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     background: linear-gradient(to right ,rgb(30, 61, 51),rgb(54, 102, 72) ) ;
     border-radius: 20px;

@@ -1,3 +1,5 @@
+document.getElementsByClassName('background')[0].style.height = document.getElementsByClassName('overview')[0].offsetHeight +'px'
+
 var height = document.getElementById('s0').offsetTop 
 height = document.getElementById('s5').offsetTop - height
 document.getElementsByClassName('vl')[0].style.height = height+'px'
