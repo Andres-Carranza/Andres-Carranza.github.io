@@ -72,11 +72,11 @@
     width: 1200px;
 }
 
-.ul{
+.timeline .ul{
     display: flex;
 }
 
-li {
+.timeline li {
     list-style: none;
     color: #333;
     font-size: 30px;
