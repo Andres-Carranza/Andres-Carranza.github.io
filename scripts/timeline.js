@@ -1,4 +1,5 @@
-var height = document.getElementsByClassName('timeline-content')[0].offsetHeight - 125 * 2
+var height = document.getElementById('s0').offsetTop 
+height = document.getElementById('s5').offsetTop - height
 document.getElementsByClassName('vl')[0].style.height = height+'px'
 
 
