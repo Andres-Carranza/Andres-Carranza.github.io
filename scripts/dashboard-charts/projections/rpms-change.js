@@ -1,11 +1,8 @@
 
 async function chartData() {
-    const ctx = document.getElementById('previous-crises-chart').getContext('2d');
+    const ctx = document.getElementById('rpms-change').getContext('2d');
     const data = await getData();
 
-    Chart.defaults.global.defaultFontSize = 13;
-    Chart.defaults.global.defaultFontColor = 'black';
-    Chart.defaults.global.legend.display = false;
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -74,10 +71,8 @@ async function chartData() {
                     }      
                 }]
             },
-            title: {
-                display: true,
-                text: 'Placeholder Chart',
-                fontSize: 25
+            legend: {
+                position: 'bottom'
             }
         }
     });

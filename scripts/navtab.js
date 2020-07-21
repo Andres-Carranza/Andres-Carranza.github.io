@@ -18,7 +18,7 @@ function updateSticky()  {
 
 function changeNavtabActive (id) {
   if (document.getElementsByClassName('active-navtab-link').length) 
-    old_active = document.getElementsByClassName('active-navtab-link')[0].classList.remove('active-navtab-link');
+    document.getElementsByClassName('active-navtab-link')[0].classList.remove('active-navtab-link');
 
   active = document.getElementById(id);
  

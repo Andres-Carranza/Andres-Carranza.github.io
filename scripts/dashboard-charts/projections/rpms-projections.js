@@ -1,11 +1,9 @@
 
 async function chartData() {
-    const ctx = document.getElementById('model-predictions-chart').getContext('2d');
+    const ctx = document.getElementById('rpms-projections').getContext('2d');
     const data = await getData();
 
-    Chart.defaults.global.defaultFontSize = 13;
-    Chart.defaults.global.defaultFontColor = 'black';
-    Chart.defaults.global.legend.display = false;
+
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -74,10 +72,8 @@ async function chartData() {
                     }      
                 }]
             },
-            title: {
-                display: true,
-                text: 'Model Predictions',
-                fontSize: 25
+            legend: {
+                position: 'bottom'
             }
         }
     });

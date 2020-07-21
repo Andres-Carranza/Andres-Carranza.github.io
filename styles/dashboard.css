@@ -1,0 +1,93 @@
+
+.dashboard-wrapper {
+    padding: 20px;
+    background-color: rgb(8, 20, 48);
+}
+
+.live-data{
+    background: linear-gradient(to right ,rgb(42,56,92),rgb(44, 73, 146) ) ;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+.covid-econ {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.covid-econ > div {
+    padding: 10px;
+    width: 100px;
+    flex-grow: 1;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.covid-chart {
+    margin-right: 10px;
+}
+
+.tsa-chart {
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.2);
+    padding: 10px;
+}
+
+
+.projected-data {
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(to right ,rgb(30, 61, 51),rgb(54, 102, 72) ) ;
+    border-radius: 20px;
+}
+
+.covid-econ-projections {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.covid-econ-projections > div {
+    padding: 10px;
+    width: 100px;
+    flex-grow: 1;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.deaths-chart, .unemployment-chart {
+    margin-right: 10px;
+}
+
+.rpms-projections, .rpms-change {
+    margin-top: 10px;
+    background-color: rgba(255,255,255,.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+  /* Source */
+
+.source {
+    font-size: 10px;
+    color: lightgray;
+  }
+  .source a {
+    text-decoration: none;
+    color: lightgray;
+  }
+
+  h1 {
+      margin-bottom: 20px;
+      font-size: 50px;
+      color: white;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: lightgray
+  }

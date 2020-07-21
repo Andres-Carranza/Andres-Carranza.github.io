@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='UTF-8'>
+    <title>Previous Crises</title>
+    <link rel = "icon" href ="images/nasa-logo-favicon.png" type="image x-icon"> 
+    
+    <link rel="stylesheet" href="styles/reset-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/research.css">
+    <link rel="stylesheet" href="styles/previous-crises.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src = "https://d3js.org/d3.v4.min.js"></script>
+
+    <meta name='viewport' content="width=device-width,initial-scale=1.0"> 
+  </head>
+
+  <body class='preload'>
+    <!--HEADER-->
+    <div class='header'>
+      <!--NAV-BARS-->
+      <div class="navbar">
+
+        <div class="navbar-logo">
+          <a href="https://www.nasa.gov" target='_blank'><img src="images/nasa-logo.png" alt="NASA"></a>
+        </div>
+
+        <div class="navbar-links">
+          <ul> 
+            <li><div class='navbar-link'>
+              <a href="index.html">Overview</a>
+            </div></li>
+            <li><div class='navbar-link'>
+              <a href="current-impact.html">Current Impact</a>
+            </div></li>
+            <li><div class='navbar-link active-navbar-link'>
+              <a href="previous-crises.html">Previous Crises</a>
+            </div></li>
+            <li><div class='navbar-link' >
+              <a href="aviation-pre-covid.html">Aviation pre-Covid</a>
+            </div></li>
+            <li><div class='navbar-link' >
+              <a href="commercial-air-travel.html">Commercial Air Travel</a>
+            </div></li>
+            <li><div class='navbar-link' >
+              <a href="manufacturing.html">Manufacturing</a>
+            </div></li>
+            <li><div class='navbar-link' >
+              <a href="nas.html">NAS</a>
+            </div></li>        
+            <li><div class='navbar-link'>
+              <a href="nasa-research.html">NASA Research</a>
+            </div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--CONTENT-->
+    <div class="content">
+
+      <div class="chart-wrapper">
+        <canvas id='previous-crises-chart' width="1200px" height="400px"></canvas>
+      </div>
+
+      <div class="overview">
+        <h1>
+        All industries get impacted in some way or another during major world events such as recessions. However, the aviation industry is one of the industries that get impacted the most when a major crisis occurs. This section covers some of the most impactful crises in the last 30 years.
+        </h1>
+      </div>
+
+    <!--NAV-TABS-->
+    <div class="navtab">
+      <div class="navtab-links">
+        <ul> 
+          <li><div class='navtab-link' id="gulf-war-tab" onclick="changeNavtabActive('gulf-war-tab')">
+            <a href="#gulf-war-section">Gulf War</a>
+          </div></li>
+          <li><div class='navtab-link' id = '911-tab' onclick="changeNavtabActive('911-tab')">
+            <a href="#911-section">9/11 Terrorist Attacks</a>
+          </div></li>
+          <li><div class='navtab-link' id='iraq-war-tab' onclick="changeNavtabActive('iraw-war-tab')">
+            <a href="#iraw-war-section">Iraq War</a>
+          </div></li>
+          <li><div class='navtab-link' id='sars-tab' onclick="changeNavtabActive('sars-tab')">
+            <a href="#sars-section">SARS Outbreak</a>
+          </div></li>
+          <li><div class='navtab-link' id='great-recession-tab' onclick="changeNavtabActive('great-recession-tab')">
+            <a href="#great-recession-section">Great Recession</a>
+          </div></li>
+        </ul>
+      </div>
+    </div>
+
+      <div class="crises-wrapper sections">
+
+
+        <div class="gulf-war-wrapper" id='gulf-war-section'>
+          <div class="crises-content-wrapper">
+
+            <h2>
+              Gulf War
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.</p>
+          </div>
+        </div>
+
+        <div class="_911-wrapper" id='911-section'>
+          <div class="crises-content-wrapper">
+            <h2>
+              9/11 Terrorist Attacks
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.</p>
+
+              <div class="image-wrapper">
+                <a title="Michael Foran / CC BY (https://creativecommons.org/licenses/by/2.0)" href="https://commons.wikimedia.org/wiki/File:WTC_smoking_on_9-11.jpeg"><img width="512" alt="WTC smoking on 9-11" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/512px-WTC_smoking_on_9-11.jpeg"></a>
+                <div class="source">
+                  Source:&nbsp;
+                  <a href="https://commons.wikimedia.org/wiki/File:WTC_smoking_on_9-11.jpeg" title="via Wikimedia Commons">Michael Foran</a> / <a href="https://creativecommons.org/licenses/by/2.0">CC BY</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="iraq-war-wrapper" id='iraq-war-section'>
+          <div class="crises-content-wrapper">
+            <h2>
+              Iraq War
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.</p>
+            </div>
+        </div>
+
+        <div class="sars-wrapper" id='sars-section'>
+          <div class="crises-content-wrapper">
+            <h2>
+              Sars Outbreak
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.</p>
+            </div>
+          </div>
+
+        <div class="great-recession-wrapper" id='great-recession-section'>
+          <div class="crises-content-wrapper">
+            <h2>
+              Great Recession
+            </h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas egestas fringilla phasellus faucibus scelerisque eleifend. Id porta nibh venenatis cras sed felis eget velit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Sed vulputate odio ut enim. Odio euismod lacinia at quis risus sed vulputate. Facilisis gravida neque convallis a cras semper auctor. Urna id volutpat lacus laoreet non curabitur gravida arcu. Laoreet id donec ultrices tincidunt arcu. Viverra aliquet eget sit amet tellus cras. Feugiat nibh sed pulvinar proin gravida hendrerit. Aliquam ut porttitor leo a. Volutpat odio facilisis mauris sit amet massa vitae tortor. Cras pulvinar mattis nunc sed blandit libero. Tristique senectus et netus et. Libero justo laoreet sit amet cursus sit. Ut sem nulla pharetra diam sit amet. Aenean pharetra magna ac placerat. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus.
+
+              Eget velit aliquet sagittis id. Blandit volutpat maecenas volutpat blandit aliquam. Sem fringilla ut morbi tincidunt augue. Nisi scelerisque eu ultrices vitae auctor eu augue. Commodo sed egestas egestas fringilla phasellus faucibus. Lectus urna duis convallis convallis tellus id. Cras ornare arcu dui vivamus arcu felis. Porttitor lacus luctus accumsan tortor. Mi sit amet mauris commodo quis. Tellus cras adipiscing enim eu turpis egestas pretium aenean. Laoreet id donec ultrices tincidunt arcu non sodales.</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    
+  </body>
+
+  <!--Prevent animations from occuring preload-->
+  <script src="scripts/preload.js"></script>
+
+  <!--Format navtab behavior-->
+   <script src="scripts/navtab.js"></script>
+
+  <!-- Chart Previous Crises-->
+  <script src='scripts/previous-crises-chart.js'></script>
+</html>
