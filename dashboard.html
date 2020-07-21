@@ -56,10 +56,13 @@
       <div class="dashboard-wrapper">
 
         <div class="live-data">
-
+          <h1>Live Data</h1>
           <div class="covid-econ">
 
             <div class="covid-chart">
+
+              <h2>Covid-19 Deaths, New Cases, & Active Cases</h2>
+
               <canvas id='covid19' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
@@ -70,6 +73,8 @@
             </div>
 
             <div class="econ-chart">
+              <h2>Unemployment Claims</h2>
+
               <canvas id='unemployment-claims' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
@@ -82,23 +87,25 @@
           </div>
 
           <div class="tsa-chart">
+            <h2>TSA Checkpoint Travel Numbers </h2>
             <canvas id='tsa' width="1000px" height="300px"></canvas>
             <div class="source">
               Source:&nbsp;
               <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-              TSA checkpoint travel numbers
-              </a>
-            </div>
+              TSA Passenger Throughput
+              </a></div>
           </div>
-
         </div>
 
         <div class="projected-data">
+          <h1>Projections</h1>
 
           <div class="covid-econ-projections">
 
             <div class="deaths-chart">
-              <canvas id='deaths' width="1000px" height="500px"></canvas>
+              <h2>Covid-19 Deaths</h2>
+
+              <canvas id='deaths' width="1000px" height="800px"></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -108,7 +115,8 @@
             </div>
 
             <div class="unemployment-chart">
-              <canvas id='unemployment' width="1000px" height="500px"></canvas>
+              <h2>Unemployment Rate</h2>
+              <canvas id='unemployment' width="1000px" height="800px"></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -118,7 +126,8 @@
             </div>
 
             <div class="nonfarm-chart">
-              <canvas id='nonfarm' width="1000px" height="500px"></canvas>
+              <h2>Nonfarm Payrolls</h2>
+              <canvas id='nonfarm' width="1000px" height="800px"></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -130,6 +139,7 @@
           </div>
 
           <div class="rpms-projections">
+            <h2>Air Travel Demand</h2>
             <canvas id='rpms-projections' width="1000px" height="300px"></canvas>
             <div class="source">
               Source:&nbsp;
@@ -140,6 +150,7 @@
           </div>
 
           <div class="rpms-change">
+            <h2>Change In Air Travel Demand</h2>
             <canvas id='rpms-change' width="1000px" height="300px"></canvas>
             <div class="source">
               Source:&nbsp;

@@ -1,58 +1,70 @@
+
 .dashboard-wrapper {
-    padding: 50px;
-    background-color: navy;
+    padding: 20px;
+    background-color: rgb(8, 20, 48);
 }
 
 .live-data{
-    padding: 50px;
-    background-color: red;
+    background: linear-gradient(to right ,rgb(42,56,92),rgb(44, 73, 146) ) ;
+    border-radius: 20px;
+    padding: 10px;
 }
+
 
 .covid-econ {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 50px;
-    background-color: green;
-
+    margin-bottom: 10px;
 }
 .covid-econ > div {
-    margin-right: 10px;
-    margin-left: 10px;
-    padding: 5px;
+    padding: 10px;
     width: 100px;
     flex-grow: 1;
-    background-color: yellow;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.covid-chart {
+    margin-right: 10px;
 }
 
 .tsa-chart {
-    background-color: yellow;
-    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.2);
+    padding: 10px;
 }
 
 
 .projected-data {
-    padding: 50px;
-    background-color: teal;
+    margin-top: 20px;
+    padding: 10px;
+    background: linear-gradient(to right ,rgb(30, 61, 51),rgb(54, 102, 72) ) ;
+    border-radius: 20px;
 }
 
 .covid-econ-projections {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    margin-bottom: 50px;
-    background-color: red;
 }
 .covid-econ-projections > div {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 10px;
     width: 100px;
     flex-grow: 1;
-    background-color: yellow;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.deaths-chart, .unemployment-chart {
+    margin-right: 10px;
 }
 
 .rpms-projections, .rpms-change {
-    background-color: yellow;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,.2);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
@@ -60,10 +72,22 @@
   /* Source */
 
 .source {
-    float: left;
     font-size: 10px;
+    color: lightgray;
   }
   .source a {
     text-decoration: none;
-    color: black;
+    color: lightgray;
+  }
+
+  h1 {
+      margin-bottom: 20px;
+      font-size: 50px;
+      color: white;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: lightgray
   }

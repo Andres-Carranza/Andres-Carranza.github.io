@@ -1,5 +1,5 @@
 .content {
-    background-color: #222;
+    background-color: rgb(8, 20, 48);
     padding-bottom: 400px;
 }
 
@@ -118,14 +118,14 @@ li {
     height: 10px;
     margin-top: 70px;
     position: absolute;
-    background-color: navy;
+    background-color: rgb(8, 20, 48);
 }
 
 
 .timeline-content {
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: #222;
+    background-color: rgb(8, 20, 48);
 }
 
 .timeline-content .section {

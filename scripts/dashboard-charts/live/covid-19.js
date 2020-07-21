@@ -2,10 +2,8 @@
 async function chartData() {
     const ctx = document.getElementById('covid19').getContext('2d');
     const data = await getData();
+    Chart.defaults.global.defaultFontColor = 'lightgray';
 
-    Chart.defaults.global.defaultFontSize = 13;
-    Chart.defaults.global.defaultFontColor = 'black';
-    Chart.defaults.global.legend.display = false;
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -28,28 +26,16 @@ async function chartData() {
                     ticks: {
                         maxRotation: 0,
                         minRotation: 0,
-                        maxTicksLimit: 10
+                        maxTicksLimit: 10,
                     }
+                      
                 }],
-                
                 yAxes: [{
-                    ticks: {
-                        maxTicksLimit: 5,
-                        callback: function(value, index, values) {
-                            if(parseInt(value) >= 1000){
-                               return  value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                            } else {
-                               return value;
-                            }
-                       } 
-                    }      
-                }]
+                    display: false
+                    
+                }],
             },
-            title: {
-                display: true,
-                text: '# of Daily Passengers in the Last 60 Days',
-                fontSize: 25
-            },
+
             tooltips: {
                 callbacks: {
                       label: function(tooltipItem, data) {
@@ -61,7 +47,11 @@ async function chartData() {
                                   }
                       }
                 } 
-              }
+            },
+
+            legend: {
+                position: 'bottom'
+            }
         }
     });
 }
