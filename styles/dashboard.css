@@ -1,11 +1,11 @@
 
 .dashboard-wrapper {
-    padding: 20px;
+    padding: 40px;
     background-color: rgb(8, 20, 48);
 }
 
 .live-data{
-    background: linear-gradient(to right ,rgb(42,56,92),rgb(44, 73, 146) ) ;
+    background: linear-gradient(to right ,rgb(42,56,92),rgb(101, 101, 202)) ;
     border-radius: 20px;
     padding: 10px;
 }
@@ -37,7 +37,7 @@
 
 
 .projected-data {
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     background: linear-gradient(to right ,rgb(30, 61, 51),rgb(54, 102, 72) ) ;
     border-radius: 20px;
