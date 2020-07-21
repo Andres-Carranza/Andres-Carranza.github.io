@@ -1,0 +1,66 @@
+.overview h1 {
+    font-size: 100px;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+p {
+    font-size: 25px;
+    text-align: justify;
+}
+
+.overview {
+    width: 100%;
+    padding: 30px
+}
+
+.sector-overviews p{
+    font-size: 20px;
+}
+.sector-overviews {
+    padding: 20px;
+    background-color: rgb(8, 20, 48);
+}
+
+.sector-overviews > section {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.sector-overviews .header {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+}
+
+.sector-overviews img {
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
+.sector-overviews h2{
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+
+.sectors-header {
+    padding: 30px;    
+    font-size: 70px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 30px;
+}
