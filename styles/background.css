@@ -16,7 +16,7 @@
 }
 
 .background img {
-    width: 17%;
+    width: calc(100%/6);
     object-fit: cover;
     object-position: center;
 }
