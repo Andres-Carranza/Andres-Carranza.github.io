@@ -9,8 +9,15 @@ p {
     text-align: justify;
 }
 
+
 .overview {
-    width: 90%;
+    width: 100%;
+    height: 800px;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
+}
+
+.overview-header {
+    width: 50%;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -62,3 +69,4 @@ p {
     width: fit-content;
     border-radius: 30px;
 }
+
