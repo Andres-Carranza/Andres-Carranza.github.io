@@ -24,7 +24,7 @@
 }
 
 .overview-header p {
-    font-size: 25px;
+    font-size: 30px;
     text-align: justify;
     color: white;
 }
@@ -34,20 +34,31 @@
     background-color: rgb(8, 20, 48);
 }
 
+.sectors-header {
+    padding: 20px;    
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
 .sector-overviews > section {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
     background-color: lightgrey;
     border-radius: 30px;
 }
 
 .sector-overviews .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
 }
 
@@ -65,13 +76,10 @@
     margin-left: 10px;
 }
 
-.sectors-header {
-    padding: 20px;    
-    font-size: 70px;
-    background-color: lightgrey;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    border-radius: 30px;
+.sector-overviews p{
+    font-size: 25px;
+    text-align: justify;
 }
+
+
 
