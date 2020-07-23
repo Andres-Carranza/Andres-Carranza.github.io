@@ -44,17 +44,27 @@ async function chartData() {
                 yAxes: [{
                   position: "left",
                   id: "left",
+                  scaleLabel: {
+                  labelString: 'Cases (thousands)',
+                  display: true
+                  },
                   ticks: {
-                      beginAtZero: true
+                      beginAtZero: true,
+                      maxTicksLimit: 7
                   }
                 }, {
                   position: "right",
                   id: "right",
+                  scaleLabel: {
+                  labelString: 'Deaths (hundreds)',
+                  display: true
+                  },
                   gridLines: {
                     display: false
                   },
                   ticks: {
-                      beginAtZero: true
+                      beginAtZero: true,
+                      maxTicksLimit: 7
                   }
                 }]
             },
@@ -64,6 +74,8 @@ async function chartData() {
                 callbacks: {
                       label: function(tooltipItem, data) {
                           var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                          value = Math.round((parseFloat(value)) * 100) / 100;
+
                           if(parseInt(value) >= 1000){
                                      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                   } else {
@@ -88,14 +100,14 @@ async function getData(){
     
     const data = {'Dates': [],'Deaths': [], 'Cases': []};
 
-    const threshold = csv_data.length  - 60
+    const threshold = 0
 
     csv_data.forEach(function (row, index) {
         if( index > threshold) {
             date = row['date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])
-            data['Cases'].push(row['cases'])
-            data['Deaths'].push(row['deaths'])
+            data['Cases'].push(row['cases']/1000)
+            data['Deaths'].push(row['deaths']/100)
         }
     })
     return data

@@ -14,8 +14,8 @@ async function chartData() {
                     fill: false,
                     borderColor: 'blue',
                     backgroundColor: 'blue',
-                    borderWidth: 1,
-                    pointRadius: 3
+                    borderWidth: 2,
+                    pointRadius: 0      
               },
               {
                 label: 'Pessimistic',
@@ -23,8 +23,8 @@ async function chartData() {
                 fill: false,
                 borderColor: 'red',
                 backgroundColor: 'red',
-                borderWidth: 1,
-                pointRadius: 3                 
+                borderWidth: 2,
+                pointRadius: 0               
               },
               {
                 label: 'Baseline',
@@ -32,8 +32,8 @@ async function chartData() {
                 fill: false,
                 borderColor: 'orange',
                 backgroundColor: 'orange',
-                borderWidth: 1,
-                pointRadius: 3                 
+                borderWidth: 2,
+                pointRadius: 0                
               },
               {
                 label: 'Optimistic',
@@ -41,8 +41,8 @@ async function chartData() {
                 fill: false,
                 borderColor: 'green',
                 backgroundColor: 'green',
-                borderWidth: 1,
-                pointRadius: 3                 
+                borderWidth: 2,
+                pointRadius: 0                 
               }
             ]
         },

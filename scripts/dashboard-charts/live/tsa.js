@@ -8,25 +8,25 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# of Passengers',
+                    label: 'Passengers',
                     data: data['2020'],
                     fill: false,
                     yAxisID: "left",
-                    borderColor: 'rgba(13, 186, 79, 1)',
-                    backgroundColor: 'rgba(13, 186, 79, 0.5)',
-                    borderWidth: 1,
-                    pointRadius: 3,
+                    borderColor: 'navy',
+                    backgroundColor: 'navy',
+                    borderWidth: 2,
+                    pointRadius: 0,
                     type: 'line'
               },
               {
-                  label: '% change',
+                  label: '7 day moving average % change compared to year ago',
                   data: data['change'],
                   fill: false,
                   yAxisID: "right",
-                  borderColor: 'blue',
-                  backgroundColor: 'blue',
-                  borderWidth: 1,
-                  pointRadius: 3,
+                  borderColor: 'teal',
+                  backgroundColor: 'teal',
+                  borderWidth: 2,
+                  pointRadius: 0,
                   type: 'line'
             }
             ]
@@ -42,10 +42,25 @@ async function chartData() {
                 yAxes: [{
                   position: "left",
                   id: "left",
+                  
+                  scaleLabel: {
+                      display: true,
+                      labelString:'Passengers (thousands)'
+                  },
+                  ticks: {
+                      beginAtZero: true,
+                      maxTicksLimit: 7
+                  }
                 }, {
                   position: "right",
                   id: "right",
+                  scaleLabel: {
+                      display: true,
+                      labelString:'% change (thousands)'
+                  },
                   ticks: {
+                    beginAtZero: true,
+                    maxTicksLimit: 7,
                       callback: function(value, index, values) {
                           return value + "%";
                       }
@@ -53,18 +68,20 @@ async function chartData() {
                 }]
             },
             tooltips: {
+                intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
                         var value = tooltipItem.value;
+                        value = Math.round((parseFloat(value)) * 100) / 100;
+
                         if (tooltipItem.datasetIndex == 0){
                             if(parseInt(value) >= 1000)
                                 value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                         }
                         else{
-                            value = Math.round((parseFloat(value)) * 100) / 100;
                             value = value +'%'
                         }
-                        return data.datasets[tooltipItem.datasetIndex].label +': ' + value
+                        return  value
                       }
                 } 
             },
@@ -75,24 +92,46 @@ async function chartData() {
     });
 }
 
+function calcMA(values, N) {
+    let i = 0;
+    let sum = 0;
+    const means = new Float64Array(values.length).fill(NaN);
+    for (let n = Math.min(N - 1, values.length); i < n; ++i) {
+      sum += values[i];
+    }
+    for (let n = values.length; i < n; ++i) {
+      sum += values[i];
+      means[i] = sum / N;
+      sum -= values[i - N + 1];
+    }
+    return means;
+  }
+
 async function getData(){
     const response= await fetch('scripts/scrapers/tsa_scraper/tsa-data.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'2020': [], 'change': []};
+    const data = {'Dates': [],'2020': [], '2019': [], 'change': []};
 
-    const threshold = csv_data.length  - 60
+    const threshold = 0
 
     csv_data.forEach(function (row, index) {
         if( index > threshold) {
             date = row['Date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])            
-            data['2020'].push(row['2020'])
-            data['change'].push(( (row['2020'] / row['2019']) - 1) * 100)
+            data['2020'].push(row['2020']/1000)
+            data['2019'].push(row['2019']/1000)
         }
     })
+
+    var ma20 = calcMA(data['2020'], 7 ) 
+    var ma19 = calcMA(data['2019'], 7 ) 
+    ma20.forEach(function (row, index){
+        data['change'].push(( (ma20[index] / ma19[index]) - 1) * 100)
+    })
+
     return data
 }
 

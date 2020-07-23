@@ -12,19 +12,19 @@ async function chartData() {
                     label: 'Actual',
                     data: data['actual'],
                     fill: false,
-                    borderColor: 'rgba(13, 186, 79, 1)',
-                    backgroundColor: 'rgba(13, 186, 79, 0.5)',
-                    borderWidth: 1,
-                    pointRadius: 3
+                    borderColor: 'blue',
+                    backgroundColor: 'blue',
+                    borderWidth: 2,
+                    pointRadius: 0
               },
               {
                   label: 'Projections',
                   data: data['projections'],
                   fill: false,
-                  borderColor: 'rgba(13, 186, 79, 1)',
-                  backgroundColor: 'rgba(13, 186, 79, 0.5)',
-                  borderWidth: 1,
-                  pointRadius: 3
+                  borderColor: 'purple',
+                  backgroundColor: 'purple',
+                  borderWidth: 2,
+                  pointRadius: 0
             }
             ]
         },

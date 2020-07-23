@@ -9,13 +9,13 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# jobless claims',
+                    label: '# Jobless Claims',
                     data: data['claims'],
                     fill: false,
-                    borderColor: 'rgba(13, 186, 79, 1)',
-                    backgroundColor: 'rgba(13, 186, 79, 0.5)',
-                    borderWidth: 1,
-                    pointRadius: 3
+                    borderColor: 'orange',
+                    backgroundColor: 'orange',
+                    borderWidth: 2,
+                    pointRadius: 0
               }
             ]
         },
@@ -30,13 +30,22 @@ async function chartData() {
                 }],
                 
                 yAxes: [{
-                    display: false
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Jobless Claims (millions)'
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                        maxTicksLimit: 7
+                    }
                 }]
             },
             tooltips: {
+                intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
                           var value = data.datasets[0].data[tooltipItem.index];
+                          value = Math.round((parseFloat(value)) * 100) / 100;
                           if(parseInt(value) >= 1000){
                                      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                   } else {
@@ -66,7 +75,7 @@ async function getData(){
         if( index > threshold) {
             date = row['date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])
-            data['claims'].push(row['claims'])
+            data['claims'].push(row['claims']/1000000)
         }
     })
     return data
