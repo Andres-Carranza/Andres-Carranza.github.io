@@ -11,29 +11,39 @@
 
 
 .content{
-    background-color: rgb(175, 175, 175);
+    background-color: rgb(8, 20, 48);
+    padding-bottom: 30px;
     
 }
 
 
-
+.title{
+    background: url("../images/062620_MichellAirportCOVID1_01.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 
 .title h1{
     text-align: center;
-    font-size: 400%;
+    font-size: 600%;
     padding-bottom: 50px;
     padding-top: 20px;
+    color: red;
 }  
 
-.title h3{
-    
-    
-    font-size: 25px;
+.title h3{    
+    font-size: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
     text-align: center;
     padding-bottom: 50px;
+    color: red;
+    
+   
 }
 
 
@@ -41,17 +51,21 @@
 
 .Passenger_Health h1{
     font-size: 300%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     position: relative;
     text-align: center;
 }
 .Passenger_Health{
-    background: url("../images/062620_MichellAirportCOVID1_01.jpg");
+    background: lightgray;
+    border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
     text-align: justify;
     padding-bottom: 10px;
     margin-bottom: 30px;
+    margin-top: 30px;
 
 }
 
@@ -60,27 +74,32 @@
 
 
 .Future_aircraft_designs{
-    background: green;
+    background: lightgray;
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
+    border-radius: 20px;
     text-align: justify;
     padding-bottom: 10px;
+    
 }
 
 .Future_aircraft_designs h1{
     font-size: 300%;
     position: relative;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
     
 }
 
 .System_management{
-    background: blue;
+    background: lightgray;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
+    border-radius: 20px;
     text-align: justify;
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -90,13 +109,16 @@
     font-size: 300%;
     position: relative;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .Support_of_disruptive_innovators{
-    background: yellow;
+    background: lightgray;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    border-radius: 20px;
+    width: 1000px;
     text-align: justify;
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -105,14 +127,17 @@
     font-size: 300%;
     position: relative;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 
 .Automation{
-    background: purple;
+    background: lightgray;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    border-radius: 20px;
+    width: 1000px;
     text-align: justify;
     padding-bottom: 10px;
     margin-bottom: 30px;
@@ -122,18 +147,23 @@
     font-size: 300%;
     position: relative;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 .Environment{
-    background: orange;
+    background: lightgray;
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 1000px;
+    border-radius: 20px;
     text-align: justify;
-    margin-bottom: 30px;
+    padding-bottom: 10px;
 }
 .Environment h1{
     font-size: 300%;
+    padding-bottom: 30px;
+    padding-top: 30px;
     
     position: relative;
     text-align: center;
