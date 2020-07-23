@@ -10,14 +10,41 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# of Passengers',
-                    data: data['2020'],
+                    label: 'Actual',
+                    data: data['deaths'],
                     fill: false,
-                    borderColor: 'rgba(13, 186, 79, 1)',
-                    backgroundColor: 'rgba(13, 186, 79, 0.5)',
-                    borderWidth: 1,
-                    pointRadius: 3
-              }
+                    borderColor: 'blue',
+                    backgroundColor: 'blue',
+                    borderWidth: 2,
+                    pointRadius: 0
+              },
+              {
+                  label: 'Pessimistic',
+                  data: data['pessimistic'],
+                  fill: false,
+                  borderColor: 'red',
+                  backgroundColor: 'red',
+                  borderWidth: 2,
+                  pointRadius: 0
+            },
+            {
+                label: 'Baseline',
+                data: data['baseline'],
+                fill: false,
+                borderColor: 'orange',
+                backgroundColor: 'orange',
+                borderWidth: 2,
+                pointRadius: 0
+          },
+          {
+              label: 'Optimistic',
+              data: data['optimistic'],
+              fill: false,
+              borderColor: 'green',
+              backgroundColor: 'green',
+              borderWidth: 2,
+              pointRadius: 0
+        }
             ]
         },
         options: {
@@ -35,9 +62,10 @@ async function chartData() {
                 }]
             },
             tooltips: {
+                intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
-                          var value = data.datasets[0].data[tooltipItem.index];
+                          var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
                           if(parseInt(value) >= 1000){
                                      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                   } else {
@@ -54,22 +82,49 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/tsa-scraper/tsa-data.csv')
-    const raw_data = await response.text()
+    const covid_response= await fetch('scripts/scrapers/covid_scraper/covid-data.csv')
+    const covid_data = await covid_response.text()
     
-    const csv_data = d3.csvParse(raw_data)
+    const projections_response= await fetch('scripts/scrapers/covid_scraper/covid-projections.csv')
+    const projections_data = await projections_response.text()
     
-    const data = {'Dates': [],'2020': [], '2019': []};
+    const data = {'Dates': [],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
+    const threshold = 0
 
-    const threshold = csv_data.length  - 60
-
-    csv_data.forEach(function (row, index) {
+    const covid_csv = d3.csvParse(covid_data)
+    covid_csv.forEach(function (row, index) {
         if( index > threshold) {
-            data['Dates'].push(row['Date'])
-            data['2020'].push(row['2020'])
-            data['2019'].push(row['2019'])
+            for (const [key, value] of Object.entries(row)) {
+                if(value == '')
+                    row[key] = NaN
+            }
+
+            date = row['date'].split('/')
+            data['Dates'].push(date[0] +'/' + date[1])
+            data['deaths'].push(row['deaths'])
         }
     })
+
+    const projections_csv = d3.csvParse(projections_data)
+    projections_csv.forEach(function (row, index) {
+        if( index > threshold) {
+            for (const [key, value] of Object.entries(row)) {
+                if(value == '')
+                    row[key] = NaN
+            }
+
+                        
+            date = row['date'].split('/')
+            if (!data['Dates'].includes(date[0] +'/' + date[1]))
+                data['Dates'].push(date[0] +'/' + date[1])
+
+            data['pessimistic'].push(row['pessimistic']),
+            data['baseline'].push(row['baseline']),
+            data['optimistic'].push(row['optimistic'])
+        }
+    })
+
+
     return data
 }
 

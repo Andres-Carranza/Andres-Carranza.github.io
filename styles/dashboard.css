@@ -44,28 +44,44 @@
 }
 
 .covid-econ-projections {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    width: 100%;
+
 }
-.covid-econ-projections > div {
+
+.deaths-chart {
     padding: 10px;
     width: 100px;
     flex-grow: 1;
     background-color: rgba(255,255,255,.2);
     border-radius: 10px;
-}
-
-.deaths-chart, .unemployment-chart {
     margin-right: 10px;
 }
 
+.econ-projections {
+    width: 100px;
+    flex-grow: 1;
+}
+
+
+.econ-projections  >div {
+    padding: 10px;
+    background-color: rgba(255,255,255,.2);
+    border-radius: 10px;
+}
+
+.unemployment-chart {
+    margin-bottom: 10px;
+}
+
 .rpms-projections, .rpms-change {
-    margin-top: 10px;
     background-color: rgba(255,255,255,.2);
     padding: 10px;
     border-radius: 10px;
+    margin-top: 10px;
 }
+
 
 
 

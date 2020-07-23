@@ -9,14 +9,23 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# of Passengers',
-                    data: data['2020'],
+                    label: 'Actual',
+                    data: data['actual'],
                     fill: false,
                     borderColor: 'rgba(13, 186, 79, 1)',
                     backgroundColor: 'rgba(13, 186, 79, 0.5)',
                     borderWidth: 1,
                     pointRadius: 3
-              }
+              },
+              {
+                  label: 'Projections',
+                  data: data['projections'],
+                  fill: false,
+                  borderColor: 'rgba(13, 186, 79, 1)',
+                  backgroundColor: 'rgba(13, 186, 79, 0.5)',
+                  borderWidth: 1,
+                  pointRadius: 3
+            }
             ]
         },
         options: {
@@ -53,20 +62,26 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/tsa-scraper/tsa-data.csv')
+    const response= await fetch('scripts/scrapers/unemployment_scraper/unemployment-data.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'2020': [], '2019': []};
+    const data = {'Dates': [],'actual': [], 'projections': []};
 
     const threshold = csv_data.length  - 60
 
     csv_data.forEach(function (row, index) {
+
+        for (const [key, value] of Object.entries(row)) {
+            if(value == '')
+                row[key] = NaN
+        }
+
         if( index > threshold) {
-            data['Dates'].push(row['Date'])
-            data['2020'].push(row['2020'])
-            data['2019'].push(row['2019'])
+            data['Dates'].push(row['date'])
+            data['actual'].push(row['actual'])
+            data['projections'].push(row['projected'])
         }
     })
     return data

@@ -80,7 +80,7 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/rpms-scraper/model-predictions.csv')
+    const response= await fetch('scripts/scrapers/rpms_scraper/model-predictions.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
