@@ -1,4 +1,3 @@
-document.getElementsByClassName('background')[0].style.height = document.getElementsByClassName('overview')[0].offsetHeight +'px'
 
 var height = document.getElementById('s0').offsetTop 
 height = document.getElementById('s5').offsetTop - height
@@ -34,19 +33,7 @@ function changeActive (id) {
       active.classList.add('active')
   }
 
-function updateHeight(){
-  var height = document.getElementsByClassName('overview-wrapper')[0].offsetHeight
-  height+= document.getElementsByClassName('navbar')[0].offsetHeight
-  var ps = Array.from(document.querySelectorAll('.background div'))
 
-  console.log(height)
-
-  ps.forEach(function (p, i){
-    p.style.height = height +'px'
-  })
-
-}
-updateHeight()
 
 window.addEventListener('resize',updateHeight)
 

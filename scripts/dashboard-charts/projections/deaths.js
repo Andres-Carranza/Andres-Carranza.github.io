@@ -13,11 +13,20 @@ async function chartData() {
                     label: 'Actual',
                     data: data['deaths'],
                     fill: false,
-                    borderColor: 'blue',
-                    backgroundColor: 'blue',
+                    borderColor: 'teal',
+                    backgroundColor: 'teal',
                     borderWidth: 2,
                     pointRadius: 0
               },
+              {
+                  label: '7 day Moving Average',
+                  data: data['ma'],
+                  fill: false,
+                  borderColor: 'blue',
+                  backgroundColor: 'blue',
+                  borderWidth: 2,
+                  pointRadius: 0
+            },
               {
                   label: 'Pessimistic',
                   data: data['pessimistic'],
@@ -65,7 +74,8 @@ async function chartData() {
                 intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
-                          var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+                        var value = tooltipItem.value;
+                        value = Math.round((parseFloat(value)) * 100) / 100;
                           if(parseInt(value) >= 1000){
                                      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                   } else {
@@ -81,6 +91,22 @@ async function chartData() {
     });
 }
 
+
+function calcMA(values) {
+    means = [NaN,NaN, NaN]
+    for(var i = 3; i< values.length - 3 ;i++){
+        var sum = 0;
+        for(var j = -3; j<=3; j++){
+            sum+=parseInt(values[i+j])
+        }
+        means.push(sum/7);
+    }
+    means.push(NaN)
+    means.push(NaN)
+    means.push(NaN)
+    return means;
+  }
+
 async function getData(){
     const covid_response= await fetch('scripts/scrapers/covid_scraper/covid-data.csv')
     const covid_data = await covid_response.text()
@@ -88,17 +114,16 @@ async function getData(){
     const projections_response= await fetch('scripts/scrapers/covid_scraper/covid-projections.csv')
     const projections_data = await projections_response.text()
     
-    const data = {'Dates': [],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
+    const data = {'Dates': [],'ma':[],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
     const threshold = 0
 
     const covid_csv = d3.csvParse(covid_data)
     covid_csv.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
             }
-
             date = row['date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])
             data['deaths'].push(row['deaths'])
@@ -107,13 +132,11 @@ async function getData(){
 
     const projections_csv = d3.csvParse(projections_data)
     projections_csv.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
-            }
-
-                        
+            }                       
             date = row['date'].split('/')
             if (!data['Dates'].includes(date[0] +'/' + date[1]))
                 data['Dates'].push(date[0] +'/' + date[1])
@@ -124,6 +147,7 @@ async function getData(){
         }
     })
 
+    data['ma']= calcMA(data['deaths'])
 
     return data
 }

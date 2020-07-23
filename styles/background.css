@@ -5,6 +5,7 @@
 
 .overview-wrapper {
     width: 100%;
+    padding-top: 50px;
     padding-bottom: 50px;
     background-color: white;
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/sofia_departure_2017-20.jpg');
@@ -13,10 +14,11 @@
     background-size: cover;
 }
 
-
-
-
-
+.sep{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
 
 .overview {
     padding: 60px;

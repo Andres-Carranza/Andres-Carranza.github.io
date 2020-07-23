@@ -53,11 +53,12 @@
 .deaths-chart {
     padding: 10px;
     width: 100px;
-    flex-grow: 1;
+    flex-grow: 1.2;
     background-color: rgba(255,255,255,.2);
     border-radius: 10px;
     margin-right: 10px;
 }
+
 
 .econ-projections {
     width: 100px;

@@ -26,6 +26,9 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 10
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 
@@ -72,7 +75,7 @@ async function getData(){
     const threshold = csv_data.length  - 60
 
     csv_data.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             date = row['date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])
             data['claims'].push(row['claims']/1000000)

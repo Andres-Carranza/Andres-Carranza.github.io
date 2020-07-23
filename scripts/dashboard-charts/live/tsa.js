@@ -37,6 +37,9 @@ async function chartData() {
                     ticks: {
                         maxRotation: 0,
                         minRotation: 0,
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 yAxes: [{
@@ -92,18 +95,19 @@ async function chartData() {
     });
 }
 
-function calcMA(values, N) {
-    let i = 0;
-    let sum = 0;
-    const means = new Float64Array(values.length).fill(NaN);
-    for (let n = Math.min(N - 1, values.length); i < n; ++i) {
-      sum += values[i];
+function calcMA(values) {
+    means = [NaN,NaN, NaN]
+    for(var i = 3; i< values.length - 3 ;i++){
+        var sum = 0;
+        for(var j = -3; j<=3; j++){
+            sum+=values[i+j]
+        }
+
+        means.push(sum/7);
     }
-    for (let n = values.length; i < n; ++i) {
-      sum += values[i];
-      means[i] = sum / N;
-      sum -= values[i - N + 1];
-    }
+    means.push(NaN)
+    means.push(NaN)
+    means.push(NaN)
     return means;
   }
 
@@ -118,7 +122,7 @@ async function getData(){
     const threshold = 0
 
     csv_data.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             date = row['Date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])            
             data['2020'].push(row['2020']/1000)

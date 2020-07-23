@@ -38,8 +38,10 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 10
+                    },
+                    gridLines: {
+                      display: false
                     }
-                      
                 }],
                 yAxes: [{
                   position: "left",
@@ -92,6 +94,22 @@ async function chartData() {
     });
 }
 
+function calcMA(values) {
+    means = [NaN,NaN, NaN]
+    for(var i = 3; i< values.length - 3 ;i++){
+        var sum = 0;
+        for(var j = -3; j<=3; j++){
+            sum+=values[i+j]
+        }
+
+        means.push(sum/7);
+    }
+    means.push(NaN)
+    means.push(NaN)
+    means.push(NaN)
+    return means;
+  }
+
 async function getData(){
     const response= await fetch('scripts/scrapers/covid_scraper/covid-data.csv')
     const raw_data = await response.text()
@@ -103,13 +121,14 @@ async function getData(){
     const threshold = 0
 
     csv_data.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             date = row['date'].split('/')
             data['Dates'].push(date[0] +'/' + date[1])
             data['Cases'].push(row['cases']/1000)
             data['Deaths'].push(row['deaths']/100)
         }
     })
+    
     return data
 }
 
