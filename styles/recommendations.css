@@ -1,8 +1,12 @@
-p{
-    text-align: center;
-    margin: 15px auto;
-    padding-left: 15px; 
-    font-size: 150%;
+ p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    
+
+
+    font-size: 200%;
 }
 
 
@@ -23,10 +27,13 @@ p{
 
 .title h3{
     
-    text-align: center;
+    
     font-size: 25px;
-    padding-bottom: px;
-    padding-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 
@@ -39,7 +46,14 @@ p{
 }
 .Passenger_Health{
     background: red;
-    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    
+    
 }
 
 
@@ -47,7 +61,12 @@ p{
 
 .Future_aircraft_designs{
     background: green;
-    margin: 50px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
 }
 
 .Future_aircraft_designs h1{
@@ -59,7 +78,12 @@ p{
 
 .System_management{
     background: blue;
-    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .System_management h1{
@@ -70,7 +94,12 @@ p{
 
 .Support_of_disruptive_innovators{
     background: yellow;
-    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 .Support_of_disruptive_innovators h1{
     font-size: 300%;
@@ -81,7 +110,12 @@ p{
 
 .Automation{
     background: purple;
-    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .Automation h1{
@@ -92,7 +126,11 @@ p{
 
 .Environment{
     background: orange;
-    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    margin-bottom: 30px;
 }
 .Environment h1{
     font-size: 300%;
