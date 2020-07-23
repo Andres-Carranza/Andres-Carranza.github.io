@@ -1,30 +1,31 @@
 
 
 
-.overview {
+.overview-wrapper {
     width: 100%;
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
-    padding-top: 100px;
-    padding-bottom: 100px;
+
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
 }
 
 .overview-header {
-    width: 90%;
-    padding: 30px;
+    padding: 60px;
     margin-left: auto;
     margin-right: auto;
 }
 .overview-header h1 {
     font-size: 100px;
     text-align: center;
-    padding: 30px;
+    margin-bottom: 20px;
     color: lightgrey;
 }
 
 .overview-header p {
+    margin-right: auto;
+    margin-left: auto;
+    width: 800px;
     font-size: 30px;
     text-align: justify;
     color: white;
