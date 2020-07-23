@@ -1,23 +1,110 @@
-h1{
-    margin: 15px auto;
-    padding-left: 15px;
-    font-size: 400%;
-}
-h2{
-    margin: 15px auto;
-    margin-top: 30px ;
-    padding-left: 15px;
-    font-size: 250%;
-    margin-bottom: 30px;
-    
-}
-h3{
-    margin: 15px auto;
-    padding-left: 15px;
-    font-size: 200%;
-}
 p{
+    text-align: center;
     margin: 15px auto;
     padding-left: 15px; 
     font-size: 150%;
 }
+
+
+.content{
+    background-color: rgb(175, 175, 175);
+    
+}
+
+
+
+
+.title h1{
+    text-align: center;
+    font-size: 400%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}  
+
+.title h3{
+    
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: px;
+    padding-bottom: 30px;
+}
+
+
+
+
+.Passenger_Health h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+.Passenger_Health{
+    background: red;
+    margin: 50px;
+}
+
+
+
+
+.Future_aircraft_designs{
+    background: green;
+    margin: 50px;
+}
+
+.Future_aircraft_designs h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+    
+}
+
+.System_management{
+    background: blue;
+    margin: 50px;
+}
+
+.System_management h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+.Support_of_disruptive_innovators{
+    background: yellow;
+    margin: 50px;
+}
+.Support_of_disruptive_innovators h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+
+.Automation{
+    background: purple;
+    margin: 50px;
+}
+
+.Automation h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+.Environment{
+    background: orange;
+    margin: 50px;
+}
+.Environment h1{
+    font-size: 300%;
+    
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
