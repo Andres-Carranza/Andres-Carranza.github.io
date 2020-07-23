@@ -80,18 +80,20 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/scrapers/rpms_scraper/model-predictions.csv')
+    const response= await fetch('scripts/scrapers/rpms_scraper/rpms-data.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
     
     const data = {'Dates': [],'Actual': [], 'Pessimistic': [], 'Baseline': [], 'Optimistic': [], 'Counterfactual': []};
 
-    const threshold =  10
+    const threshold =  0
 
     csv_data.forEach(function (row, index) {
-        if( index < threshold) {
-
+        if( index > threshold) {
+            if (row['Actual'] == '' && row['Baseline'] == '')
+                return
+                
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
