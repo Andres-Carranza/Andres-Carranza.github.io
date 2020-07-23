@@ -9,8 +9,8 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# of Passengers',
-                    data: data['2020'],
+                    label: '# jobless claims',
+                    data: data['claims'],
                     fill: false,
                     borderColor: 'rgba(13, 186, 79, 1)',
                     backgroundColor: 'rgba(13, 186, 79, 0.5)',
@@ -53,20 +53,20 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/tsa-scraper/tsa-data.csv')
+    const response= await fetch('scripts/scrapers/claims_scraper/claims-data.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'2020': [], '2019': []};
+    const data = {'Dates': [],'claims': []};
 
     const threshold = csv_data.length  - 60
 
     csv_data.forEach(function (row, index) {
         if( index > threshold) {
-            data['Dates'].push(row['Date'])
-            data['2020'].push(row['2020'])
-            data['2019'].push(row['2019'])
+            date = row['date'].split('/')
+            data['Dates'].push(date[0] +'/' + date[1])
+            data['claims'].push(row['claims'])
         }
     })
     return data

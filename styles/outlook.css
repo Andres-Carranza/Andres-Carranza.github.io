@@ -1,41 +1,64 @@
-.overview h1 {
-    font-size: 100px;
-    text-align: center;
-    padding: 30px;
-}
 
-p {
-    font-size: 25px;
-    text-align: justify;
-}
+
 
 .overview {
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-size: cover;
+}
+
+.overview-header {
     width: 90%;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
 }
+.overview-header h1 {
+    font-size: 100px;
+    text-align: center;
+    padding: 30px;
+    color: lightgrey;
+}
 
+.overview-header p {
+    font-size: 30px;
+    text-align: justify;
+    color: white;
+}
 
 .sector-overviews {
     padding: 20px;
     background-color: rgb(8, 20, 48);
 }
 
+.sectors-header {
+    padding: 20px;    
+    font-size: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
 .sector-overviews > section {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 30px;
-    background-color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: lightgrey;
     border-radius: 30px;
 }
 
 .sector-overviews .header {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
 }
 
@@ -53,12 +76,10 @@ p {
     margin-left: 10px;
 }
 
-.sectors-header {
-    padding: 20px;    
-    font-size: 70px;
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-    border-radius: 30px;
+.sector-overviews p{
+    font-size: 25px;
+    text-align: justify;
 }
+
+
+

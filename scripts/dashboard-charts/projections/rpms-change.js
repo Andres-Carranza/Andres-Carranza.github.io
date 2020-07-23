@@ -18,15 +18,6 @@ async function chartData() {
                     pointRadius: 3
               },
               {
-                label: 'Counterfactual',
-                data: data['Counterfactual'],
-                fill: false,
-                borderColor: 'purple',
-                backgroundColor: 'purple',
-                borderWidth: 1,
-                pointRadius: 3                 
-              },
-              {
                 label: 'Pessimistic',
                 data: data['Pessimistic'],
                 fill: false,
@@ -79,29 +70,31 @@ async function chartData() {
 }
 
 async function getData(){
-    const response= await fetch('scripts/rpms-scraper/model-predictions.csv')
+    const response= await fetch('scripts/scrapers/rpms_scraper/rpms-data.csv')
     const raw_data = await response.text()
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'Actual': [], 'Pessimistic': [], 'Baseline': [], 'Optimistic': [], 'Counterfactual': []};
+    const data = {'Dates': [],'Actual': [], 'Pessimistic': [], 'Baseline': [], 'Optimistic': []};
 
-    const threshold =  10
+    const threshold =  1
 
     csv_data.forEach(function (row, index) {
-        if( index < threshold) {
+        if( index > threshold) {
 
+            if (row['Actual'] == '' && row['Baseline'] == '')
+                return
+                
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
             }
 
             data['Dates'].push(row['Date'])
-            data['Actual'].push(row['Actual']/1000000000)
-            data['Pessimistic'].push(row['Pessimistic']/1000000000)
-            data['Baseline'].push(row['Baseline']/1000000000)
-            data['Optimistic'].push(row['Optimistic']/1000000000)
-            data['Counterfactual'].push(row['Counterfactual']/1000000000)
+            data['Actual'].push(row['Actual']/row['Counterfactual'])
+            data['Pessimistic'].push(row['Pessimistic']/row['Counterfactual'])
+            data['Baseline'].push(row['Baseline']/row['Counterfactual'])
+            data['Optimistic'].push(row['Optimistic']/row['Counterfactual'])
         }
     })
     return data
