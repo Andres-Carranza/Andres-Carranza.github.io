@@ -1,28 +1,33 @@
-.overview h1 {
-    font-size: 100px;
-    text-align: center;
-    padding: 30px;
-}
 
-p {
-    font-size: 25px;
-    text-align: justify;
-}
 
 
 .overview {
     width: 100%;
-    height: 800px;
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-position: center;
+    background-size: cover;
 }
 
 .overview-header {
-    width: 50%;
+    width: 90%;
     padding: 30px;
     margin-left: auto;
     margin-right: auto;
 }
+.overview-header h1 {
+    font-size: 100px;
+    text-align: center;
+    padding: 30px;
+    color: lightgrey;
+}
 
+.overview-header p {
+    font-size: 25px;
+    text-align: justify;
+    color: white;
+}
 
 .sector-overviews {
     padding: 20px;
@@ -36,7 +41,7 @@ p {
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 30px;
-    background-color: white;
+    background-color: lightgrey;
     border-radius: 30px;
 }
 
@@ -63,7 +68,7 @@ p {
 .sectors-header {
     padding: 20px;    
     font-size: 70px;
-    background-color: white;
+    background-color: lightgrey;
     margin-left: auto;
     margin-right: auto;
     width: fit-content;
