@@ -1,23 +1,148 @@
-h1{
-    margin: 15px auto;
-    padding-left: 15px;
-    font-size: 400%;
-}
-h2{
-    margin: 15px auto;
-    margin-top: 30px ;
-    padding-left: 15px;
-    font-size: 250%;
-    margin-bottom: 30px;
+ p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
     
-}
-h3{
-    margin: 15px auto;
-    padding-left: 15px;
+
+
     font-size: 200%;
 }
-p{
-    margin: 15px auto;
-    padding-left: 15px; 
-    font-size: 150%;
+
+
+.content{
+    background-color: rgb(175, 175, 175);
+    
 }
+
+
+
+
+.title h1{
+    text-align: center;
+    font-size: 400%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}  
+
+.title h3{
+    
+    
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+
+
+.Passenger_Health h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+.Passenger_Health{
+    background: red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    
+    
+}
+
+
+
+
+.Future_aircraft_designs{
+    background: green;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+}
+
+.Future_aircraft_designs h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+    
+}
+
+.System_management{
+    background: blue;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.System_management h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+.Support_of_disruptive_innovators{
+    background: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.Support_of_disruptive_innovators h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+
+.Automation{
+    background: purple;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.Automation h1{
+    font-size: 300%;
+    position: relative;
+    text-align: center;
+}
+
+.Environment{
+    background: orange;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.Environment h1{
+    font-size: 300%;
+    
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
