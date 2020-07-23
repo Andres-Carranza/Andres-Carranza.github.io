@@ -7,19 +7,13 @@
     width: 100%;
     padding-bottom: 50px;
     background-color: white;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/sofia_departure_2017-20.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
-.background {
-    position: absolute;
-    display: flex;
-    z-index: 0;
-}
 
-.background img {
-    width: calc(100%/6);
-    object-fit: cover;
-    object-position: center;
-}
 
 
 
@@ -28,7 +22,6 @@
     padding: 60px;
     position: relative;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.7);
     height: 100%;
 }
 
@@ -69,7 +62,7 @@
 .timeline-wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: 1200px;
 }
 
 .timeline .ul{
@@ -145,7 +138,7 @@
 
 .timeline-content .section {
     position: relative;
-    width: 80%;
+    width: 800px;
     margin-top: 100px;
     margin-bottom: 100px;
     padding: 30px;
@@ -207,7 +200,7 @@
 }
 
 .summary {
-    font-size: 25px;
+    font-size: 20px;
     text-align: justify;
 }
 
@@ -229,5 +222,3 @@
     text-decoration: none;
     color: white;
   }
-
- 

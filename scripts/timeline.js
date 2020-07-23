@@ -34,6 +34,22 @@ function changeActive (id) {
       active.classList.add('active')
   }
 
+function updateHeight(){
+  var height = document.getElementsByClassName('overview-wrapper')[0].offsetHeight
+  height+= document.getElementsByClassName('navbar')[0].offsetHeight
+  var ps = Array.from(document.querySelectorAll('.background div'))
+
+  console.log(height)
+
+  ps.forEach(function (p, i){
+    p.style.height = height +'px'
+  })
+
+}
+updateHeight()
+
+window.addEventListener('resize',updateHeight)
+
 window.addEventListener('scroll', function () {
     updateSticky()
 
