@@ -35,22 +35,30 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 10
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 
                 yAxes: [{
-                    display: false    
+                    scaleLabel: {
+                        display: true,
+                        labelString:'Unemployment Rate'
+                    },
+                    ticks: {
+                        beginAtZero: true,
+                    callback: function(value, index, values) {
+                        return value + "%";
+                    }
+                }
                 }]
             },
             tooltips: {
+                intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
-                          var value = data.datasets[0].data[tooltipItem.index];
-                          if(parseInt(value) >= 1000){
-                                     return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                                  } else {
-                                     return value;
-                                  }
+                        return tooltipItem.value +'%'
                       }
                 } 
               },
@@ -78,7 +86,7 @@ async function getData(){
                 row[key] = NaN
         }
 
-        if( index > threshold) {
+        if( index >= threshold) {
             data['Dates'].push(row['date'])
             data['actual'].push(row['actual'])
             data['projections'].push(row['projected'])

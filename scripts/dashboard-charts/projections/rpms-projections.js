@@ -49,8 +49,8 @@ async function chartData() {
                 label: 'Optimistic',
                 data: data['Optimistic'],
                 fill: false,
-                borderColor: 'green',
-                backgroundColor: 'green',
+                borderColor: 'limeGreen',
+                backgroundColor: 'limeGreen',
                 borderWidth: 2,
                 pointRadius: 0                  
               }
@@ -63,18 +63,31 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 12
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 
                 yAxes: [{
-                    ticks: {
-                        maxTicksLimit: 5,
-                    }      
-                }]
+                    scaleLabel: {
+                      display: true,
+                      labelString:'RPMs (billions)'
+                  },
+                  }]
+              },
+              tooltips: {
+                  intersect: false,
+                  callbacks: {
+                        label: function(tooltipItem, data) {
+                          var value = tooltipItem.value;
+                          return Math.round((parseFloat(value)) * 100) / 100;
+                  } 
+              }
             },
-            legend: {
-                position: 'bottom'
-            }
+              legend: {
+                  position: 'bottom'
+              }
         }
     });
 }
@@ -90,7 +103,7 @@ async function getData(){
     const threshold =  0
 
     csv_data.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
             if (row['Actual'] == '' && row['Baseline'] == '')
                 return
                 

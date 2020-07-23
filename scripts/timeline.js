@@ -34,9 +34,6 @@ function changeActive (id) {
   }
 
 
-
-window.addEventListener('resize',updateHeight)
-
 window.addEventListener('scroll', function () {
     updateSticky()
 

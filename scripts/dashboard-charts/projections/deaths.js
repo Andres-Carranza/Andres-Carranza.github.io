@@ -13,20 +13,11 @@ async function chartData() {
                     label: 'Actual',
                     data: data['deaths'],
                     fill: false,
-                    borderColor: 'teal',
-                    backgroundColor: 'teal',
+                    borderColor: 'blue',
+                    backgroundColor: 'blue',
                     borderWidth: 2,
                     pointRadius: 0
               },
-              {
-                  label: '7 day Moving Average',
-                  data: data['ma'],
-                  fill: false,
-                  borderColor: 'blue',
-                  backgroundColor: 'blue',
-                  borderWidth: 2,
-                  pointRadius: 0
-            },
               {
                   label: 'Pessimistic',
                   data: data['pessimistic'],
@@ -49,8 +40,8 @@ async function chartData() {
               label: 'Optimistic',
               data: data['optimistic'],
               fill: false,
-              borderColor: 'green',
-              backgroundColor: 'green',
+              borderColor: 'limeGreen',
+              backgroundColor: 'limeGreen',
               borderWidth: 2,
               pointRadius: 0
         }
@@ -63,11 +54,17 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 10
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 
                 yAxes: [{
-                    display: false 
+                  scaleLabel: {
+                    display: true,
+                    labelString:'Deaths'
+                },
                 }]
             },
             tooltips: {
@@ -114,7 +111,7 @@ async function getData(){
     const projections_response= await fetch('scripts/scrapers/covid_scraper/covid-projections.csv')
     const projections_data = await projections_response.text()
     
-    const data = {'Dates': [],'ma':[],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
+    const data = {'Dates': [],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
     const threshold = 0
 
     const covid_csv = d3.csvParse(covid_data)
@@ -147,7 +144,7 @@ async function getData(){
         }
     })
 
-    data['ma']= calcMA(data['deaths'])
+    data['deaths']= calcMA(data['deaths'])
 
     return data
 }

@@ -3,6 +3,7 @@ async function chartData() {
     const ctx = document.getElementById('rpms-change').getContext('2d');
     const data = await getData();
 
+
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
@@ -24,7 +25,7 @@ async function chartData() {
                 borderColor: 'red',
                 backgroundColor: 'red',
                 borderWidth: 2,
-                pointRadius: 0               
+                pointRadius: 0             
               },
               {
                 label: 'Baseline',
@@ -39,10 +40,10 @@ async function chartData() {
                 label: 'Optimistic',
                 data: data['Optimistic'],
                 fill: false,
-                borderColor: 'green',
-                backgroundColor: 'green',
+                borderColor: 'limeGreen',
+                backgroundColor: 'limeGreen',
                 borderWidth: 2,
-                pointRadius: 0                 
+                pointRadius: 0                  
               }
             ]
         },
@@ -53,18 +54,38 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 12
+                    },
+                    gridLines: {
+                      display: false
                     }
                 }],
                 
                 yAxes: [{
-                    ticks: {
-                        maxTicksLimit: 5,
-                    }      
-                }]
+                    scaleLabel: {
+                      display: true,
+                      labelString:'% Change'
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    maxTicksLimit: 7,
+                      callback: function(value, index, values) {
+                          return value + "%";
+                      }
+                  }
+                  }]
+              },
+              tooltips: {
+                  intersect: false,
+                  callbacks: {
+                        label: function(tooltipItem, data) {
+                          var value = tooltipItem.value;
+                          return Math.round((parseFloat(value)) * 100) / 100 + '%';
+                  } 
+              }
             },
-            legend: {
-                position: 'bottom'
-            }
+              legend: {
+                  position: 'bottom'
+              }
         }
     });
 }
@@ -77,10 +98,10 @@ async function getData(){
     
     const data = {'Dates': [],'Actual': [], 'Pessimistic': [], 'Baseline': [], 'Optimistic': []};
 
-    const threshold =  1
+    const threshold =  2
 
     csv_data.forEach(function (row, index) {
-        if( index > threshold) {
+        if( index >= threshold) {
 
             if (row['Actual'] == '' && row['Baseline'] == '')
                 return
@@ -91,10 +112,10 @@ async function getData(){
             }
 
             data['Dates'].push(row['Date'])
-            data['Actual'].push(row['Actual']/row['Counterfactual'])
-            data['Pessimistic'].push(row['Pessimistic']/row['Counterfactual'])
-            data['Baseline'].push(row['Baseline']/row['Counterfactual'])
-            data['Optimistic'].push(row['Optimistic']/row['Counterfactual'])
+            data['Actual'].push(100*(row['Actual']/row['Counterfactual']-1))
+            data['Pessimistic'].push(100*(row['Pessimistic']/row['Counterfactual']-1))
+            data['Baseline'].push(100*(row['Baseline']/row['Counterfactual']-1))
+            data['Optimistic'].push(100*(row['Optimistic']/row['Counterfactual']-1))
         }
     })
     return data
