@@ -1,4 +1,27 @@
+.overview-wrapper{
+    width: 100%;
+    height: 500px;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
 
+.overview-header {
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.overview-header h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: justify;
+    color:lightgrey;
+}
 .dashboard-wrapper {
     padding: 40px;
     background-color: rgb(8, 20, 48);
@@ -97,7 +120,7 @@
     color: lightgray;
   }
 
-  h1 {
+  .dashboard-wrapper h1 {
       margin-bottom: 20px;
       font-size: 50px;
       color: white;
@@ -108,3 +131,23 @@
     font-size: 25px;
     color: lightgray
   }
+
+  /* Learn More Button */
+.learn-more{
+    font-size: 50px;
+    font-weight: 800;
+    color: royalblue 50%;
+    overflow: hidden;
+    background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position .75s ease;
+  }
+  
+  .learn-more:hover {
+    background-position: 0 100%;
+  }
+

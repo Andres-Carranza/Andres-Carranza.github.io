@@ -10,16 +10,15 @@ function goTo(id){
 
 // Get the timeline
 var timeline = document.getElementsByClassName("timeline")[0];
-
-// Get the offset position of the navtab
-var sticky = timeline.offsetTop;
+var height = timeline.offsetTop
 
 // Add the sticky class to the navtab when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function updateSticky()  {
-  if (window.pageYOffset >= sticky) {
+  if (window.pageYOffset >= height) {
     timeline.classList.add("sticky")
   } else {
     timeline.classList.remove("sticky");
+    height= timeline.offsetTop
   }
 }
 
