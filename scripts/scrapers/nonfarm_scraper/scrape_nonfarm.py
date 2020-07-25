@@ -41,6 +41,7 @@ def update_data(html,name,log):
     old_len = len(df)
 
     for i, date in enumerate(df['date'].values):
+        df.loc[i,'projected'] = ''
         if date in new_df['date'].values:
             df = df.drop(i)
 
