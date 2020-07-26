@@ -20,8 +20,8 @@ def run_scrapers():
     project.update_prediction()
 
 
-schedule.every().day.at('06:10').do(run_scrapers)
-#schedule.every().day.at('10:27').do(run_scrapers)
+#schedule.every().day.at('06:10').do(run_scrapers)
+schedule.every().day.at('10:50').do(run_scrapers)
 
 while True:
     schedule.run_pending()

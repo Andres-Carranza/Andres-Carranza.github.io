@@ -27,7 +27,8 @@ def update_data(response,projection_date,name,log):
         if date[2][0] == '0':
             date[2] = date[2][1]
 
-        df.loc[i,'date'] = date[1] + '/' + date[2] + '/' + date[0]
+        date = date[1] + '/' + date[2] + '/' + date[0]
+        df.loc[i,'date'] = date
 
         if date == '6/25/2020':
             df.loc[i,'actual_deaths'] = 657
