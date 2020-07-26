@@ -28,15 +28,6 @@ async function chartData() {
                 pointRadius: 0                 
               },
               {
-                label: 'Pessimistic',
-                data: data['Pessimistic'],
-                fill: false,
-                borderColor: 'red',
-                backgroundColor: 'red',
-                borderWidth: 2,
-                pointRadius: 0             
-              },
-              {
                 label: 'Baseline',
                 data: data['Baseline'],
                 fill: false,
@@ -44,15 +35,6 @@ async function chartData() {
                 backgroundColor: 'orange',
                 borderWidth: 2,
                 pointRadius: 0                
-              },
-              {
-                label: 'Optimistic',
-                data: data['Optimistic'],
-                fill: false,
-                borderColor: 'limeGreen',
-                backgroundColor: 'limeGreen',
-                borderWidth: 2,
-                pointRadius: 0                  
               }
             ]
         },
@@ -63,31 +45,18 @@ async function chartData() {
                         maxRotation: 0,
                         minRotation: 0,
                         maxTicksLimit: 12
-                    },
-                    gridLines: {
-                      display: false
                     }
                 }],
                 
                 yAxes: [{
-                    scaleLabel: {
-                      display: true,
-                      labelString:'RPMs (billions)'
-                  },
-                  }]
-              },
-              tooltips: {
-                  intersect: false,
-                  callbacks: {
-                        label: function(tooltipItem, data) {
-                          var value = tooltipItem.value;
-                          return Math.round((parseFloat(value)) * 100) / 100;
-                  } 
-              }
+                    ticks: {
+                        maxTicksLimit: 5,
+                    }      
+                }]
             },
-              legend: {
-                  position: 'bottom'
-              }
+            legend: {
+                position: 'bottom'
+            }
         }
     });
 }
@@ -98,7 +67,7 @@ async function getData(){
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'Actual': [], 'Pessimistic': [], 'Baseline': [], 'Optimistic': [], 'Counterfactual': []};
+    const data = {'Dates': [],'Actual': [],  'Baseline': [], 'Counterfactual': []};
 
     const threshold =  0
 
@@ -114,9 +83,7 @@ async function getData(){
 
             data['Dates'].push(row['Date'])
             data['Actual'].push(row['Actual']/1000000000)
-            data['Pessimistic'].push(row['Pessimistic']/1000000000)
             data['Baseline'].push(row['Baseline']/1000000000)
-            data['Optimistic'].push(row['Optimistic']/1000000000)
             data['Counterfactual'].push(row['Counterfactual']/1000000000)
         }
     })

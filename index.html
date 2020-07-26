@@ -121,7 +121,7 @@
             <div class="deaths-chart">
               <h2>Daily Covid-19 Deaths (7 day moving average)</h2>
 
-              <canvas id='deaths' width="1000px" height="800px"></canvas>
+              <canvas id='deaths' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -130,46 +130,22 @@
               </div>
             </div>
 
-            <div class="econ-projections">
-              <div class="unemployment-chart">
+            <div class="unemployment-chart">
                 <h2>Unemployment Rate</h2>
-                <canvas id='unemployment' width="1000px" height="400px"></canvas>
+                <canvas id='unemployment' width="1000px" height="500px"></canvas>
                 <div class="source">
                   Source:&nbsp;
                   <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
                   TSA checkpoint travel numbers
                   </a>
                 </div>
-              </div>
-
-              <div class="nonfarm-chart">
-                <h2>Nonfarm Payrolls</h2>
-                <canvas id='nonfarm' width="1000px" height="400px"></canvas>
-                <div class="source">
-                  Source:&nbsp;
-                  <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-                  TSA checkpoint travel numbers
-                  </a>
-                </div>
-              </div>
             </div>
-
           </div>
+
 
           <div class="rpms-projections">
             <h2>Air Travel Demand</h2>
             <canvas id='rpms-projections' width="1000px" height="300px"></canvas>
-            <div class="source">
-              Source:&nbsp;
-              <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-              TSA checkpoint travel numbers
-              </a>
-            </div>
-          </div>
-
-          <div class="rpms-change">
-            <h2>Change In Air Travel Demand</h2>
-            <canvas id='rpms-change' width="1000px" height="300px"></canvas>
             <div class="source">
               Source:&nbsp;
               <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -193,9 +169,7 @@
   <script src='scripts/dashboard-charts/live/unemployment-claims.js'> </script>
   <script src='scripts/dashboard-charts/live/tsa.js'> </script>
 
-  <script src='scripts/dashboard-charts/projections/rpms-change.js'> </script>
   <script src='scripts/dashboard-charts/projections/rpms-projections.js'> </script>
-  <script src='scripts/dashboard-charts/projections/nonfarm.js'> </script>
   <script src='scripts/dashboard-charts/projections/unemployment.js'> </script>
   <script src='scripts/dashboard-charts/projections/deaths.js'> </script>
 

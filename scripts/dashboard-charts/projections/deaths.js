@@ -18,15 +18,6 @@ async function chartData() {
                     borderWidth: 2,
                     pointRadius: 0
               },
-              {
-                  label: 'Pessimistic',
-                  data: data['pessimistic'],
-                  fill: false,
-                  borderColor: 'red',
-                  backgroundColor: 'red',
-                  borderWidth: 2,
-                  pointRadius: 0
-            },
             {
                 label: 'Baseline',
                 data: data['baseline'],
@@ -35,16 +26,7 @@ async function chartData() {
                 backgroundColor: 'orange',
                 borderWidth: 2,
                 pointRadius: 0
-          },
-          {
-              label: 'Optimistic',
-              data: data['optimistic'],
-              fill: false,
-              borderColor: 'limeGreen',
-              backgroundColor: 'limeGreen',
-              borderWidth: 2,
-              pointRadius: 0
-        }
+          }
             ]
         },
         options: {
@@ -90,61 +72,51 @@ async function chartData() {
 
 
 function calcMA(values) {
-    means = [NaN,NaN, NaN]
-    for(var i = 3; i< values.length - 3 ;i++){
+    means = [NaN,NaN, NaN,NaN,NaN,NaN]
+    for(var i = 6; i< values.length - 3 ;i++){
         var sum = 0;
-        for(var j = -3; j<=3; j++){
+        for(var j = -6; j<=0; j++){
             sum+=parseInt(values[i+j])
         }
         means.push(sum/7);
     }
-    means.push(NaN)
-    means.push(NaN)
-    means.push(NaN)
     return means;
   }
 
 async function getData(){
-    const covid_response= await fetch('scripts/scrapers/covid_scraper/covid-data.csv')
-    const covid_data = await covid_response.text()
-    
     const projections_response= await fetch('scripts/scrapers/covid_scraper/covid-projections.csv')
     const projections_data = await projections_response.text()
     
-    const data = {'Dates': [],'deaths': [], 'pessimistic': [], 'baseline': [], 'optimistic': []};
-    const threshold = 0
+    const data = {'Dates': [],'deaths': [],  'baseline': []};
+    const threshold = 0 
 
-    const covid_csv = d3.csvParse(covid_data)
-    covid_csv.forEach(function (row, index) {
-        if( index >= threshold) {
-            for (const [key, value] of Object.entries(row)) {
-                if(value == '')
-                    row[key] = NaN
-            }
-            date = row['date'].split('/')
-            data['Dates'].push(date[0] +'/' + date[1])
-            data['deaths'].push(row['deaths'])
-        }
-    })
 
     const projections_csv = d3.csvParse(projections_data)
+    var last = 0
     projections_csv.forEach(function (row, index) {
         if( index >= threshold) {
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
-            }                       
+            }                  
             date = row['date'].split('/')
-            if (!data['Dates'].includes(date[0] +'/' + date[1]))
-                data['Dates'].push(date[0] +'/' + date[1])
+            data['Dates'].push(date[0] +'/' + date[1])
 
-            data['pessimistic'].push(row['pessimistic']),
-            data['baseline'].push(row['baseline']),
-            data['optimistic'].push(row['optimistic'])
+            if ( !isNaN(row['actual_deaths'])){
+                last = index
+            }
+
+            data['deaths'].push(row['actual_deaths'])     
+
+
+
+            data['baseline'].push(row['predicted_deaths_mean'])
         }
     })
 
     data['deaths']= calcMA(data['deaths'])
+
+    data['baseline'][last] = data['deaths'][last]
 
     return data
 }

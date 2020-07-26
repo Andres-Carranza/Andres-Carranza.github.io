@@ -59,7 +59,7 @@ async function chartData() {
                   id: "right",
                   scaleLabel: {
                       display: true,
-                      labelString:'% change (thousands)'
+                      labelString:'% change'
                   },
                   ticks: {
                     beginAtZero: true,
@@ -95,14 +95,13 @@ async function chartData() {
     });
 }
 
-function calcMA(values) {
+function calcMAA(values) {
     means = [NaN,NaN, NaN]
-    for(var i = 3; i< values.length - 3 ;i++){
+    for(var i = 3; i<= values.length - 3 ;i++){
         var sum = 0;
         for(var j = -3; j<=3; j++){
             sum+=values[i+j]
         }
-
         means.push(sum/7);
     }
     means.push(NaN)
@@ -130,8 +129,9 @@ async function getData(){
         }
     })
 
-    var ma20 = calcMA(data['2020'], 7 ) 
-    var ma19 = calcMA(data['2019'], 7 ) 
+    var ma20 = calcMAA(data['2020'], 7 ) 
+    var ma19 = calcMAA(data['2019'], 7 )
+    //console.log(ma20) 
     ma20.forEach(function (row, index){
         data['change'].push(( (ma20[index] / ma19[index]) - 1) * 100)
     })

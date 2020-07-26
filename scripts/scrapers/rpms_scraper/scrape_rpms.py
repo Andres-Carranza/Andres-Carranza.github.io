@@ -24,10 +24,11 @@ def update_data(html,name,log):
             new_dates+=1
 
         df.loc[i,'Actual'] = val
-        if i == 5:
-            df.loc[i,['Pessimistic','Baseline','Optimistic']] = [val,val,val]
-        elif i == 1:
+        if i == 1:
             df.loc[i,'Counterfactual'] = val
+
+
+
 
     df.to_csv('rpms_scraper/rpms-data.csv',index=False)
     log.write('({})\t\t{}:\t\tAdding {} date(s) to csv file...\n'.format(name,dt.now(),new_dates))
