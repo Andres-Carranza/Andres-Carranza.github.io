@@ -40,7 +40,7 @@
 
 .passenger {
     
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/passengers.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/passengers.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -51,7 +51,7 @@
 
 .sustainability {
     
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/aero-check_flight_3-17-15_w_meatball_k66304.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/aero-check_flight_3-17-15_w_meatball_k66304.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -60,7 +60,7 @@
 }
 
 .innovation {
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/rvlt_urbanairmobility.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/rvlt_urbanairmobility.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
