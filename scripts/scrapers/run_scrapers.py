@@ -10,13 +10,13 @@ from rpms_scraper import scrape_rpms
 from rpms_scraper import project
 
 def run_scrapers():
-    '''    scrape_tsa.scrape()
-        scrape_covid.scrape()
-        scrape_claims.scrape()
-        scrape_unemployment.scrape()
-        scrape_nonfarm.scrape()
-        scrape_covid_projections.scrape()
-        scrape_rpms.scrape()'''
+    scrape_tsa.scrape()
+    scrape_covid.scrape()
+    scrape_claims.scrape()
+    scrape_unemployment.scrape()
+    scrape_nonfarm.scrape()
+    scrape_covid_projections.scrape()
+    scrape_rpms.scrape()
     project.update_prediction()
 
 
