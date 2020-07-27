@@ -1,7 +1,4 @@
 
-.sector-overviews > section {
-    padding: 20px
-}
 
 .sector-overviews .header {
     width: 80%;
@@ -10,6 +7,23 @@
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
+}
+
+
+.sector-overviews .up{
+    background: url('https://api.iconify.design/el-chevron-up.svg') no-repeat center center / contain;
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
+}
+
+.sector-overviews .down{
+    background: url('https://api.iconify.design/el-chevron-down.svg') no-repeat center center / contain;    margin-top: 25px;
+    margin-left: 20px;
+    margin-top: 30px;
+    height: 40px;
+    width: 40px;
 }
 
 .sector-overviews img {
@@ -24,9 +38,13 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
-    color: lightgrey;
+    color: black;
 }
 
+.sector-overviews .ov {
+    padding: 40px;
+
+}
 
 .sector-overviews p{
     width: 80%;
@@ -37,80 +55,48 @@
     color: white;
 }
 
-.sectors-header{      
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/sofia_departure_2017-20.jpg');
-    background-repeat: no-repeat;  
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    font-size: 100px;    
-    font-weight: bolder;
-    text-align: center;
-    color: lightgrey;
-    height: 100vh;
-}
 
-.sectors-header h1{
-    line-height: 100vh;
-}
-
-
-.passenger {
-    
+.passenger .ov{  
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/header-background-alternate.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
 }
 
 
-.freight {
-    
+.cargo .ov{  
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/dhl_cargo.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
 }
 
-.manufacturing {
+.manufacturing .ov{
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/boeing_manufacturing.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;   
 }
 
-.uam {
+.uam .ov{
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/uam-everything_v09.jpeg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;   
 }
 
-.nas {
+.nas .ov{
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/control_tower.jpg');
     background-repeat: no-repeat;  
     background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;   
+    background-size: cover;  
 }
 
-.environment{
-    
+.environment .ov{  
     background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/spinoff_heathy_planet4.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
 }
 
 

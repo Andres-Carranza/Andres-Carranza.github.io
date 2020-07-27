@@ -1,34 +1,20 @@
 
-
-.sector-overviews {
-    padding: 20px;
-}
-
-.sectors-header {
-    width: 80%;
-    font-size: 60px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: bolder;
-}
-
 .sector-overviews > section {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sector-overviews .header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
 }
 
-.sector-overviews img {
-    width: 100px;
-    height: 100px;
-    object-fit: fill;
-}
 
 .sector-overviews h2{
     font-size: 50px;
@@ -36,12 +22,52 @@
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 10px;
+    color: lightgrey;
 }
 
+
 .sector-overviews p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 25px;
     text-align: justify;
+    color: white;
 }
+
+
+
+
+.passenger {
+    
+    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/passengers.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+
+.sustainability {
+    
+    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/aero-check_flight_3-17-15_w_meatball_k66304.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.innovation {
+    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/rvlt_urbanairmobility.jpg');
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;   
+}
+
 
 
 
