@@ -79,6 +79,15 @@ async function chartData() {
                                   } else {
                                      return value;
                                   }
+                      },
+                      title: function(tooltipItem, data){
+                          var date = tooltipItem[0].xLabel.split('-')
+                        
+                          if (date[1][0] == '0')
+                                date[1] = date[1].charAt(1)
+                          if( date[2][0] == '0')
+                            date[2] = date[2].charAt(1)
+                          return date[1] +'/'+date[2]+'/'+date[0]
                       }
                 } 
             },
