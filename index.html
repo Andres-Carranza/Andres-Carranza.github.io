@@ -68,7 +68,15 @@
         </div>
         
       </div>
+      <div class="overview">
+        <h1>Dashboard</h1><br><br>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <br><br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       </p>
 
+      </div>
       <div class="dashboard-wrapper">
 
         <div class="live-data">
@@ -77,39 +85,40 @@
 
             <div class="covid-chart">
 
-              <h2>Daily Covid-19 Cases & Deaths</h2>
+              <h2>Covid-19 Cases & Deaths</h2>
 
               <canvas id='covid19' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
-                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-                TSA checkpoint travel numbers
-                </a>
+                <a class='source' href='https://covid19api.com/' target='_blank'>
+                Covid19 API
+                </a>(updated daily)
               </div>
             </div>
 
             <div class="econ-chart">
-              <h2>Weekly Unemployment Claims</h2>
+              <h2>Unemployment Claims</h2>
 
               <canvas id='unemployment-claims' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
-                <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-                TSA checkpoint travel numbers
-                </a>
+                <a class='source' href='https://fred.stlouisfed.org/series/ICSA' target='_blank'>
+                FRED
+                </a>(updated weekly on Saturdays)
               </div>
             </div>
 
           </div>
 
           <div class="tsa-chart">
-            <h2>Daily TSA Checkpoint Travel Numbers </h2>
+            <h2>TSA Checkpoint Travel Numbers </h2>
             <canvas id='tsa' width="1000px" height="300px"></canvas>
             <div class="source">
               Source:&nbsp;
               <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
               TSA Passenger Throughput
-              </a></div>
+              </a>(updated on weekdays)
+            </div>
           </div>
         </div>
 
@@ -120,14 +129,14 @@
 
           <div class="covid-econ-projections">
             <div class="deaths-chart">
-              <h2>Daily Covid-19 Deaths (7 day moving average)</h2>
+              <h2>Covid-19 Deaths (7 day moving average)</h2>
 
               <canvas id='deaths' width="1000px" height="500px"></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://covid19-projections.com/' target='_blank'>
-                  COVID-19 Projections Using Machine Learning
-                </a>
+                  COVID-19 Projections Using Machine Learning 
+                </a>(updated daily)
               </div>
             </div>
 
@@ -136,22 +145,28 @@
                 <canvas id='unemployment' width="1000px" height="500px"></canvas>
                 <div class="source">
                   Source:&nbsp;
-                  <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-                  TSA checkpoint travel numbers
-                  </a>
+                  <a class='source' href='https://www.forecasts.org/unemploy.htm' target='_blank'>
+                  The Financial Forecast Center 
+                  </a>(updated monthly)
                 </div>
             </div>
           </div>
 
 
           <div class="rpms-projections">
-            <h2>Air Travel Demand</h2>
+            <h2>Domestic Air Travel Demand</h2>
             <canvas id='rpms-projections' width="1000px" height="300px"></canvas>
             <div class="source">
-              Source:&nbsp;
-              <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
-              TSA checkpoint travel numbers
-              </a>
+              Historical RPMs Source:&nbsp;
+              <a class='source' href='https://www.transtats.bts.gov/Data_Elements.aspx?Data=3' target='_blank'>
+              BTS Transtats
+              </a>(updated monthly with a 3 month lag; 3 most recent months are estimated by our model)
+            </div>
+            <div class="source">
+              Estimated, Projected, and Counterfactual RPMs Source:&nbsp;
+              <a class='source' href='documents/report.pdf' target='_blank'>
+              Team Revelation Model
+              </a>(estimates & projections updated daily)
             </div>
           </div>
 

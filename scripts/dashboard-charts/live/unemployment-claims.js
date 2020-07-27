@@ -9,33 +9,30 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: '# Jobless Claims',
+                    label: 'Jobless Claims',
                     data: data['claims'],
                     fill: false,
-                    borderColor: 'orange',
-                    backgroundColor: 'orange',
+                    borderColor: 'rgb(252, 219, 3)',
+                    backgroundColor: 'rgb(252, 219, 3)',
                     borderWidth: 2,
-                    pointRadius: 0
+                    pointRadius: 0,
+                    hitRadius: 0
               }
             ]
         },
         options: {
             scales: {
                 xAxes: [{
-                    ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
-                        maxTicksLimit: 10
-                    },
-                    gridLines: {
-                      display: false
+                     type: 'time',
+                    time: {
+                      unit: 'month'
                     }
                 }],
                 
                 yAxes: [{
                     scaleLabel: {
                         display: true,
-                        labelString: 'Jobless Claims (millions)'
+                        labelString: 'Initial Claims (millions)'
                     },
                     ticks: {
                         beginAtZero: true,
@@ -54,11 +51,20 @@ async function chartData() {
                                   } else {
                                      return value;
                                   }
+                      },
+                      title: function(tooltipItem, data){
+                          var date = tooltipItem[0].xLabel.split('-')
+                        
+                          if (date[1][0] == '0')
+                                date[1] = date[1].charAt(1)
+                          if( date[2][0] == '0')
+                            date[2] = date[2].charAt(1)
+                          return date[1] +'/'+date[2]+'/'+date[0]
                       }
                 } 
             },
             legend: {
-                position: 'bottom'
+                display: false
             }
         }
     });
@@ -73,14 +79,29 @@ async function getData(){
     const data = {'Dates': [],'claims': []};
 
     const threshold = csv_data.length  - 60
-
+    var march = 0;
     csv_data.forEach(function (row, index) {
         if( index >= threshold) {
             date = row['date'].split('/')
-            data['Dates'].push(date[0] +'/' + date[1])
+
+            if (date[0].length ==1 )
+                date[0] = '0'+date[0]
+            if (date[1].length ==1 )
+                date[1] = '0'+date[1]
+
+            if(row['date'] == '2/29/2020'){
+                march = index
+            }
+
+            data['Dates'].push(date[2] +'-'+date[0]+'-'+date[1])
             data['claims'].push(row['claims']/1000000)
         }
     })
+
+    for (var i = 0; i< march; i++){
+        data['claims'].shift()
+        data['Dates'].shift()
+    }
     return data
 }
 

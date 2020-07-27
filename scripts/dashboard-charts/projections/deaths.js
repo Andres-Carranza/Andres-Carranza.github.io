@@ -40,16 +40,14 @@ async function chartData() {
                     type: 'time',
                     time: {
                       unit: 'month'
-                    },
-                    gridLines: {
-                      display: false
                     }
                 }],
                 
                 yAxes: [{
                   scaleLabel: {
                     display: true,
-                    labelString:'Deaths'
+                    labelString:'Deaths',
+                    beginAtZero: true
                 },
                 }]
             },

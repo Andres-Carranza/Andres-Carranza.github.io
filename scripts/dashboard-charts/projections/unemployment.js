@@ -1,7 +1,10 @@
 
 async function chartData() {
     const ctx = document.getElementById('unemployment').getContext('2d');
-    const data = await getData();
+    var data = await getData();
+
+    var last = data[1]
+    data = data[0]
 
     const myChart = new Chart(ctx, {
         type: 'line',
@@ -12,35 +15,33 @@ async function chartData() {
                     label: 'Actual',
                     data: data['actual'],
                     fill: false,
-                    borderColor: 'blue',
-                    backgroundColor: 'blue',
+                    borderColor: 'rgb(252, 219, 3)',
+                    backgroundColor: 'rgb(252, 219, 3)',
                     borderWidth: 2,
-                    pointRadius: 0
+                    pointRadius: 0,
+                    hitRadius:0   
               },
               {
                   label: 'Projections',
                   data: data['projections'],
                   fill: false,
-                  borderColor: 'purple',
-                  backgroundColor: 'purple',
+                  borderColor: 'rgb(252, 219, 3)',
+                  backgroundColor: 'rgb(252, 219, 3)',
                   borderWidth: 2,
-                  pointRadius: 0
+                  pointRadius: 0,
+                  borderDash: [10,5],
+                  hitRadius:0
             }
             ]
         },
         options: {
             scales: {
                 xAxes: [{
-                    ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
-                        maxTicksLimit: 10
-                    },
-                    gridLines: {
-                      display: false
+                    type: 'time',
+                    time: {
+                      unit: 'month'
                     }
                 }],
-                
                 yAxes: [{
                     scaleLabel: {
                         display: true,
@@ -58,12 +59,25 @@ async function chartData() {
                 intersect: false,
                 callbacks: {
                       label: function(tooltipItem, data) {
+                        var value = tooltipItem.value;
+                        if(tooltipItem.index== last && tooltipItem.datasetIndex == 1){
+                            return;
+                        }
                         return tooltipItem.value +'%'
+                      },
+                      title: function(tooltipItem, data){
+                          var date = tooltipItem[0].xLabel.split('-')
+                        
+                          if (date[1][0] == '0')
+                                date[1] = date[1].charAt(1)
+                          if( date[2][0] == '0')
+                            date[2] = date[2].charAt(1)
+                          return date[1] +'/'+date[0]
                       }
                 } 
               },
               legend: {
-                  position: 'bottom'
+                 display: false
               }
         }
     });
@@ -77,22 +91,31 @@ async function getData(){
     
     const data = {'Dates': [],'actual': [], 'projections': []};
 
-    const threshold = csv_data.length  - 60
+    const threshold = 2
 
     csv_data.forEach(function (row, index) {
 
         for (const [key, value] of Object.entries(row)) {
             if(value == '')
                 row[key] = NaN
-        }
+        }   
+        date = row['date'].split('/')
 
+        if (date[0].length ==1 )
+            date[0] = '0'+date[0]
+
+        date = date[1] + '-'+ date[0] + '-01'
         if( index >= threshold) {
-            data['Dates'].push(row['date'])
+            if ( !isNaN(row['actual'])){
+                last = index
+            }
+
+            data['Dates'].push(date)
             data['actual'].push(row['actual'])
             data['projections'].push(row['projected'])
         }
     })
-    return data
+    return [data,last - threshold]
 }
 
 chartData()

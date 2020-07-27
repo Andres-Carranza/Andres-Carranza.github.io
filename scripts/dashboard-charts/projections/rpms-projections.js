@@ -1,8 +1,10 @@
 
 async function chartData() {
     const ctx = document.getElementById('rpms-projections').getContext('2d');
-    const data = await getData();
+    var data = await getData();
 
+    var last = data[1]
+    data = data[0]
 
     const myChart = new Chart(ctx, {
         type: 'line',
@@ -10,52 +12,156 @@ async function chartData() {
             labels: data['Dates'],
             datasets: [
                 {
-                    label: 'Actual',
+                    label: 'RPMs',
                     data: data['Actual'],
                     fill: false,
-                    borderColor: 'blue',
-                    backgroundColor: 'blue',
+                    borderColor: 'navy',
+                    backgroundColor: 'navy',
                     borderWidth: 2,
-                    pointRadius: 0      
+                    pointRadius: 0,   
+                    hitRadius:0 ,
+                    yAxisID: "left",
+  
               },
               {
-                label: 'Counterfactual',
+                label: 'Counterfactual RPMs',
+                data: [],
+                fill: false,
+                borderColor: 'purple',
+                backgroundColor: 'purple',
+                borderWidth: 2,
+                pointRadius: 0,   
+                hitRadius:0, 
+                yAxisID: "left",
+                
+              },
+              {
+                label: 'hide',
                 data: data['Counterfactual'],
                 fill: false,
                 borderColor: 'purple',
                 backgroundColor: 'purple',
                 borderWidth: 2,
-                pointRadius: 0                 
+                pointRadius: 0,   
+                hitRadius:0, 
+                borderDash: [10,5],
+                yAxisID: "left",
+                
               },
               {
-                label: 'Baseline',
+                label: 'hide',
                 data: data['Baseline'],
                 fill: false,
-                borderColor: 'orange',
-                backgroundColor: 'orange',
+                borderColor: 'navy',
+                backgroundColor: 'navy',
                 borderWidth: 2,
-                pointRadius: 0                
+                pointRadius: 0,   
+                borderDash: [10,5],
+                hitRadius:0  ,
+                yAxisID: "left",
+                
+              },
+              {
+                label: 'RPMs % change compared to Counterfactual',
+                data: data['changea'],
+                fill: false,
+                borderColor: '#58b7cc',
+                backgroundColor: '#58b7cc',
+                borderWidth: 2,
+                pointRadius: 0,   
+                hitRadius:0,   
+                yAxisID: "right",
+        
+              },
+              {
+                label: 'hide',
+                data: data['changeb'],
+                fill: false,
+                borderColor: '#58b7cc',
+                backgroundColor: '#58b7cc',
+                borderWidth: 2,
+                pointRadius: 0,   
+                hitRadius:0,
+                borderDash: [10,5]   ,
+                yAxisID: "right",
               }
             ]
         },
         options: {
             scales: {
                 xAxes: [{
-                    ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
-                        maxTicksLimit: 12
+                    type: 'time',
+                    time: {
+                      unit: 'month'
                     }
                 }],
                 
                 yAxes: [{
+                    position: "left",
+                    id: "left",
+                    
+                    scaleLabel: {
+                        display: true,
+                        labelString:'RPMs (billions)'
+                    },
                     ticks: {
-                        maxTicksLimit: 5,
-                    }      
-                }]
+                        beginAtZero: true,
+                    }
+                  }, {
+                    position: "right",
+                    id: "right",
+                    scaleLabel: {
+                        display: true,
+                        labelString:'% Change'
+                    },
+                    gridLines: {
+                        display: false
+                    },
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return value + "%";
+                        }
+                    }
+                  }]
+            },
+            tooltips: {
+                intersect: false,
+                callbacks: {
+                      label: function(tooltipItem, data) {
+
+                        var value = tooltipItem.value;
+                        if(tooltipItem.index== last &&( tooltipItem.datasetIndex == 3 || tooltipItem.datasetIndex == 5) ){
+                            return;
+                        }
+                        value = Math.round((parseFloat(value)) * 100) / 100;
+
+                        if(tooltipItem.datasetIndex == 4 ||tooltipItem.datasetIndex == 5)
+                            return value+'%'
+
+                          if(parseInt(value) >= 1000){
+                                return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                  } else {
+                                return value;
+                         }
+                      },
+                      title: function(tooltipItem, data){
+                          var date = tooltipItem[0].xLabel.split('-')
+                        
+                          if (date[1][0] == '0')
+                                date[1] = date[1].charAt(1)
+                          if( date[2][0] == '0')
+                            date[2] = date[2].charAt(1)
+                          return date[1] +'/'+date[0]
+                      }
+                } 
             },
             legend: {
-                position: 'bottom'
+                position: 'bottom',
+                labels: {
+                    filter: function(item, chart) {
+                        return !item.text.includes('hide');
+                    }
+                }
             }
         }
     });
@@ -67,27 +173,43 @@ async function getData(){
     
     const csv_data = d3.csvParse(raw_data)
     
-    const data = {'Dates': [],'Actual': [],  'Baseline': [], 'Counterfactual': []};
+    const data = {'Dates': [],'Actual': [],'changea': [],'changeb': [],  'Baseline': [], 'Counterfactual': []};
 
-    const threshold =  0
-
+    const threshold =  2
+    var last = 0
     csv_data.forEach(function (row, index) {
         if( index >= threshold) {
-            if (row['Actual'] == '' && row['Baseline'] == '')
+
+            if (row['Actual'] == '' && row['Baseline'] == ''){
                 return
+            }
                 
             for (const [key, value] of Object.entries(row)) {
                 if(value == '')
                     row[key] = NaN
             }
 
-            data['Dates'].push(row['Date'])
+            date = row['Date'].split('/')
+
+            if (date[0].length ==1 )
+                date[0] = '0'+date[0]
+       
+            date = date[1] + '-'+ date[0] + '-01'
+            
+            if ( !isNaN(row['Actual'])){
+                last = index
+            }
+
+            data['Dates'].push(date)
             data['Actual'].push(row['Actual']/1000000000)
             data['Baseline'].push(row['Baseline']/1000000000)
             data['Counterfactual'].push(row['Counterfactual']/1000000000)
+            data['changea'].push(100*(row['Actual'] / row['Counterfactual']-1))
+            data['changeb'].push(100*(row['Baseline'] / row['Counterfactual']-1))
         }
     })
-    return data
+
+    return [data,last - threshold]
 }
 
 chartData()

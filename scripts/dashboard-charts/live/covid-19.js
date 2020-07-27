@@ -13,20 +13,22 @@ async function chartData() {
                   data: data['Cases'],
                   fill: false,
                   yAxisID: 'left',
-                  borderColor: 'blue',
-                  backgroundColor: 'blue',
+                  borderColor: '#c97f1c',
+                  backgroundColor: '#c97f1c',
                   pointRadius: 0,
-                  borderWidth: 2
+                  borderWidth: 2,
+                  hitRadius: 0
             },
             {
               label: 'Deaths',
               data: data['Deaths'],
               fill: false,
               yAxisID: 'right',
-              borderColor: 'purple',
-              backgroundColor: 'purple',      
+              borderColor: '#700907',
+              backgroundColor: '#700907',  
               pointRadius: 0,
-              borderWidth: 2
+              borderWidth: 2,
+              hitRadius: 0
             }
             ]
         },
@@ -34,13 +36,9 @@ async function chartData() {
 
             scales: {
                 xAxes: [{
-                    ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
-                        maxTicksLimit: 10
-                    },
-                    gridLines: {
-                      display: false
+                    type: 'time',
+                    time: {
+                      unit: 'month'
                     }
                 }],
                 yAxes: [{
@@ -52,7 +50,6 @@ async function chartData() {
                   },
                   ticks: {
                       beginAtZero: true,
-                      maxTicksLimit: 7
                   }
                 }, {
                   position: "right",
@@ -66,7 +63,6 @@ async function chartData() {
                   },
                   ticks: {
                       beginAtZero: true,
-                      maxTicksLimit: 7
                   }
                 }]
             },
@@ -119,16 +115,31 @@ async function getData(){
     const data = {'Dates': [],'Deaths': [], 'Cases': []};
 
     const threshold = 0
-
+    var march =0;
     csv_data.forEach(function (row, index) {
         if( index >= threshold) {
             date = row['date'].split('/')
-            data['Dates'].push(date[0] +'/' + date[1])
+
+            if (date[0].length ==1 )
+                date[0] = '0'+date[0]
+            if (date[1].length ==1 )
+                date[1] = '0'+date[1]
+
+            if(row['date'] == '3/1/2020'){
+                march = index
+            }
+
+            data['Dates'].push(date[2] +'-'+date[0]+'-'+date[1])
+
             data['Cases'].push(row['cases']/1000)
             data['Deaths'].push(row['deaths']/100)
         }
     })
-    
+    for (var i = 0; i< march; i++){
+        data['Deaths'].shift()
+        data['Dates'].shift()
+        data['Cases'].shift()
+    }
     return data
 }
 

@@ -16,17 +16,19 @@ async function chartData() {
                     backgroundColor: 'navy',
                     borderWidth: 2,
                     pointRadius: 0,
+                    hitRadius:0,
                     type: 'line'
               },
               {
-                  label: '7 day moving average % change compared to year ago',
+                  label: '7 day moving average % change compared to a year ago',
                   data: data['change'],
                   fill: false,
                   yAxisID: "right",
-                  borderColor: 'teal',
-                  backgroundColor: 'teal',
+                  borderColor: '#58b7cc',
+                  backgroundColor: '#58b7cc',
                   borderWidth: 2,
                   pointRadius: 0,
+                  hitRadius:0,
                   type: 'line'
             }
             ]
@@ -34,12 +36,9 @@ async function chartData() {
         options: {
             scales: {
                 xAxes: [{
-                    ticks: {
-                        maxRotation: 0,
-                        minRotation: 0,
-                    },
-                    gridLines: {
-                      display: false
+                    type: 'time',
+                    time: {
+                      unit: 'month'
                     }
                 }],
                 yAxes: [{
@@ -52,18 +51,16 @@ async function chartData() {
                   },
                   ticks: {
                       beginAtZero: true,
-                      maxTicksLimit: 7
                   }
                 }, {
                   position: "right",
                   id: "right",
+                  gridLines: false,
                   scaleLabel: {
                       display: true,
-                      labelString:'% change'
+                      labelString:'% Change'
                   },
                   ticks: {
-                    beginAtZero: true,
-                    maxTicksLimit: 7,
                       callback: function(value, index, values) {
                           return value + "%";
                       }
@@ -85,6 +82,15 @@ async function chartData() {
                             value = value +'%'
                         }
                         return  value
+                      },
+                      title: function(tooltipItem, data){
+                          var date = tooltipItem[0].xLabel.split('-')
+                        
+                          if (date[1][0] == '0')
+                                date[1] = date[1].charAt(1)
+                          if( date[2][0] == '0')
+                            date[2] = date[2].charAt(1)
+                          return date[1] +'/'+date[2]+'/'+date[0]
                       }
                 } 
             },
@@ -123,7 +129,13 @@ async function getData(){
     csv_data.forEach(function (row, index) {
         if( index >= threshold) {
             date = row['Date'].split('/')
-            data['Dates'].push(date[0] +'/' + date[1])            
+
+            if (date[0].length ==1 )
+                date[0] = '0'+date[0]
+            if (date[1].length ==1 )
+                date[1] = '0'+date[1]
+
+            data['Dates'].push(date[2] +'-'+date[0]+'-'+date[1])
             data['2020'].push(row['2020']/1000)
             data['2019'].push(row['2019']/1000)
         }

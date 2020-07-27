@@ -190,14 +190,16 @@ def update_prediction():
     last = 0
 
     for i, row in rpms.iterrows():
-        rpms.loc[i, 'Baseline'] = ''
-
         if not np.isnan(row['Actual'] ):
             last = i
         else:
             break
 
+        rpms.loc[i, 'Baseline'] = ''
+
+
     rpms.loc[last,'Baseline'] = rpms.loc[last,'Actual']
+
 
     log.write('({})\t\t\t{}:\t\tWriting predictions to csv...\n'.format(name,dt.now()))
 
