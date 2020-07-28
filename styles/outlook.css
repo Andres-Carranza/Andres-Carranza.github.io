@@ -9,6 +9,9 @@
     display: flex;
 }
 
+.sector-overviews .header:hover {
+    cursor: pointer;
+}
 
 .sector-overviews .up{
     background: url('https://api.iconify.design/el-chevron-up.svg') no-repeat center center / contain;
