@@ -1,34 +1,40 @@
-.overview-header {
-    margin-left: 10%;
-    margin-bottom: 100px;
-    padding: 20px;
-  }
-  
-  .overview-header h1 {
-    font-size: 140px;
-    color: lightgray;
-    text-align: justify;
-  }
-  
-  .overview {
+
+  .team-overview {
     background-color: white;
-    padding: 20px;
     padding-bottom: 50px;
-    padding-top: 50px
+    padding-top: 50px; 
   }
   
-  .overview h1{
+  .team-overview h1{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     font-size: 60px;
+    padding-bottom: 30px;
+    padding-top: 30px;
   }
+
+.team-overview > div{
+    display:flex;
+    margin-top: 20px;
+    padding: 50px;
+}
   
-  .overview p{
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+.pov{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 200px;
+}
+
+.team-overview h2 {
+    font-size: 40px;
+
+}
+.team-overview p{
     font-size: 25px;
     text-align: justify;
   }
+
+
   
