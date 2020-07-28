@@ -57,7 +57,7 @@
 
 
 .passenger .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/header-background-alternate.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/header-background-alternate.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -65,35 +65,35 @@
 
 
 .cargo .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/dhl_cargo.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/dhl_cargo.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .manufacturing .ov{
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/boeing_manufacturing.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/boeing_manufacturing.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .uam .ov{
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/uam-everything_v09.jpeg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/uam-everything_v09.jpeg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .nas .ov{
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/control_tower.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/control_tower.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;  
 }
 
 .environment .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.7), rgb(0,0,0, 0.7) ), url('../images/spinoff_heathy_planet4.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/spinoff_heathy_planet4.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
