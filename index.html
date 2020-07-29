@@ -29,6 +29,12 @@
           <a href="https://www.nasa.gov" target='_blank'><img src="images/nasa-logo.png" alt="NASA"></a>
         </div>
 
+        <a href="#" class='toggle-button'>
+          <span class='bar'></span>
+          <span class='bar'></span>
+          <span class='bar'></span>
+        </a>
+
         <div class="navbar-links">
           <ul> 
             <li><div class='navbar-link active-navbar-link'>
@@ -49,6 +55,8 @@
           </ul>
         </div>
       </div>
+
+      
     </div>
 
     <!--CONTENT-->
@@ -72,11 +80,6 @@
         <h1>Dashboard</h1><br><br>
         <p>
           Our Dashboard displays a variety of data to assess the current state of US air travel and the direction it is headed in. Both the Live Data panel and the Projections panel provides 3 categories of information: covid-19 related statistics, data on economic conditions, and air travel related metrics. We provide data on covid-19 and the economy because both are very influential factors that heavily impact the state of air travel.
-          <br><br>
-          View the Live Data panel to assess the current state of air travel (measured by TSA Passenger Throughput), as well as how the covid-19 pandemic is playing out and what the present economic climate is like (as perceived through unemployment claims).
-          <br><br>
-          The Projections  panel provides projections for where the covid-19 pandemic is headed in the coming months, what climate the economy is moving towards (as perceived through unemployment), and what domestic air travel demand (measured by RPMs) can be expected to look like in the near term. Additionally, we provide a counterfactual estimate of what domestic air travel demand would have most likely been had the covid-19 pandemic not occurred.
-          
        </p>
 
       </div>
@@ -90,7 +93,7 @@
 
               <h2>Covid-19 Cases & Deaths</h2>
 
-              <canvas id='covid19' width="1000px" height="500px"></canvas>
+              <canvas id='covid19' ></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://covid19api.com/' target='_blank'>
@@ -102,7 +105,7 @@
             <div class="econ-chart">
               <h2>Unemployment Claims</h2>
 
-              <canvas id='unemployment-claims' width="1000px" height="500px"></canvas>
+              <canvas id='unemployment-claims' ></canvas>
               <div class="source">
                 Source:&nbsp;
                 <a class='source' href='https://fred.stlouisfed.org/series/ICSA' target='_blank'>
@@ -115,7 +118,7 @@
 
           <div class="tsa-chart">
             <h2>TSA Checkpoint Travel Numbers </h2>
-            <canvas id='tsa' width="1000px" height="300px"></canvas>
+            <canvas id='tsa'></canvas>
             <div class="source">
               Source:&nbsp;
               <a class='source' href='https://www.tsa.gov/coronavirus/passenger-throughput' target='_blank'>
@@ -157,8 +160,9 @@
 
 
           <div class="rpms-projections">
+            <div class="chart-wrapper">
             <h2>Domestic Air Travel Demand</h2>
-            <canvas id='rpms-projections' width="1000px" height="300px"></canvas>
+            <canvas id='rpms-projections' ></canvas>
             <div class="source">
               Historical RPMs Source:&nbsp;
               <a class='source' href='https://www.transtats.bts.gov/Data_Elements.aspx?Data=3' target='_blank'>
@@ -172,18 +176,38 @@
               </a>(estimates & projections updated daily)
             </div>
           </div>
-
         </div>
-
+        </div>
       </div>
-
     </div>
   </body>
 
   <!--Prevent animations from occuring preload-->
   <script src="scripts/preload.js"></script>
 
+  <!--Toggle Button Script-->
+  <script src="scripts/toggle-button.js"></script>
   <!--Charts-->
+
+  <!--Resize Canvas-->
+  <script>   
+   // window.onresize = updateCanvas
+    //updateCanvas()
+
+    function updateCanvas(){
+      rpms_projections = document.getElementById('rpms-projections')
+      
+      if(screen.width > 500) {
+        rpms_projections.width = 1000
+        rpms_projections.height = 300
+      }
+      else{
+        rpms_projections.width = 1000
+        rpms_projections.height = 700
+      }
+      console.log(screen.width, rpms_projections.width, rpms_projections.height)
+    }
+  </script>
   <script src='scripts/dashboard-charts/live/covid-19.js'> </script>
   <script src='scripts/dashboard-charts/live/unemployment-claims.js'> </script>
   <script src='scripts/dashboard-charts/live/tsa.js'> </script>

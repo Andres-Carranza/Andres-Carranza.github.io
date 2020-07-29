@@ -2,9 +2,15 @@
 async function chartData() {
     const ctx = document.getElementById('rpms-projections').getContext('2d');
     var data = await getData();
-
     var last = data[1]
     data = data[0]
+    var aspectRatio = 1/.3
+    if (screen.width <= 500)
+        aspectRatio = 1/.79 
+    else if (screen.width <= 700)
+        aspectRatio = 1/.7
+    else if (screen.width <= 1000)
+        aspectRatio = 1/.5
 
     const myChart = new Chart(ctx, {
         type: 'line',
@@ -88,6 +94,21 @@ async function chartData() {
             ]
         },
         options: {
+            aspectRatio: aspectRatio,
+            onResize: function(chart, size){
+                if( screen.width <= 500){
+                    chart.aspectRatio= 1/.9;
+                }
+                else if( screen.width <= 700){
+                    chart.aspectRatio= 1/.7;
+                }
+                else if( screen.width <= 1000){
+                    chart.aspectRatio= 1/.5;
+                }
+                else {
+                    chart.aspectRatio= 1/.3;
+                }
+            },
             scales: {
                 xAxes: [{
                     type: 'time',

@@ -68,9 +68,9 @@
 
 
 .cargo .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/dhl_cargo.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/usps.jpg');
     background-repeat: no-repeat;  
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
 }
 

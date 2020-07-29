@@ -2,6 +2,14 @@
 async function chartData() {
     const ctx = document.getElementById('covid19').getContext('2d');
     const data = await getData();
+    var aspectRatio = 1/.5
+    
+    if (screen.width <= 500)
+        aspectRatio = 1/.7   
+    else if (screen.width <= 700)
+        aspectRatio = 1/.5
+    else if (screen.width <= 1000)
+        aspectRatio = 1/.3
     Chart.defaults.global.defaultFontColor = 'lightgray';
     const myChart = new Chart(ctx, {
         type: 'line',
@@ -33,7 +41,21 @@ async function chartData() {
             ]
         },
         options: {
-
+            aspectRatio: aspectRatio,
+            onResize: function(chart, size){
+                if( screen.width <= 500){
+                    chart.aspectRatio= 1/.7;
+                }
+                else if( screen.width <= 700){
+                    chart.aspectRatio= 1/.5;
+                }
+                else if( screen.width <= 1000){
+                    chart.aspectRatio= 1/.3;
+                }
+                else {
+                    chart.aspectRatio= 1/.5;
+                }
+            },
             scales: {
                 xAxes: [{
                     type: 'time',
@@ -73,11 +95,11 @@ async function chartData() {
                       label: function(tooltipItem, data) {
                           var value = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
                           value = Math.round((parseFloat(value)) * 100) / 100;
-
+                            console.log(value)
                           if(parseInt(value) >= 1000){
                                      return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                                   } else {
-                                     return value;
+                                     return value.toString();
                                   }
                       },
                       title: function(tooltipItem, data){

@@ -1675,3 +1675,25 @@ Scraper             Time                            Message
 (Project)			2020-07-27 09:24:16.878290:		Making predictions..
 (Project)			2020-07-27 09:24:18.887542:		Writing predictions to csv...
 (Project)			2020-07-27 09:24:18.889532:		Script finished
+(TSA Scraper)		2020-07-28 08:48:11.419823:		Running script
+(TSA Scraper)		2020-07-28 08:48:11.427803:		Requesting data...
+(TSA Scraper)		2020-07-28 08:48:12.076069:		Error retrieving data; Response failed
+(TSA Scraper)		2020-07-28 08:48:12.076069:		Finished script
+(Covid-19 Scraper)	2020-07-28 08:48:12.110976:		Running script
+(Covid-19 Scraper)	2020-07-28 08:48:13.156728:		Requesting data...
+(Covid-19 Scraper)	2020-07-28 08:48:13.164706:		Error retrieving data; Response failed
+(Covid-19 Scraper)	2020-07-28 08:48:13.164706:		Finished script
+(Claims Scraper)	2020-07-28 08:48:13.168695:		Running script
+(Claims Scraper)	2020-07-28 08:48:13.420024:		Requesting data...
+(Claims Scraper)	2020-07-28 08:48:13.438975:		Error retrieving data; Response failed
+(Claims Scraper)	2020-07-28 08:48:13.439974:		Finished script
+(Unmp. Scraper)		2020-07-28 08:48:13.442964:		Running script
+(Unmp. Scraper)		2020-07-28 08:48:13.442964:		Requesting data...
+(Unmp. Scraper)		2020-07-28 08:48:13.449943:		Error retrieving data; Response failed
+(Unmp. Scraper)		2020-07-28 08:48:13.449943:		Finished script
+(NFarm Scraper)		2020-07-28 08:48:13.450940:		Running script
+(NFarm Scraper)		2020-07-28 08:48:13.451938:		Requesting data...
+(NFarm Scraper)		2020-07-28 08:48:13.490833:		Error retrieving data; Response failed
+(NFarm Scraper)		2020-07-28 08:48:13.490833:		Finished script
+(C19-Proj. Scraper)	2020-07-28 08:48:13.492838:		Running script
+(C19-Proj. Scraper)	2020-07-28 08:48:13.492838:		Requesting data...

@@ -2,6 +2,14 @@
 async function chartData() {
     const ctx = document.getElementById('tsa').getContext('2d');
     const data = await getData();
+    var aspectRatio = 1/.3
+    if (screen.width <= 500)
+        aspectRatio = 1/.79 
+    else if (screen.width <= 700)
+        aspectRatio = 1/.7
+    else if (screen.width <= 1000)
+        aspectRatio = 1/.5
+
 
     const myChart = new Chart(ctx, {
         data: {
@@ -20,7 +28,7 @@ async function chartData() {
                     type: 'line'
               },
               {
-                  label: '7 day moving average % change compared to a year ago',
+                  label: '7 day moving average % change from 2019',
                   data: data['change'],
                   fill: false,
                   yAxisID: "right",
@@ -34,6 +42,21 @@ async function chartData() {
             ]
         },
         options: {
+            aspectRatio: aspectRatio,
+            onResize: function(chart, size){
+                if( screen.width <= 500){
+                    chart.aspectRatio= 1/.9;
+                }
+                else if( screen.width <= 700){
+                    chart.aspectRatio= 1/.7;
+                }
+                else if( screen.width <= 1000){
+                    chart.aspectRatio= 1/.5;
+                }
+                else {
+                    chart.aspectRatio= 1/.3;
+                }
+            },
             scales: {
                 xAxes: [{
                     type: 'time',

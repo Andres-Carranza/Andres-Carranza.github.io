@@ -2,6 +2,14 @@
 async function chartData() {
     const ctx = document.getElementById('unemployment').getContext('2d');
     var data = await getData();
+    var aspectRatio = 1/.5
+    
+    if (screen.width <= 500)
+        aspectRatio = 1/.7   
+    else if (screen.width <= 700)
+        aspectRatio = 1/.5
+    else if (screen.width <= 1000)
+        aspectRatio = 1/.3
 
     var last = data[1]
     data = data[0]
@@ -35,6 +43,21 @@ async function chartData() {
             ]
         },
         options: {
+            aspectRatio: aspectRatio,
+            onResize: function(chart, size){
+                if( screen.width <= 500){
+                    chart.aspectRatio= 1/.7;
+                }
+                else if( screen.width <= 700){
+                    chart.aspectRatio= 1/.5;
+                }
+                else if( screen.width <= 1000){
+                    chart.aspectRatio= 1/.3;
+                }
+                else {
+                    chart.aspectRatio= 1/.5;
+                }
+            },
             scales: {
                 xAxes: [{
                     type: 'time',

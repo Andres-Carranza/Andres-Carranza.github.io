@@ -1,18 +1,10 @@
-.overview-wrapper{
-    width: 100%;
-    height: 500px;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/nasa-outlook.jpg');
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: flex-end;
-}
+
 
 .overview-header {
-    width: 40%;
+    width: 50%;
     margin-left: 10%;
-    margin-bottom: 100px;
+    margin-bottom: auto;
+    margin-top: auto;
     padding: 20px;
 }
 
@@ -22,6 +14,57 @@
     text-align: justify;
     color:lightgrey;
 }
+  /* Learn More Button */
+  .learn-more{
+    font-size: 50px;
+    font-weight: 800;
+    color: royalblue 50%;
+    overflow: hidden;
+    background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position .75s ease;
+  }
+  
+  .learn-more:hover {
+    background-position: 0 100%;
+  }
+
+@media (max-width: 1100px){
+    .overview-header {
+        margin-left: 10%;
+        width: 80%;
+        margin-bottom: auto;
+        margin-top: auto;
+        padding: 20px;
+    }
+
+    .overview-header h1 {
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: justify;
+        color:lightgrey;
+    }
+
+    .learn-more{
+        font-size: 35px;
+        font-weight: 800;
+        color: royalblue 50%;
+        overflow: hidden;
+        background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position .75s ease;
+      }
+}
+
+/*Dashboard*/
 
 .dashboard-wrapper {
     padding: 40px;
@@ -81,13 +124,11 @@
     flex-grow: 1;
     background-color: rgba(255,255,255,.2);
     border-radius: 10px;
-    margin-right: 10px;
 }
 
 .deaths-chart {
     margin-right: 10px;
 }
-
 
 .rpms-projections {
     background-color: rgba(255,255,255,.2);
@@ -96,7 +137,104 @@
     margin-top: 10px;
 }
 
+@media ( max-width: 1000px){
+    .dashboard-wrapper {
+        padding: 10px;
+    }
+    
+    .live-data{
+        padding: 5px;
+        border-radius: 15px;
+    }
+    
+    .covid-econ {
+        margin-bottom: 5px;
+        flex-direction: column;
+    }
+    .covid-econ > div {
+        padding: 5px;
+        width: 100%;
+    }
+    
+    .covid-chart {
+        margin-bottom: 5px;
+    }
+    
+    .tsa-chart {
+        padding: 5px;
+    }
+    
+    .projected-data {
+        margin-top: 10px;
+        padding: 5px;
+        border-radius: 15px;
+    }
+    
+    .covid-econ-projections {
+        margin-bottom: 0px;
+        flex-direction: column;
+    }
+    
+    .covid-econ-projections > div {
+        padding: 5px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .rpms-projections {
+        padding: 5px;
+        margin-top: 0px;
+    }
+}
 
+
+@media ( max-width: 400px){
+    .dashboard-wrapper {
+        padding: 5px;
+    }
+    
+    .live-data{
+        padding: 2px;
+        border-radius: 10px;
+    }
+    
+    
+    .covid-econ {
+        margin-bottom: 3px;
+        flex-direction: column;
+    }
+    .covid-econ > div {
+        padding: 2px;
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .covid-chart {
+        margin-bottom: 3px;
+    }
+    
+    .tsa-chart {
+        padding: 2px;
+        border-radius: 8px;
+    }
+    
+    .projected-data {
+        margin-top: 3px;
+        padding: 2px;
+        border-radius: 10px;
+    }
+    
+    .covid-econ-projections > div {
+        padding: 2px;
+        border-radius: 8px;
+        margin-bottom: 3px;
+    }
+    
+    .rpms-projections {
+        padding: 2px;
+        border-radius: 8px;
+    }
+}
 
 
   /* Source */
@@ -122,22 +260,4 @@
     color: lightgray
   }
 
-  /* Learn More Button */
-.learn-more{
-    font-size: 50px;
-    font-weight: 800;
-    color: royalblue 50%;
-    overflow: hidden;
-    background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 100%;
-    background-position: 100%;
-    transition: background-position .75s ease;
-  }
-  
-  .learn-more:hover {
-    background-position: 0 100%;
-  }
 
