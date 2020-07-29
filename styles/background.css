@@ -135,14 +135,14 @@
 }
 
 #s3 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/B777\,_B474\,_and_A319\'s_at_SFO_International.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/sfo_parked_airplanes.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s4 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/1599px-Delta_Airlines_-_Boeing_767-300_-_N185DN_\(Quintin_Soloviev\).jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/delta_plane_parked.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;

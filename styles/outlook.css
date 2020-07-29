@@ -75,7 +75,7 @@
 }
 
 .manufacturing .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/boeing_manufacturing.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/boeing_factory.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -96,7 +96,7 @@
 }
 
 .environment .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/spinoff_heathy_planet4.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/earth_graphic.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
