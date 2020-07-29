@@ -48,13 +48,13 @@ def scrape():
 
     date = dt.now()
 
-    response = requests.get(url.format(str(date)).split(' ')[0])
-
-    while response.status_code !=200:
-        date = date - timedelta( days=1)
-        response = requests.get(url.format(str(date).split(' ')[0]))
-
+    response = None
     try: 
+        response = requests.get(url.format(str(date)).split(' ')[0])
+
+        while response.status_code !=200:
+            date = date - timedelta( days=1)
+            response = requests.get(url.format(str(date).split(' ')[0]))
 
         if response.status_code == 200:
             log.write('({})\t{}:\t\tData received\n'.format(name,dt.now()))

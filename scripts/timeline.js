@@ -1,9 +1,11 @@
+window.onresize = resizeVL
+resizeVL()
 
-var height = document.getElementById('s0').offsetTop 
-height = document.getElementById('s5').offsetTop - height
-document.getElementsByClassName('vl')[0].style.height = height+'px'
-
-
+function resizeVL() {
+  var height = document.getElementById('s0').offsetTop 
+  height = document.getElementById('s5').offsetTop - height
+  document.getElementsByClassName('vl')[0].style.height = height+'px'
+}
 function goTo(id){
   window.scrollTo(0,document.getElementById(id).offsetTop - 180)
 }
@@ -30,6 +32,7 @@ function changeActive (id) {
     active = document.getElementById(id);
     if( active != null)
       active.classList.add('active')
+
   }
 
 

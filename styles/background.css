@@ -18,16 +18,14 @@
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
 .sticky + .timeline-content {
-    margin-top: 170px;
+    margin-top: 150px;
   }
 
 
 .timeline-wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 90%;
 }
 
 .timeline .ul{
@@ -74,8 +72,8 @@
     font-weight: bold;
 }
 
-.active{
-    font-size: 40px;
+.active {
+    font-size: 40px !important;
     font-weight: bold;
 }
 
@@ -92,6 +90,16 @@
     margin-top: 70px;
     position: absolute;
     background-color: rgb(8, 20, 48);
+}
+
+@media (max-width: 950px){
+    .timeline-wrapper{
+        display: none;
+    }
+
+    .sticky + .timeline-content {
+        margin-top: 0;
+      }
 }
 
 
