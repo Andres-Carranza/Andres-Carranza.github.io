@@ -64,6 +64,12 @@
       }
 }
 
+
+@media(max-width: 500px){
+    .overview-header h1{
+        text-align: left !important;
+    }
+}
 /*Dashboard*/
 
 .dashboard-wrapper {
