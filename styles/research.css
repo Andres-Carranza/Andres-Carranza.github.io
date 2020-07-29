@@ -12,11 +12,12 @@
     transition: none !important;
   }
   
-  body {
-    background: white;
-    margin: 0;
-    padding: 0;
-  }
+  html,body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 
   html {
     scroll-behavior: smooth;
@@ -179,6 +180,58 @@
   font-size: 140px;
   color: lightgray;
   text-align: justify;
+}
+
+@media (max-width: 1300px){
+  .overview-header {
+    margin-left: 5%;
+  }
+  
+  .overview-header h1 {
+    font-size: 100px;
+  }
+  
+}
+
+@media (max-width: 900px){
+  .overview-header {
+    margin: auto;
+  }
+  
+  .overview-header h1 {
+    font-size: 80px;
+  }
+  
+}
+
+@media (max-width: 700px){
+  .overview-header {
+    margin: auto;
+    width: 100%;
+  }
+  
+  .overview-header h1 {
+    font-size: 60px;
+    color: lightgray;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  
+}
+
+@media (max-width: 520px){
+  .overview-header {
+    margin: auto;
+    width: 100%;
+  }
+  
+  .overview-header h1 {
+    font-size: 50px;
+    color: lightgray;
+    text-align: left;
+    word-wrap: break-word;
+  }
+  
 }
 
 /*Overview*/
