@@ -126,21 +126,21 @@
 }
 
 #s0 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/usaf_f-16a_f-15c_f-15e_desert_.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s1 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/WTC_smoking_on_9-11.jpeg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/wtc_smoking_on_9-11.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s2 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/southwest.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/southwest.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -161,7 +161,7 @@
 }
 
 #s5 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/Delta_Aircraft_Cleaning_-_49656588072.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/delta_aircraft_cleaning.jpg');
     background-repeat: no-repeat;  
     background-position: left top;
     background-size: cover;
