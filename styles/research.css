@@ -129,12 +129,13 @@
 
 .navbar-links ul {
   flex-direction: column;
-  background-color:  rgb(0, 0, 0, .8);
+  background-color:  rgba(0, 0, 0, .8);
   margin: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
   position: relative;
+  height: fit-content;
 }
 
 .navbar-links ul li {
