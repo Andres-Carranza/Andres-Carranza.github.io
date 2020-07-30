@@ -9,27 +9,37 @@
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    font-size: 60px;
+    font-size: 50px;
     padding-bottom: 30px;
     padding-top: 30px;
   }
 
 .team-overview > div{
     display:flex;
-    margin-top: 20px;
-    padding: 50px;
+    margin-top: 50px;
+    width: 80%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.team-overview > div > img{
+  object-fit: contain;
+  width: 20vw;
+  height: 20vw;
+  border-radius: 50%;
+  margin: auto;
 }
   
 .pov{
+  margin-left: 10%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 200px;
 }
 
 .team-overview h2 {
-    font-size: 40px;
-
+    font-size: 45px;
+    margin-bottom: 20px;
 }
 .team-overview p{
     font-size: 25px;
@@ -37,4 +47,81 @@
   }
 
 
+  @media (max-width: 1300px){
+    .team-overview > div{
+      width: 90%;
+  }
+
+  .team-overview h1{
+    width: 90%;
+    font-size: 45px;
+  }
+
+    .team-overview h2 {
+      font-size: 40px;
+    }
+    
+    .team-overview p{
+      font-size: 20px;
+    }
+    
+  }
+  
+  @media (max-width: 900px){
+    .team-overview > div{
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    .team-overview > div > img{
+      margin-bottom: 40px;
+      width: 50vw;
+      height: 50vw;
+    }
+
+    .pov{
+      margin-left: 0;
+    }
+    .team-overview h1{
+      font-size: 40px;
+    }
+    .team-overview h2 {
+      font-size: 35px;
+    }
+    
+    .team-overview p{
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 700px){
+
+    .team-overview h1{
+      font-size: 40px;
+    }
+    .team-overview h2 {
+      font-size: 30px;
+    }
+    
+    .team-overview p{
+      font-size: 16px;
+    }
+    
+  }
+  
+  @media (max-width: 520px){
+
+    .team-overview h1{
+      font-size: 40px;
+    }
+    .team-overview h2 {
+      font-size: 25px;
+    }
+    
+    .team-overview p{
+      font-size: 14px;
+    }
+    
+  }
+  
   
