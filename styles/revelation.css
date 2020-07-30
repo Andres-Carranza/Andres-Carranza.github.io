@@ -23,8 +23,8 @@
     margin-right: auto;
 }
 .team-overview > div > img{
-  object-fit: contain;
-  width: 20vw;
+  object-fit: cover;
+  min-width: 20vw;
   height: 20vw;
   border-radius: 50%;
   margin: auto;
@@ -75,8 +75,8 @@
 
     .team-overview > div > img{
       margin-bottom: 40px;
-      width: 50vw;
-      height: 50vw;
+      width: 40vw;
+      height: 40vw;
     }
 
     .pov{
@@ -95,6 +95,10 @@
   }
   
   @media (max-width: 700px){
+    .team-overview > div > img{
+      width: 45vw;
+      height: 45vw;
+    }
 
     .team-overview h1{
       font-size: 40px;
@@ -110,7 +114,10 @@
   }
   
   @media (max-width: 520px){
-
+    .team-overview > div > img{
+      width: 50vw;
+      height: 50vw;
+    }
     .team-overview h1{
       font-size: 40px;
     }
