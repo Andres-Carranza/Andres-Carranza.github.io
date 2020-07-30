@@ -175,7 +175,8 @@
 
 
 .passenger .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/header-background-alternate.jpg');
+    /*Image source: https://www.nasa.gov/centers/dryden/images/content/411999main_ED09-0342-08_full.jpg*/
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/sophia_departure.jpg'); 
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -183,10 +184,19 @@
 
 
 .cargo .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/usps.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/usps.jpg');
     background-repeat: no-repeat;  
     background-position: center bottom;
     background-size: cover;
+}
+
+@media (max-width: 550px){
+    .cargo .ov {
+        background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/usps-mobile.jpg');
+        background-repeat: no-repeat;  
+    background-position: center ;
+    background-size: cover;
+    }
 }
 
 .manufacturing .ov{
@@ -197,14 +207,14 @@
 }
 
 .uam .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/uam-everything_v09.jpeg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/outlook/uam_sunset.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .nas .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/control_tower.jpg');
+    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/outlook/control_tower.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;  
