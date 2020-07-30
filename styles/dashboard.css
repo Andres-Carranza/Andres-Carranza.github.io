@@ -13,6 +13,10 @@
     font-size: 40px;
     text-align: justify;
     color:lightgrey;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
 }
   /* Learn More Button */
   .learn-more{
