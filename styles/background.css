@@ -189,6 +189,16 @@
     margin-top: 100px;
   }
 
+  @media( min-width: 2000px){
+
+    .timeline-content .section {
+        width: 60%;
+    }
+
+
+    
+}
+
 @media( max-width: 1300px){
 
     .timeline-content .header {
