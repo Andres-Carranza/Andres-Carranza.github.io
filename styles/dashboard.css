@@ -19,6 +19,7 @@
     font-size: 50px;
     font-weight: 800;
     color: royalblue 50%;
+    -webkit-color: royalblue 50%;
     overflow: hidden;
     background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
     background-clip: text;
@@ -45,22 +46,10 @@
     .overview-header h1 {
         margin-bottom: 20px;
         font-size: 30px;
-        text-align: justify;
-        color:lightgrey;
     }
 
     .learn-more{
         font-size: 35px;
-        font-weight: 800;
-        color: royalblue 50%;
-        overflow: hidden;
-        background: linear-gradient(to right, dodgerblue, dodgerblue 50%, royalblue 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% 100%;
-        background-position: 100%;
-        transition: background-position .75s ease;
       }
 }
 
