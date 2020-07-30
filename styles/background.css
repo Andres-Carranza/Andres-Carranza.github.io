@@ -126,42 +126,42 @@
 }
 
 #s0 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/usaf_f-16a_f-15c_f-15e_desert_.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/background/usaf_f-16a_f-15c_f-15e_desert_.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s1 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/wtc_smoking_on_9-11.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/background/wtc_smoking_on_9-11.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s2 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/southwest.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/background/southwest.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s3 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/sfo_parked_airplanes.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ),url('../images/background/sfo_parked_airplanes.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s4 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/delta_plane_parked.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/background/delta_plane_parked.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 #s5 {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7) ), url('../images/background/delta_aircraft_cleaning.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/background/delta_aircraft_cleaning.jpg');
     background-repeat: no-repeat;  
     background-position: left top;
     background-size: cover;

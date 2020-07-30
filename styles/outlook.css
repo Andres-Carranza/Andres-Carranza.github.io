@@ -176,7 +176,7 @@
 
 .passenger .ov{  
     /*Image source: https://www.nasa.gov/centers/dryden/images/content/411999main_ED09-0342-08_full.jpg*/
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/sophia_departure.jpg'); 
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/sophia_departure.jpg'); 
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
@@ -184,7 +184,7 @@
 
 
 .cargo .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/usps.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/usps.jpg');
     background-repeat: no-repeat;  
     background-position: center bottom;
     background-size: cover;
@@ -192,7 +192,7 @@
 
 @media (max-width: 550px){
     .cargo .ov {
-        background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/usps-mobile.jpg');
+        background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/usps-mobile.jpg');
         background-repeat: no-repeat;  
     background-position: center ;
     background-size: cover;
@@ -200,28 +200,28 @@
 }
 
 .manufacturing .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/boeing_factory.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/boeing_factory.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .uam .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/outlook/uam_sunset.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/uam_sunset.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
 }
 
 .nas .ov{
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75)), url('../images/outlook/control_tower.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/control_tower.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;  
 }
 
 .environment .ov{  
-    background: linear-gradient( rgba(0,0,0, 0.75), rgb(0,0,0, 0.75) ), url('../images/outlook/earth_graphic.jpg');
+    background: linear-gradient(  to left,rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/outlook/earth_graphic.jpg');
     background-repeat: no-repeat;  
     background-position: center;
     background-size: cover;
