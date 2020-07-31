@@ -1,5 +1,5 @@
 
-.overview .learn-more{
+ .learn-more{
     margin-left: auto;
     margin-right: auto;
     width: 80%;
@@ -34,7 +34,7 @@
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
     background-position: 100%;
-    transition: background-position .75s ease;
+    transition: background-position 1s ;
   }
   
   .learn-more:hover {

@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Titillium Web', Helvetica, sans-serif;
+    line-height: 110%;
   }
   
   .preload *{
