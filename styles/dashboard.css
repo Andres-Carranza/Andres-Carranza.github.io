@@ -13,7 +13,7 @@
 }
 
 .overview-header h1 {
-    font-size: 40px;
+    font-size: 45px;
     text-align: justify;
     color:lightgrey;
     -webkit-hyphens: none;
@@ -51,7 +51,7 @@
     }
 
     .overview-header h1 {
-        font-size: 30px;
+        font-size: 40px;
     }
 
     .learn-more{
@@ -64,11 +64,18 @@
 @media(max-width: 500px){
     .overview-header h1{
         text-align: left !important;
+        font-size: 35px;
     }
 
     .learn-more{
         font-size: 29px;
       }
+}
+
+@media(max-width: 400px){
+    .overview-header h1{
+        font-size: 30px;
+    }
 }
 /*Dashboard*/
 
