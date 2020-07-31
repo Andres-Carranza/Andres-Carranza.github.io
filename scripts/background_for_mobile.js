@@ -14,6 +14,7 @@ function is_iOS() {
 //Fix bakcgorund attachment bug on mobile(occurs on iOS)
 //var isSafari = !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 /*There are bugs on iOS 10 and below*/
+/*Does not work on Nokia Lumina*/
 var fixed_backgrounds = ['overview-wrapper','sustainability','passenger','innovation']
   if (is_iOS()){
       for ( var i =0; i<fixed_backgrounds.length; i++){

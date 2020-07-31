@@ -1,15 +1,18 @@
 
+.overview .learn-more{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
 
 .overview-header {
     width: 50%;
     margin-left: 10%;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: 100px;
     padding: 20px;
 }
 
 .overview-header h1 {
-    margin-bottom: 20px;
     font-size: 40px;
     text-align: justify;
     color:lightgrey;
@@ -48,12 +51,12 @@
     }
 
     .overview-header h1 {
-        margin-bottom: 20px;
         font-size: 30px;
     }
 
     .learn-more{
         font-size: 35px;
+        width: 90% !important;
       }
 }
 
@@ -62,6 +65,10 @@
     .overview-header h1{
         text-align: left !important;
     }
+
+    .learn-more{
+        font-size: 29px;
+      }
 }
 /*Dashboard*/
 
