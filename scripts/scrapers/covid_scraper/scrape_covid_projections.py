@@ -30,8 +30,12 @@ def update_data(response,projection_date,name,log):
         date = date[1] + '/' + date[2] + '/' + date[0]
         df.loc[i,'date'] = date
 
+        #account for differences in reported deaths to correspond with the moving average displayed at covid19-projections.com
         if date == '6/25/2020':
             df.loc[i,'actual_deaths'] = 657
+        elif date == '7/27/2020':
+            df.loc[i,'actual_deaths'] = 483
+
 
     df.to_csv('covid_scraper/covid-projections.csv', index=False)
 

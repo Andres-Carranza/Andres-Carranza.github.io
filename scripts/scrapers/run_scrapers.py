@@ -10,14 +10,14 @@ from rpms_scraper import scrape_rpms
 from rpms_scraper import project
 
 def run_scrapers():
-    scrape_tsa.scrape()
-    scrape_covid.scrape()
-    scrape_claims.scrape()
-    scrape_unemployment.scrape()
-    scrape_nonfarm.scrape()
-    scrape_covid_projections.scrape()
-    scrape_rpms.scrape()
-    project.update_prediction()
+    scrape_tsa.scrape()#Updatees on weekdays at 6
+    scrape_covid.scrape()#Updated daily
+    scrape_claims.scrape()#Updates on saturdays
+    scrape_unemployment.scrape()#updates ~ first week of the month
+    scrape_nonfarm.scrape()#updates ~ first week of the month
+    scrape_covid_projections.scrape()#updates everyday sometime around the morning
+    scrape_rpms.scrape()#updates ~ second week of the month (3 month lag)
+    project.update_prediction()#updates projections using data from unemoployment, nonfarm, and covid
 
 
 schedule.every().day.at('06:10').do(run_scrapers)
