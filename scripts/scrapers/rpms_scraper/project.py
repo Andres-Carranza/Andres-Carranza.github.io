@@ -172,7 +172,9 @@ def update_prediction():
     log.write('({})\t\t\t{}:\t\tMaking predictions..\n'.format(name,dt.now()))
 
     predictions = predict_model(model_name, threshold)
-    
+
+    predictions.to_csv('rpms_scraper/projections_archive/{}.csv'.format(str(dt.now()).split('.')[0].replace(' ','_').replace(':','-')), index=False)
+
     rpms = pd.read_csv('rpms_scraper/rpms-data.csv')
 
     now = dt.now()
