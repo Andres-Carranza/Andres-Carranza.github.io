@@ -139,6 +139,7 @@ async function chartData() {
                         display: false
                     },
                     ticks: {
+                        beginAtZero: true,
                         callback: function(value, index, values) {
                             return value + "%";
                         }
