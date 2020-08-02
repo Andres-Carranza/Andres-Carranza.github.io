@@ -1,1 +1,2 @@
 All projections start in July 2020.
+File format is yyyy-mm-dd_hh-mm-ss
