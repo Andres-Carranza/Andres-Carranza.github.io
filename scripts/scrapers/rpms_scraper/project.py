@@ -14,13 +14,22 @@ def apply_inverse(data):
 
 def normalize_data(data):
     data = apply_inverse(data)
-    
+
+    max_vals = {
+        'jan':1,'feb':1,'mar':1,'apr':1,'may':1,'jun':1,'jul':1,'aug':1,'sep':1,'oct':1,'nov':1,'dec':1,
+        'leap-feb':1,'thanksgiving-nov':1,'thanksgiving-dec':1,
+        'gulf-war':1, '9/2001':1, 'iraq-war':1,'sars-outbreak':1,'great-recession':1,
+        'months-since-9/11':1,'months-since-covid-19':1,
+        'unemployment-rate':14.7,'nonfarm-payroll':152463,
+        'deaths':1955.033333,'new-infected':204180.4,'current-infected':3367528.167,
+        'rpms':71230170772,
+    }
     for col in data.columns:
-        data[col] = data[col] / max(max(data[col]),1)
+        data[col] = data[col] / max_vals[col]
 
     return data
 
-def predict(features_data,model,max_rpms):
+def predict(features_data,model):
         
     features = {name:np.array(value) for name, value in features_data.items()}
         
@@ -29,7 +38,7 @@ def predict(features_data,model,max_rpms):
 
 
     for i, prediction in enumerate(predictions):
-        results.loc[i,'rpms'] = prediction[0] * max_rpms
+        results.loc[i,'rpms'] = prediction[0] * 71230170772
 
     for i, row in results.iterrows():
         results.loc[i,'rpms'] = max(row['rpms'],0)
@@ -46,9 +55,8 @@ def predict_model(model_name,threshold):
     
     prediction_data = prediction_data.drop(range(threshold, len(prediction_data)))
     
-    max_rpms = 71230170772
 
-    results = predict(prediction_data, model,max_rpms)
+    results = predict(prediction_data, model)
 
     return results 
 
@@ -178,7 +186,7 @@ def update_prediction():
     rpms = pd.read_csv('rpms_scraper/rpms-data.csv')
 
     now = dt.now()
-    now = str(now).split(' ')[0]
+    now = str(now).split(' ')[0].split('-')
     now  = int(now[1]) +int(now[0]) *12
 
     for i,row in predictions.iterrows():
