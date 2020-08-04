@@ -17,6 +17,9 @@ def update_data(response,projection_date,name,log):
     del df['predicted_total_infected_upper']
 
     del df['r_values_mean']
+    del df['r_values_lower']
+    del df['r_values_upper']
+
 
 
     for i, row in df.iterrows():
