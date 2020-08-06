@@ -100,7 +100,8 @@ async function chartData() {
                 } 
               },
               legend: {
-                 display: false
+                 display: false,
+                 onClick: (e) => e.stopPropagation()
               }
         }
     });

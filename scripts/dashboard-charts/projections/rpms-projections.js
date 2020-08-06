@@ -179,6 +179,7 @@ async function chartData() {
             },
             legend: {
                 position: 'bottom',
+                onClick: (e) => e.stopPropagation(),
                 labels: {
                     filter: function(item, chart) {
                         return !item.text.includes('hide');

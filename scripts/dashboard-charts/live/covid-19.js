@@ -115,7 +115,8 @@ async function chartData() {
             },
 
             legend: {
-                position: 'bottom'
+                position: 'bottom',
+                onClick: (e) => e.stopPropagation()
             }
         }
     });
