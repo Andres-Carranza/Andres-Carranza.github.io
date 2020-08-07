@@ -81,7 +81,7 @@
 
 
 .passenger {
-    
+  /*img source: https://www.pikrepo.com/fyuue/airport-passengers*/
     background: linear-gradient( to left, rgba(15,17,32,0.4) 0%,rgba(15,17,32,0.8) 80% ), url('../images/recommendations/passengers.jpg');
     background-repeat: no-repeat;  
     background-position: center;
