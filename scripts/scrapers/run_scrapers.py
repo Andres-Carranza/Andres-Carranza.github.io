@@ -24,7 +24,7 @@ schedule.every().day.at('06:10').do(run_scrapers)
 schedule.every().day.at('12:00').do(run_scrapers)
 #schedule.every().day.at('14:40').do(run_scrapers)
 
-
+run_scrapers()
 while True:
     schedule.run_pending()
     time.sleep(1)
