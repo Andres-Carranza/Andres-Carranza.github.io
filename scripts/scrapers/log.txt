@@ -4562,3 +4562,165 @@ Scraper             Time                            Message
 (Project)			2020-08-22 12:00:11.075909:		Making predictions..
 (Project)			2020-08-22 12:00:13.269193:		Writing predictions to csv...
 (Project)			2020-08-22 12:00:13.271170:		Script finished
+(TSA Scraper)		2020-08-23 06:36:01.076012:		Running script
+(TSA Scraper)		2020-08-23 06:36:01.076177:		Requesting data...
+(TSA Scraper)		2020-08-23 06:36:01.344085:		Data received
+(TSA Scraper)		2020-08-23 06:36:01.344108:		Updating csv file..
+(TSA Scraper)		2020-08-23 06:36:01.780671:		Adding 0 date(s) to csv file...
+(TSA Scraper)		2020-08-23 06:36:01.789198:		Data written to csv
+(TSA Scraper)		2020-08-23 06:36:01.789223:		Finished script
+(Covid-19 Scraper)	2020-08-23 06:36:01.790323:		Running script
+(Covid-19 Scraper)	2020-08-23 06:36:01.796998:		Requesting data...
+(Covid-19 Scraper)	2020-08-23 06:36:03.807349:		Data received
+(Covid-19 Scraper)	2020-08-23 06:36:03.807393:		Updating csv file..
+(Covid-19 Scraper)	2020-08-23 06:36:04.349501:		Adding 1 date(s) to csv file...
+(Covid-19 Scraper)	2020-08-23 06:36:04.353230:		Data written to csv
+(Covid-19 Scraper)	2020-08-23 06:36:04.353258:		Finished script
+(Claims Scraper)	2020-08-23 06:36:04.353732:		Running script
+(Claims Scraper)	2020-08-23 06:36:04.356943:		Requesting data...
+(Claims Scraper)	2020-08-23 06:36:05.029342:		Data received
+(Claims Scraper)	2020-08-23 06:36:05.029379:		Updating csv file..
+(Claims Scraper)	2020-08-23 06:36:05.034256:		Adding 0 date(s) to csv file...
+(Claims Scraper)	2020-08-23 06:36:05.035936:		Data written to csv
+(Claims Scraper)	2020-08-23 06:36:05.035960:		Finished script
+(Unmp. Scraper)		2020-08-23 06:36:05.036269:		Running script
+(Unmp. Scraper)		2020-08-23 06:36:05.036284:		Requesting data...
+(Unmp. Scraper)		2020-08-23 06:36:05.712390:		Data received
+(Unmp. Scraper)		2020-08-23 06:36:05.712427:		Updating csv file..
+(Unmp. Scraper)		2020-08-23 06:36:05.786431:		Adding 0 date(s) to csv file...
+(Unmp. Scraper)		2020-08-23 06:36:05.789620:		Data written to csv
+(Unmp. Scraper)		2020-08-23 06:36:05.789659:		Finished script
+(NFarm Scraper)		2020-08-23 06:36:05.790017:		Running script
+(NFarm Scraper)		2020-08-23 06:36:05.790035:		Requesting data...
+(NFarm Scraper)		2020-08-23 06:36:06.187885:		Data received
+(NFarm Scraper)		2020-08-23 06:36:06.187921:		Updating csv file..
+(NFarm Scraper)		2020-08-23 06:36:06.262306:		Adding 0 date(s) to csv file...
+(NFarm Scraper)		2020-08-23 06:36:06.263763:		Data written to csv
+(NFarm Scraper)		2020-08-23 06:36:06.263784:		Finished script
+(C19-Proj. Scraper)	2020-08-23 06:36:06.264042:		Running script
+(C19-Proj. Scraper)	2020-08-23 06:36:06.264053:		Requesting data...
+(C19-Proj. Scraper)	2020-08-23 06:36:06.818612:		Data received
+(C19-Proj. Scraper)	2020-08-23 06:36:06.818649:		Updating csv file..
+(C19-Proj. Scraper)	2020-08-23 06:36:06.938946:		Adding projections from 2020-08-22 to csv file...
+(C19-Proj. Scraper)	2020-08-23 06:36:06.939030:		Data written to csv
+(C19-Proj. Scraper)	2020-08-23 06:36:06.939034:		Finished script
+(RPMs Scraper)		2020-08-23 06:36:06.939243:		Running script
+(RPMs Scraper)		2020-08-23 06:36:06.939250:		Requesting data...
+(RPMs Scraper)		2020-08-23 06:36:14.830476:		Data received
+(RPMs Scraper)		2020-08-23 06:36:14.830687:		Updating csv file..
+(RPMs Scraper)		2020-08-23 06:36:17.186506:		Adding 0 date(s) to csv file...
+(RPMs Scraper)		2020-08-23 06:36:17.199372:		Data written to csv
+(RPMs Scraper)		2020-08-23 06:36:17.199545:		Finished script
+(Project)			2020-08-23 06:36:17.201445:		Running script
+(Project)			2020-08-23 06:36:17.201531:		Loading data...
+(Project)			2020-08-23 06:36:17.487170:		Making predictions..
+(Project)			2020-08-23 06:36:21.391295:		Writing predictions to csv...
+(Project)			2020-08-23 06:36:21.395012:		Script finished
+(TSA Scraper)		2020-08-23 12:00:00.305803:		Running script
+(TSA Scraper)		2020-08-23 12:00:00.309906:		Requesting data...
+(TSA Scraper)		2020-08-23 12:00:00.545758:		Data received
+(TSA Scraper)		2020-08-23 12:00:00.545792:		Updating csv file..
+(TSA Scraper)		2020-08-23 12:00:01.054936:		Adding 0 date(s) to csv file...
+(TSA Scraper)		2020-08-23 12:00:01.062552:		Data written to csv
+(TSA Scraper)		2020-08-23 12:00:01.062578:		Finished script
+(Covid-19 Scraper)	2020-08-23 12:00:01.063703:		Running script
+(Covid-19 Scraper)	2020-08-23 12:00:01.066841:		Requesting data...
+(Covid-19 Scraper)	2020-08-23 12:00:02.776508:		Data received
+(Covid-19 Scraper)	2020-08-23 12:00:02.776547:		Updating csv file..
+(Covid-19 Scraper)	2020-08-23 12:00:02.877444:		Adding 0 date(s) to csv file...
+(Covid-19 Scraper)	2020-08-23 12:00:02.881094:		Data written to csv
+(Covid-19 Scraper)	2020-08-23 12:00:02.881124:		Finished script
+(Claims Scraper)	2020-08-23 12:00:02.881673:		Running script
+(Claims Scraper)	2020-08-23 12:00:02.885041:		Requesting data...
+(Claims Scraper)	2020-08-23 12:00:03.694749:		Data received
+(Claims Scraper)	2020-08-23 12:00:03.694788:		Updating csv file..
+(Claims Scraper)	2020-08-23 12:00:03.699498:		Adding 0 date(s) to csv file...
+(Claims Scraper)	2020-08-23 12:00:03.701218:		Data written to csv
+(Claims Scraper)	2020-08-23 12:00:03.701242:		Finished script
+(Unmp. Scraper)		2020-08-23 12:00:03.701654:		Running script
+(Unmp. Scraper)		2020-08-23 12:00:03.701670:		Requesting data...
+(Unmp. Scraper)		2020-08-23 12:00:04.228787:		Data received
+(Unmp. Scraper)		2020-08-23 12:00:04.228824:		Updating csv file..
+(Unmp. Scraper)		2020-08-23 12:00:04.308215:		Adding 0 date(s) to csv file...
+(Unmp. Scraper)		2020-08-23 12:00:04.309827:		Data written to csv
+(Unmp. Scraper)		2020-08-23 12:00:04.309850:		Finished script
+(NFarm Scraper)		2020-08-23 12:00:04.310107:		Running script
+(NFarm Scraper)		2020-08-23 12:00:04.310133:		Requesting data...
+(NFarm Scraper)		2020-08-23 12:00:04.704611:		Data received
+(NFarm Scraper)		2020-08-23 12:00:04.704648:		Updating csv file..
+(NFarm Scraper)		2020-08-23 12:00:05.210778:		Adding 0 date(s) to csv file...
+(NFarm Scraper)		2020-08-23 12:00:05.214440:		Data written to csv
+(NFarm Scraper)		2020-08-23 12:00:05.214504:		Finished script
+(C19-Proj. Scraper)	2020-08-23 12:00:05.214878:		Running script
+(C19-Proj. Scraper)	2020-08-23 12:00:05.214893:		Requesting data...
+(C19-Proj. Scraper)	2020-08-23 12:00:06.166519:		Data received
+(C19-Proj. Scraper)	2020-08-23 12:00:06.166557:		Updating csv file..
+(C19-Proj. Scraper)	2020-08-23 12:00:06.292134:		Adding projections from 2020-08-22 to csv file...
+(C19-Proj. Scraper)	2020-08-23 12:00:06.292248:		Data written to csv
+(C19-Proj. Scraper)	2020-08-23 12:00:06.292253:		Finished script
+(RPMs Scraper)		2020-08-23 12:00:06.292636:		Running script
+(RPMs Scraper)		2020-08-23 12:00:06.292646:		Requesting data...
+(RPMs Scraper)		2020-08-23 12:00:11.186979:		Data received
+(RPMs Scraper)		2020-08-23 12:00:11.187018:		Updating csv file..
+(RPMs Scraper)		2020-08-23 12:00:11.374368:		Adding 0 date(s) to csv file...
+(RPMs Scraper)		2020-08-23 12:00:11.375471:		Data written to csv
+(RPMs Scraper)		2020-08-23 12:00:11.375485:		Finished script
+(Project)			2020-08-23 12:00:11.375635:		Running script
+(Project)			2020-08-23 12:00:11.375641:		Loading data...
+(Project)			2020-08-23 12:00:11.430779:		Making predictions..
+(Project)			2020-08-23 12:00:13.008175:		Writing predictions to csv...
+(Project)			2020-08-23 12:00:13.009560:		Script finished
+(TSA Scraper)		2020-08-24 06:51:15.225708:		Running script
+(TSA Scraper)		2020-08-24 06:51:15.228875:		Requesting data...
+(TSA Scraper)		2020-08-24 06:51:15.512334:		Data received
+(TSA Scraper)		2020-08-24 06:51:15.512369:		Updating csv file..
+(TSA Scraper)		2020-08-24 06:51:16.064054:		Adding 3 date(s) to csv file...
+(TSA Scraper)		2020-08-24 06:51:16.070762:		Data written to csv
+(TSA Scraper)		2020-08-24 06:51:16.070781:		Finished script
+(Covid-19 Scraper)	2020-08-24 06:51:16.071428:		Running script
+(Covid-19 Scraper)	2020-08-24 06:51:16.074266:		Requesting data...
+(Covid-19 Scraper)	2020-08-24 06:51:18.352192:		Data received
+(Covid-19 Scraper)	2020-08-24 06:51:18.352226:		Updating csv file..
+(Covid-19 Scraper)	2020-08-24 06:51:18.518861:		Adding 1 date(s) to csv file...
+(Covid-19 Scraper)	2020-08-24 06:51:18.521089:		Data written to csv
+(Covid-19 Scraper)	2020-08-24 06:51:18.521115:		Finished script
+(Claims Scraper)	2020-08-24 06:51:18.521507:		Running script
+(Claims Scraper)	2020-08-24 06:51:18.524983:		Requesting data...
+(Claims Scraper)	2020-08-24 06:51:18.967590:		Data received
+(Claims Scraper)	2020-08-24 06:51:18.967629:		Updating csv file..
+(Claims Scraper)	2020-08-24 06:51:18.974397:		Adding 0 date(s) to csv file...
+(Claims Scraper)	2020-08-24 06:51:18.976430:		Data written to csv
+(Claims Scraper)	2020-08-24 06:51:18.976460:		Finished script
+(Unmp. Scraper)		2020-08-24 06:51:18.976902:		Running script
+(Unmp. Scraper)		2020-08-24 06:51:18.976919:		Requesting data...
+(Unmp. Scraper)		2020-08-24 06:51:19.775660:		Data received
+(Unmp. Scraper)		2020-08-24 06:51:19.775697:		Updating csv file..
+(Unmp. Scraper)		2020-08-24 06:51:19.857655:		Adding 0 date(s) to csv file...
+(Unmp. Scraper)		2020-08-24 06:51:19.859362:		Data written to csv
+(Unmp. Scraper)		2020-08-24 06:51:19.859386:		Finished script
+(NFarm Scraper)		2020-08-24 06:51:19.859676:		Running script
+(NFarm Scraper)		2020-08-24 06:51:19.859688:		Requesting data...
+(NFarm Scraper)		2020-08-24 06:51:20.238245:		Data received
+(NFarm Scraper)		2020-08-24 06:51:20.238281:		Updating csv file..
+(NFarm Scraper)		2020-08-24 06:51:20.312128:		Adding 0 date(s) to csv file...
+(NFarm Scraper)		2020-08-24 06:51:20.313589:		Data written to csv
+(NFarm Scraper)		2020-08-24 06:51:20.313623:		Finished script
+(C19-Proj. Scraper)	2020-08-24 06:51:20.315045:		Running script
+(C19-Proj. Scraper)	2020-08-24 06:51:20.315074:		Requesting data...
+(C19-Proj. Scraper)	2020-08-24 06:51:21.173735:		Data received
+(C19-Proj. Scraper)	2020-08-24 06:51:21.173774:		Updating csv file..
+(C19-Proj. Scraper)	2020-08-24 06:51:21.291981:		Adding projections from 2020-08-22 to csv file...
+(C19-Proj. Scraper)	2020-08-24 06:51:21.292073:		Data written to csv
+(C19-Proj. Scraper)	2020-08-24 06:51:21.292077:		Finished script
+(RPMs Scraper)		2020-08-24 06:51:21.292365:		Running script
+(RPMs Scraper)		2020-08-24 06:51:21.292373:		Requesting data...
+(RPMs Scraper)		2020-08-24 06:51:26.306224:		Data received
+(RPMs Scraper)		2020-08-24 06:51:26.306379:		Updating csv file..
+(RPMs Scraper)		2020-08-24 06:51:32.175933:		Adding 0 date(s) to csv file...
+(RPMs Scraper)		2020-08-24 06:51:32.181438:		Data written to csv
+(RPMs Scraper)		2020-08-24 06:51:32.181505:		Finished script
+(Project)			2020-08-24 06:51:32.182415:		Running script
+(Project)			2020-08-24 06:51:32.182453:		Loading data...
+(Project)			2020-08-24 06:51:32.427083:		Making predictions..
+(Project)			2020-08-24 06:51:36.760817:		Writing predictions to csv...
+(Project)			2020-08-24 06:51:36.763675:		Script finished
