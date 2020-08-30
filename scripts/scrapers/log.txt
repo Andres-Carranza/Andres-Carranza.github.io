@@ -5297,3 +5297,36 @@ Scraper             Time                            Message
 (Project)			2020-08-29 12:01:28.529430:		Making predictions..
 (Project)			2020-08-29 12:01:30.136465:		Writing predictions to csv...
 (Project)			2020-08-29 12:01:30.139881:		Script finished
+(TSA Scraper)		2020-08-30 06:40:27.086943:		Running script
+(TSA Scraper)		2020-08-30 06:40:27.087344:		Requesting data...
+(TSA Scraper)		2020-08-30 06:40:27.982748:		Error retrieving data; Response failed
+(TSA Scraper)		2020-08-30 06:40:27.982811:		Finished script
+(Covid-19 Scraper)	2020-08-30 06:40:27.983953:		Running script
+(Covid-19 Scraper)	2020-08-30 06:40:28.023500:		Requesting data...
+(Covid-19 Scraper)	2020-08-30 06:40:28.045218:		Error retrieving data; Response failed
+(Covid-19 Scraper)	2020-08-30 06:40:28.045273:		Finished script
+(Claims Scraper)	2020-08-30 06:40:28.045981:		Running script
+(Claims Scraper)	2020-08-30 06:40:28.049906:		Requesting data...
+(Claims Scraper)	2020-08-30 06:40:28.056392:		Error retrieving data; Response failed
+(Claims Scraper)	2020-08-30 06:40:28.056472:		Finished script
+(Unmp. Scraper)		2020-08-30 06:40:28.056898:		Running script
+(Unmp. Scraper)		2020-08-30 06:40:28.056913:		Requesting data...
+(Unmp. Scraper)		2020-08-30 06:40:28.081051:		Error retrieving data; Response failed
+(Unmp. Scraper)		2020-08-30 06:40:28.081105:		Finished script
+(NFarm Scraper)		2020-08-30 06:40:28.081533:		Running script
+(NFarm Scraper)		2020-08-30 06:40:28.081548:		Requesting data...
+(NFarm Scraper)		2020-08-30 06:40:28.085845:		Error retrieving data; Response failed
+(NFarm Scraper)		2020-08-30 06:40:28.085925:		Finished script
+(C19-Proj. Scraper)	2020-08-30 06:40:28.086252:		Running script
+(C19-Proj. Scraper)	2020-08-30 06:40:28.086263:		Requesting data...
+(C19-Proj. Scraper)	2020-08-30 06:40:28.093532:		Error retrieving data; Response failed
+(C19-Proj. Scraper)	2020-08-30 06:40:28.093597:		Finished script
+(RPMs Scraper)		2020-08-30 06:40:28.093847:		Running script
+(RPMs Scraper)		2020-08-30 06:40:28.093858:		Requesting data...
+(RPMs Scraper)		2020-08-30 06:40:28.099207:		Error retrieving data; Response failed
+(RPMs Scraper)		2020-08-30 06:40:28.099254:		Finished script
+(Project)			2020-08-30 06:40:28.099534:		Running script
+(Project)			2020-08-30 06:40:28.099558:		Loading data...
+(Project)			2020-08-30 06:40:28.333886:		Making predictions..
+(Project)			2020-08-30 06:40:30.104364:		Writing predictions to csv...
+(Project)			2020-08-30 06:40:30.106264:		Script finished
