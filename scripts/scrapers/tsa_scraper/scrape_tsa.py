@@ -13,7 +13,7 @@ def update_data(html,name,log):
     for i, tr in enumerate(tr_elements):
         row = []
         for td in tr.find_all('td'):
-            row.append(td.text.replace(',',''))
+            row.append(td.text.replace(',','').strip())
 
         if(len(row) == 3):
             new_df.loc[i] = row
