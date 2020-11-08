@@ -20,9 +20,9 @@ def run_scrapers():
     project.update_prediction()#updates projections using data from unemoployment, nonfarm, and covid
 
 schedule.every().day.at('06:10').do(run_scrapers)
-#schedule.every().day.at('09:00').do(run_scrapers)
+schedule.every().day.at('09:00').do(run_scrapers)
 schedule.every().day.at('12:00').do(run_scrapers)
-#schedule.every().day.at('14:40').do(run_scrapers)
+schedule.every().day.at('14:40').do(run_scrapers)
 
 run_scrapers()
 while True:
